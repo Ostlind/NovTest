@@ -34,7 +34,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            // Set the current boobin order id to an extracted value\r\n            SetExtractedValue(\"boobinOrderId\", bobbinOrderName);\r\n            var bobbins = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).ToList();\r\n            \r\n            Log.WriteLine(bobbins.ToString());\r\n            ",
+                "Code": "            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            // Set the current boobin order id to an extracted value\r\n            SetExtractedValue(\"boobinOrderId\", bobbinOrderName);\r\n            var bobbins = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).ToList();\r\n            \r\n            Log.WriteLine(bobbinOrderName);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -68,7 +68,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "571d1c51-5c8f-4319-93cc-1045fc4591bc",
+            "Runtime ID": "b1787aa0-9549-40bb-acd7-56a8335168ea",
             "Description": "Execute test 'login-rewinder'",
             "CustomDescription": null,
             "Step": {
@@ -78,7 +78,7 @@
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
                 "TestName": "login-rewinder",
-                "TestPath": "Rewinder\\login-rewinder.tstest",
+                "TestPath": "rewinder-overview\\login-rewinder.tstest",
                 "TestUniqueId": "19ba9543-3191-40b4-8360-021fc25f97bf",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
@@ -100,7 +100,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "MainTesttnumiip0.4xa",
+            "StepImageKey": "MainTestcj1hyqkm.pit",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -109,17 +109,18 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "8a1c2320-b7b5-4786-9849-11ea3ed79807",
-            "Description": "New Coded Step",
+            "Runtime ID": "57145f93-dcd8-4984-b5c7-114a25edc10a",
+            "Description": "Execute test 'select-campaign'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "Code": "            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            // Set the current boobin order id to an extracted value\r\n            SetExtractedValue(\"boobinOrderId\", bobbinOrderName);\r\n            var bobbins = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).ToList();\r\n            \r\n            Log.WriteLine(bobbins.ToString());\r\n            ",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "select-campaign",
+                "TestPath": "rewinder-overview\\select-campaign.tstest",
+                "TestUniqueId": "7c20feab-d798-47c2-bd35-10533ab9d5e0",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -137,10 +138,51 @@
             },
             "Enabled": true,
             "Order": 3,
-            "Id": "MainTest_CodedStep",
-            "StepState": 1,
+            "Id": "",
+            "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "MainTest0aacvhbz.bzo",
+            "StepImageKey": "MainTestbc1b00ic.lsl",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "637acc12-3e4c-401e-8a32-b9e4ad17082e",
+            "Description": "Execute test 'download-bobbin-order'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "download-bobbin-order",
+                "TestPath": "rewinder-overview\\download-bobbin-order.tstest",
+                "TestUniqueId": "5b711df9-239d-49f3-a7af-61fc5a055794",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MainTestjiwsqcbe.dhr",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

@@ -230,47 +230,6 @@
             "QcVersionStamp": 0,
             "Version": 200
           }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "a2c483e8-7771-490c-8fbd-a8caa83f9048",
-            "Description": "Execute test 'select-campaign'",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
-              "__value": {
-                "WaitOnElementsTimeout": 0,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": false,
-                "TestName": "select-campaign",
-                "TestPath": "Rewinder\\select-campaign.tstest",
-                "TestUniqueId": "7c20feab-d798-47c2-bd35-10533ab9d5e0",
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 4,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "login-rewinderv5yipdvo.kvv",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
         }
       ]
     },
@@ -1045,7 +1004,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "Nov_Test.login_rewinder",
     "IsManual": false,
-    "ResourceFilePath": "Rewinder\\login-rewinder.resx",
+    "ResourceFilePath": "rewinder-overview\\login-rewinder.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -1077,7 +1036,7 @@
     "Description": "",
     "Name": "login-rewinder",
     "Owner": "",
-    "Path": "Rewinder\\login-rewinder.tstest",
+    "Path": "rewinder-overview\\login-rewinder.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "19ba9543-3191-40b4-8360-021fc25f97bf",

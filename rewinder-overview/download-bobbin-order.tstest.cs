@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class MainTest : BaseWebAiiTest
+    public class download_bobbin_order : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -46,17 +46,12 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void MainTest_CodedStep()
+        [CodedStep(@"Click 'DownloadImage'")]
+        public void downloadbobbinorder_CodedStep()
         {
-            
-            var bobbinOrderName = Data["Name"].ToString();
-            
-            // Set the current boobin order id to an extracted value
-            SetExtractedValue("boobinOrderId", bobbinOrderName);
-            var bobbins = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).ToList();
-            
-            Log.WriteLine(bobbinOrderName);
+            Element e = Find.ById("input1");
+            // Click 'DownloadImage'
+            Pages.PressureRewindingOverview.DownloadImage.Click(false);
             
         }
     }
