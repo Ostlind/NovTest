@@ -150,7 +150,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "637acc12-3e4c-401e-8a32-b9e4ad17082e",
+            "Runtime ID": "923206f7-575e-49ca-82bd-29a3437a5cbb",
             "Description": "Execute test 'download-bobbin-order'",
             "CustomDescription": null,
             "Step": {
@@ -182,7 +182,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "MainTestjiwsqcbe.dhr",
+            "StepImageKey": "MainTestz4qynv1r.g3p",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

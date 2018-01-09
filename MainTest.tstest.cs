@@ -59,5 +59,13 @@ namespace Nov_Test
             Log.WriteLine(bobbinOrderName);
             
         }
+    
+        [CodedStep(@"Execute test 'download-bobbin-order'")]
+        public void MainTest_CodedStep1()
+        {
+            // Execute test 'download-bobbin-order'
+            this.ExecuteTest("rewinder-overview\\download-bobbin-order.tstest");
+            
+        }
     }
 }

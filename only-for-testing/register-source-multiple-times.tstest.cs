@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class open_material_window : BaseWebAiiTest
+    public class register_source_multiple_times : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -47,9 +47,12 @@ namespace Nov_Test
         // Add your test methods here...
     
         [CodedStep(@"New Coded Step")]
-        public void openmaterialwindow_CodedStep()
+        public void registersourcemultipletimes_CodedStep()
         {
-              
+            var bobbin = GetExtractedValue("currentBobbin") as Bobbin;
+            
+            
+            Log.WriteLine("Got bobbin name : " + bobbin.Name);
         }
     }
 }

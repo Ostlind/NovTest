@@ -399,6 +399,8 @@ namespace Nov_Test
         }
     }
 
+
+    [Serializable]
     public class Welding
     {
         public int? LotId { get; set; }
@@ -408,7 +410,7 @@ namespace Nov_Test
         public string WeldingType { get; set; }
         public string Name { get; set; }
     }
-
+    [Serializable]
     public class Bobbin
     {
         public int BobbinOrderId { get; set; }
