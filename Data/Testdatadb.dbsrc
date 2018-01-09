@@ -1,0 +1,2 @@
+System.Data.SqlClient
+Data Source=localhost; Initial Catalog=TestDataDb; Integrated Security=true;
