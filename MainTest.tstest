@@ -109,18 +109,17 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "9ed073b5-9f6b-44b0-bb58-97966a1cd6e0",
-            "Description": "Execute test 'select-campaign'",
+            "Runtime ID": "8a1c2320-b7b5-4786-9849-11ea3ed79807",
+            "Description": "New Coded Step",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "WaitOnElementsTimeout": 0,
+                "Code": "            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            // Set the current boobin order id to an extracted value\r\n            SetExtractedValue(\"boobinOrderId\", bobbinOrderName);\r\n            var bobbins = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).ToList();\r\n            \r\n            Log.WriteLine(bobbins.ToString());\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": false,
-                "TestName": "select-campaign",
-                "TestPath": "Rewinder\\select-campaign.tstest",
-                "TestUniqueId": "7c20feab-d798-47c2-bd35-10533ab9d5e0",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -138,10 +137,10 @@
             },
             "Enabled": true,
             "Order": 3,
-            "Id": "",
-            "StepState": 0,
+            "Id": "MainTest_CodedStep",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "MainTestcub2xzgi.bfd",
+            "StepImageKey": "MainTest0aacvhbz.bzo",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -163,7 +162,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "Nov_Test.MainTest",
     "IsManual": false,
-    "ResourceFilePath": "Rewinder\\MainTest.resx",
+    "ResourceFilePath": "MainTest.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -195,7 +194,7 @@
     "Description": "",
     "Name": "MainTest",
     "Owner": "",
-    "Path": "Rewinder\\MainTest.tstest",
+    "Path": "MainTest.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "4076e434-d913-48a0-9066-6ab67b270778",
