@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "Login\\login-fls-rewinder.resx",
+    "ResourceFilePath": "logins\\login-fls-rewinder.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -61,7 +61,7 @@
     "Description": "",
     "Name": "login-fls-rewinder",
     "Owner": "",
-    "Path": "Login\\login-fls-rewinder.tstest",
+    "Path": "logins\\login-fls-rewinder.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "2e0a7dd2-60b3-411e-bd2e-a0539e4d7e82",

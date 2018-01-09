@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class download_bobbin_order : BaseWebAiiTest
+    public class open_material_window : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -45,17 +45,5 @@ namespace Nov_Test
         #endregion
         
         // Add your test methods here...
-    
-        [CodedStep(@"Click 'DownloadImage'")]
-        public void downloadbobbinorder_CodedStep()
-        {
-            Element e = Find.ById("input1");
-            
-            
-            
-            // Click 'DownloadImage'
-            Pages.PressureRewindingOverview.DownloadImage.Click(false);
-            
-        }
     }
 }

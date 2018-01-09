@@ -28,57 +28,19 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "91f00edc-5cd3-414a-bc92-ee2080ea994e",
-            "Description": "Click 'DownloadImage'",
+            "Runtime ID": "52dd2eef-5fc6-4425-807d-7e45460f51b8",
+            "Description": "radwindow: 'Restore' action.",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__type": "Telerik.WebAii.Design.Translators.Xaml.Window.WindowButtonClickAction",
               "__value": {
-                "Code": "            Element e = Find.ById(\"input1\");\r\n            \r\n            \r\n            \r\n            // Click 'DownloadImage'\r\n            Pages.PressureRewindingOverview.DownloadImage.Click(false);\r\n            ",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 1,
-            "Id": "downloadbobbinorder_CodedStep",
-            "StepState": 1,
-            "ContinueOnFailure": false,
-            "StepImageKey": "download-bobbin-orderwi11j0bs.hjn",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "9800beae-2001-4790-80da-3da28d7e7908",
-            "Description": "Click 'ButtonTag'",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ClickActionDescriptor",
-              "__value": {
-                "SimulateRealClick": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
+                "ActionType": 3,
+                "ControlKey": "radwindow",
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "SimulateRealUser": true,
                 "Pause": 0,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
@@ -93,34 +55,34 @@
                   }
                 },
                 "Elements": {
-                  "target": {
+                  "radwindow": {
                     "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
                     "__value": {
-                      "Name": "target",
+                      "Name": "radwindow",
                       "Region": null,
                       "Page": {
                         "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
                         "__value": {
-                          "Path": "https://10.40.168.67/RewinderOverview/Views/paview.html",
-                          "Query": "?eq=KALEB1&eqPath=NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1",
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
                           "BaseUrl": "",
                           "EquivalentUrls": [],
                           "Fragment": "",
-                          "Title": "Pressure Rewinding Overview",
+                          "Title": "FormFlex Line System",
                           "CompareMode": 2,
                           "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "PressureRewindingOverview"
+                          "FriendlyName": "FormFlexLineSystem"
                         }
                       },
                       "Frame": null,
                       "FindInfo": null,
                       "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "ooptPudsNqeQ5Y2177zT23RuzJ0=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "ButtonTag",
+                          "uniqueKey": "M3H+uXlRSvgXsw7NTfFANklTwR8=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "MomIndexWindowIndexview",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -131,13 +93,39 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
                                       "__value": {
-                                        "Clause": "TextContent=×"
+                                        "Clause": "id=silverlightControlHost"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
                                       "__value": {
-                                        "Clause": "tagname=button"
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "AutomationId=MomIndexWindow"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlTag=indexview"
                                       }
                                     }
                                   ],
@@ -147,14 +135,14 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[8]/div[1]/div[1]/div[1]/button[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]",
                           "DataBindingExpressions": {}
                         }
                       },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlButton",
+                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadWindow",
                       "IsIndependent": false,
                       "DomStateKey": "",
-                      "TechnologyType": 1,
+                      "TechnologyType": 2,
                       "Version": 200
                     }
                   }
@@ -166,11 +154,11 @@
               }
             },
             "Enabled": true,
-            "Order": 2,
+            "Order": 1,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "select-campaigntetekn3s.sqd",
+            "StepImageKey": "WebTeste5lq5c3w.y14",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -178,69 +166,9 @@
         }
       ]
     },
-    "IndependentDescriptors": [
-      {
-        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-        "__value": {
-          "Name": "",
-          "Region": null,
-          "Page": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-            "__value": {
-              "Path": "https://10.40.168.67/RewinderOverview/Views/paview.html",
-              "Query": "?eq=KALEB1&eqPath=NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1",
-              "BaseUrl": "",
-              "EquivalentUrls": [],
-              "Fragment": "",
-              "Title": "Pressure Rewinding Overview",
-              "CompareMode": 2,
-              "AlwaysUseTitleInCompare": false,
-              "FriendlyName": "PressureRewindingOverview"
-            }
-          },
-          "Frame": null,
-          "FindInfo": null,
-          "FindExpression": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-            "__value": {
-              "uniqueKey": "gxj3Oc89Z1ScuvRxoRWyilBRzH0=",
-              "NodeKind": 4,
-              "TechnologyType": 1,
-              "Name": "DownloadImage",
-              "FindExpressions": [
-                {
-                  "Key": 1,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "TagIndex=img:24"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": []
-                    }
-                  }
-                }
-              ],
-              "BackupSearchClause": "/html[1]/body[1]/div[2]/div[2]/nov-pa-cradle[1]/div[1]/div[1]/tr[6]/td[1]/div[1]/div[1]/div[1]/span[1]/img[1]",
-              "DataBindingExpressions": {}
-            }
-          },
-          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlImage",
-          "IsIndependent": true,
-          "DomStateKey": "",
-          "TechnologyType": 1,
-          "Version": 200
-        }
-      }
-    ],
+    "IndependentDescriptors": [],
     "HtmlDescription": "",
-    "SilverlightEnabled": false,
+    "SilverlightEnabled": true,
     "IsSilverlightApp": false,
     "SilverlightAppWebUrl": "",
     "SilverlightAppLocalDirectory": "",
@@ -250,10 +178,10 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.download_bobbin_order",
+    "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "rewinder-overview\\download-bobbin-order.resx",
-    "HasCodeBehind": true,
+    "ResourceFilePath": "rewinder-overview\\WebTest.resx",
+    "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
       "__value": {
@@ -282,13 +210,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "download-bobbin-order",
+    "Name": "WebTest",
     "Owner": "",
-    "Path": "rewinder-overview\\download-bobbin-order.tstest",
+    "Path": "rewinder-overview\\WebTest.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "5b711df9-239d-49f3-a7af-61fc5a055794",
-    "Id": "5b711df9-239d-49f3-a7af-61fc5a055794",
+    "UniqueId": "a0981c62-7fe9-44e5-a39a-3f702d7f069e",
+    "Id": "a0981c62-7fe9-44e5-a39a-3f702d7f069e",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

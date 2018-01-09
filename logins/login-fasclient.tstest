@@ -1149,7 +1149,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "Login\\login-fasclient.resx",
+    "ResourceFilePath": "logins\\login-fasclient.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -1181,7 +1181,7 @@
     "Description": "",
     "Name": "login-fasclient",
     "Owner": "",
-    "Path": "Login\\login-fasclient.tstest",
+    "Path": "logins\\login-fasclient.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "c403edd6-3ede-4e00-b870-4b7a36921c6b",
