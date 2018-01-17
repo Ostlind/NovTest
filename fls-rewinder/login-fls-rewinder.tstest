@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\unregister-source.resx",
+    "ResourceFilePath": "fls-rewinder\\login-fls-rewinder.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "unregister-source",
+    "Name": "login-fls-rewinder",
     "Owner": "",
-    "Path": "fls-rewinder\\unregister-source.tstest",
+    "Path": "fls-rewinder\\login-fls-rewinder.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "413797d6-824c-496c-8cd1-65a6f5814a00",
-    "Id": "413797d6-824c-496c-8cd1-65a6f5814a00",
+    "UniqueId": "5f03ed1f-d76a-4bd2-a338-90c84847a66c",
+    "Id": "5f03ed1f-d76a-4bd2-a338-90c84847a66c",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\unregister-source.resx",
+    "ResourceFilePath": "fls-rewinder\\register-mpi.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "unregister-source",
+    "Name": "register-mpi",
     "Owner": "",
-    "Path": "fls-rewinder\\unregister-source.tstest",
+    "Path": "fls-rewinder\\register-mpi.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "413797d6-824c-496c-8cd1-65a6f5814a00",
-    "Id": "413797d6-824c-496c-8cd1-65a6f5814a00",
+    "UniqueId": "10024805-dde8-48ed-9368-ab1542b88698",
+    "Id": "10024805-dde8-48ed-9368-ab1542b88698",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

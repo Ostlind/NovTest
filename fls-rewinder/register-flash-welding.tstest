@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\unregister-source.resx",
+    "ResourceFilePath": "fls-rewinder\\register-flash-welding.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "unregister-source",
+    "Name": "register-flash-welding",
     "Owner": "",
-    "Path": "fls-rewinder\\unregister-source.tstest",
+    "Path": "fls-rewinder\\register-flash-welding.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "413797d6-824c-496c-8cd1-65a6f5814a00",
-    "Id": "413797d6-824c-496c-8cd1-65a6f5814a00",
+    "UniqueId": "7bc36fba-ae1e-42c6-96a1-b066faaad5ba",
+    "Id": "7bc36fba-ae1e-42c6-96a1-b066faaad5ba",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

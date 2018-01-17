@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\register-source-part2.resx",
+    "ResourceFilePath": "fls-rewinder\\register-visual-test.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "register-source-part2",
+    "Name": "register-visual-test",
     "Owner": "",
-    "Path": "fls-rewinder\\register-source-part2.tstest",
+    "Path": "fls-rewinder\\register-visual-test.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "a4577149-0736-48b3-b6f1-61b9136cb700",
-    "Id": "a4577149-0736-48b3-b6f1-61b9136cb700",
+    "UniqueId": "ac140737-cf9d-4e99-8df1-a2bba662c947",
+    "Id": "ac140737-cf9d-4e99-8df1-a2bba662c947",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

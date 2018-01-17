@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\unregister-source.resx",
+    "ResourceFilePath": "fls-rewinder\\register-wireattach.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "unregister-source",
+    "Name": "register-wireattach",
     "Owner": "",
-    "Path": "fls-rewinder\\unregister-source.tstest",
+    "Path": "fls-rewinder\\register-wireattach.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "413797d6-824c-496c-8cd1-65a6f5814a00",
-    "Id": "413797d6-824c-496c-8cd1-65a6f5814a00",
+    "UniqueId": "c1ce3872-b8ee-4fa2-b5c6-3ac63ad53d0c",
+    "Id": "c1ce3872-b8ee-4fa2-b5c6-3ac63ad53d0c",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }
