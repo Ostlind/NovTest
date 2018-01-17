@@ -28,22 +28,17 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "b1f34267-1c5d-4bc2-8543-1bb12a450c3f",
-            "Description": "Navigate to : 'http://10.40.168.97/flsclient/'",
+            "Runtime ID": "d670421f-a1f1-482f-b74b-f71be9d61ff2",
+            "Description": "New Coded Step",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.NavigateToActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "UseDecodedUrl": true,
-                "NavigateURL": "http://10.40.168.97/flsclient/",
-                "BaseUrl": "",
-                "WaitOnElementsTimeout": 0,
+                "Code": "            var bobbins = Helper.GetBobbinsByBobbinOrderName(Data[\"Name\"].ToString());\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": false,
-                "UsejQuery": false,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -61,10 +56,10 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "",
-            "StepState": 0,
+            "Id": "WebTest_CodedStep",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestbz5zwuex.3js",
+            "StepImageKey": "WebTestna5mjgoq.xcm",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -73,139 +68,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "edf9ecf8-c380-4694-981b-f91639f37ab7",
-            "Description": "LeftClick on Item0Textboxview",
+            "Runtime ID": "947cef2d-a286-46b0-9e3a-dc68f6318604",
+            "Description": "Execute test 'login-fls-rewinder'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "11, 71, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "login-fls-rewinder",
+                "TestPath": "fls-rewinder\\login-fls-rewinder.tstest",
+                "TestUniqueId": "5f03ed1f-d76a-4bd2-a338-90c84847a66c",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "SJVt8eozDiu5wq7AwvC3HsTRBU8=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "Item0Textboxview",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=scrollcontentpresenter"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "name=ScrollContentPresenter"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/textboxview[0]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/textbox[1]/grid[1]/border[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/textboxview[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.FrameworkElement",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -217,7 +100,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestv5mm3tgd.1jc",
+            "StepImageKey": "WebTestcwhtwj3a.0of",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -226,130 +109,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "e123d703-5db2-414a-a457-5c5020bdc389",
-            "Description": "Type 'a05' into LoginUserNameTextbox",
+            "Runtime ID": "8a2a74ca-8c46-415c-9104-881cf387844c",
+            "Description": "Execute test 'start-bobbin-order'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
-                "TypedText": "a05",
-                "RecordedTextContent": "a05",
-                "TimeBetweenKeypresses": 10,
-                "KeyHoldTime": 100,
-                "FireKeyEvents": false,
-                "ClearCurrentText": true,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "start-bobbin-order",
+                "TestPath": "fls-rewinder\\start-bobbin-order.tstest",
+                "TestUniqueId": "35c86320-aef5-4173-ad3f-35ad05bf56b0",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "5Js1nngIuTVfqHmFzVqyjelWy4k=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "LoginUserNameTextbox",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "AutomationId=LoginUserName"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=textbox"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/textbox[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBox",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -361,7 +141,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestqcjuqpou.ffz",
+            "StepImageKey": "WebTestid3davbj.ac1",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -370,121 +150,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "7ef71e00-9d8e-43ad-b1e2-03041800f4c8",
-            "Description": "Press Tab",
+            "Runtime ID": "8f771084-eaf2-4acd-9b8d-53ba8c9c9fc5",
+            "Description": "Execute test 'open-mom-dialog'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "SimulateRealUser": true,
-                "KeyCode": 9,
-                "RepeatCount": 1,
-                "HoldTime": 10,
-                "DelayBetweenRepitions": 50,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "open-mom-dialog",
+                "TestPath": "fls-rewinder\\open-mom-dialog.tstest",
+                "TestUniqueId": "4c77ed17-5080-41c7-8727-5db1f8fc1396",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "F6H/i6VmfXR/sW6MVHE1nMwk8TI=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "FORMFLEXLINESYSTEMMainview",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath="
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.UserControl",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -496,727 +182,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTest5dib2cqw.v5r",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "7e284b27-dd02-4539-8f8c-707171da8ea4",
-            "Description": "Type 'nov' into Item0Passwordbox",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.PasswordBoxSetTextActionDescriptor",
-              "__value": {
-                "RecordedTextContent": "nov",
-                "SimulateRealTyping": true,
-                "TimeBetweenKeypresses": 10,
-                "KeyHoldTime": 100,
-                "SimulateRealUser": true,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "E5bXWsSi+y4fQ0nmbzwTNNpJknI=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "Item0Passwordbox",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=grid"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "name=contentGrid"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/loginmainview[0]/grid[name=LayoutRoot]/loginview[0]/grid[0]/grid[0]/passwordbox[0]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/passwordbox[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.PasswordBox",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {},
-                "Encrypt": false,
-                "TypedText": "nov",
-                "_cipher": null
-              }
-            },
-            "Enabled": true,
-            "Order": 5,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTest1cgqdlcy.oor",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "92489736-8889-4515-a096-eb0e5c196583",
-            "Description": "Press Tab",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
-              "__value": {
-                "SimulateRealUser": true,
-                "KeyCode": 9,
-                "RepeatCount": 1,
-                "HoldTime": 10,
-                "DelayBetweenRepitions": 50,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "F6H/i6VmfXR/sW6MVHE1nMwk8TI=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "FORMFLEXLINESYSTEMMainview",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath="
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.UserControl",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 6,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTestz4pz4fp1.mmw",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "c10ce175-3417-4a06-8faa-ce2d3cc99a4b",
-            "Description": "Press Down (3 times)",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
-              "__value": {
-                "SimulateRealUser": true,
-                "KeyCode": 40,
-                "RepeatCount": 3,
-                "HoldTime": 10,
-                "DelayBetweenRepitions": 50,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "7MQP7rK4iGLcX0P4RT55rSUCTkI=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "Item1Radcombobox",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=grid"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "name=contentGrid"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/loginmainview[0]/grid[name=LayoutRoot]/loginview[0]/grid[0]/grid[0]/radcombobox[0]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/radcombobox[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadComboBox",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 7,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTest4tu3oj0k.sjb",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "b0939587-3cf1-4dd0-bd38-bd52cb89d6c9",
-            "Description": "LeftClick on LOGINDTextblock",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
-              "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "57, 41, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "hNUgJuXP4imk0kmxGAmdJnWSIGs=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "LOGINDTextblock",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=LOG IND"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=textblock"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/button[1]/grid[1]/border[1]/grid[1]/contentcontrol[1]/contentpresenter[1]/contentpresenter[1]/grid[1]/textblock[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 8,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTestbpnjj1ww.teg",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "34bc2c80-dbfe-4614-9b4c-626de04ba3d1",
-            "Description": "radwindow: 'Restore' action.",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "Telerik.WebAii.Design.Translators.Xaml.Window.WindowButtonClickAction",
-              "__value": {
-                "ActionType": 3,
-                "ControlKey": "radwindow",
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "SimulateRealUser": true,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "radwindow": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "radwindow",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "M3H+uXlRSvgXsw7NTfFANklTwR8=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "MomIndexWindowIndexview",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "AutomationId=MomIndexWindow"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=indexview"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadWindow",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 9,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTesth3jkuwb3.ecr",
+            "StepImageKey": "WebTestt4h13ncp.gxr",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1253,7 +219,7 @@
               }
             },
             "Enabled": true,
-            "Order": 10,
+            "Order": 5,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1294,7 +260,7 @@
               }
             },
             "Enabled": true,
-            "Order": 11,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1307,7 +273,212 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "2237d724-8cc9-4a41-b81c-7f3ef5522681",
+            "Runtime ID": "e83664e0-04cf-4244-95b1-d4c48a62ac51",
+            "Description": "Execute test 'register-wireattach'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "register-wireattach",
+                "TestPath": "fls-rewinder\\register-wireattach.tstest",
+                "TestUniqueId": "c1ce3872-b8ee-4fa2-b5c6-3ac63ad53d0c",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestxvfxq3lf.1u0",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5cf23732-06e5-4914-bf0c-d469758ea165",
+            "Description": "Execute test 'register-flash-welding'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "register-flash-welding",
+                "TestPath": "fls-rewinder\\register-flash-welding.tstest",
+                "TestUniqueId": "7bc36fba-ae1e-42c6-96a1-b066faaad5ba",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestsmv1pmyc.bg3",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "4d1d20b8-f7d2-4489-aa2b-c1a2ae171288",
+            "Description": "Execute test 'register-visual-test'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "register-visual-test",
+                "TestPath": "fls-rewinder\\register-visual-test.tstest",
+                "TestUniqueId": "ac140737-cf9d-4e99-8df1-a2bba662c947",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestwoannwfw.5cp",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "04a3c7a5-e9bc-47b5-a710-7c61dc89a2ba",
+            "Description": "Execute test 'register-mpi'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "register-mpi",
+                "TestPath": "fls-rewinder\\register-mpi.tstest",
+                "TestUniqueId": "10024805-dde8-48ed-9368-ab1542b88698",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestggpal30c.sel",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "492ce62f-69a4-411e-9247-7e90c0e633fb",
+            "Description": "Execute test 'finish-welding'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "finish-welding",
+                "TestPath": "fls-rewinder\\finish-welding.tstest",
+                "TestUniqueId": "7fdbcf11-51fe-4fa7-80b8-673025176491",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTest1djvr0ln.e4l",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "64255f7b-0fa6-4710-bd91-30436c025d16",
             "Description": "Execute test 'unregister-source'",
             "CustomDescription": null,
             "Step": {
@@ -1318,7 +489,7 @@
                 "WaitOnElements": false,
                 "TestName": "unregister-source",
                 "TestPath": "fls-rewinder\\unregister-source.tstest",
-                "TestUniqueId": "ebc2c548-e8bb-49dc-ae74-000da5e3ecdf",
+                "TestUniqueId": "413797d6-824c-496c-8cd1-65a6f5814a00",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -1339,7 +510,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestmqpm0pwe.ukp",
+            "StepImageKey": "WebTestcsywncx0.s4i",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1348,248 +519,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "66445297-e328-4e23-9ccb-f6f6787b6890",
-            "Description": "Drag UdklipsdetaljerBorder to application at (1303, 483) from TopLeftCorner",
+            "Runtime ID": "341c9a50-7afe-415c-8e94-91f3c75ffaf3",
+            "Description": "Execute test 'unregister-destination'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SimpleDragDropActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "DropTargetType": 1,
-                "DragOffset": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "19, 4, Pixel, TopLeftCorner"
-                },
-                "DropOffset": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "20, 10, Pixel, TopLeftCorner"
-                },
-                "LayoutRootDropOffset": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "1303, 483, Pixel, TopLeftCorner"
-                },
-                "EnsureDropPointInBrowser": true,
-                "DropWindowData": {
-                  "__type": "ArtOfTest.Common.Design.DragDropWindowData",
-                  "__value": "{X=2560, Y=-591, Width=1440, Height=1948}"
-                },
-                "SimulateRealUser": true,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "unregister-destination",
+                "TestPath": "fls-rewinder\\unregister-destination.tstest",
+                "TestUniqueId": "e2c437b6-5876-4333-8082-fa3fe2e88d57",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "initial": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "initial",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "Mg8OZhu+xfqSyqCbe1eKXrS1wwc=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "UdklipsdetaljerBorder",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=indexview"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "automationid=MomIndexWindow"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/weldingsignview[name=UserControl]/scrollviewer[0]/border[0]/grid[0]/scrollcontentpresenter[name=ScrollContentPresenter]/grid[name=LayoutRoot]/stackpanel[0]/border[1]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/grid[2]/weldingsignview[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/grid[1]/stackpanel[1]/border[2]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Border",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  },
-                  "final": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "final",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "Mg8OZhu+xfqSyqCbe1eKXrS1wwc=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "UdklipsdetaljerBorder",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=indexview"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "automationid=MomIndexWindow"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/weldingsignview[name=UserControl]/scrollviewer[0]/border[0]/grid[0]/scrollcontentpresenter[name=ScrollContentPresenter]/grid[name=LayoutRoot]/stackpanel[0]/border[1]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/grid[2]/weldingsignview[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/grid[1]/stackpanel[1]/border[2]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Border",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -1601,7 +551,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestjsssqyqu.nlg",
+            "StepImageKey": "WebTestr23kloyv.cq0",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1610,139 +560,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "dd506c87-5ebc-40d8-a07c-5a30165b77a8",
-            "Description": "LeftClick on UdklipsdetaljerBorder",
-            "CustomDescription": null,
+            "Runtime ID": "7288b02f-514c-4622-9302-b7af52bbc47c",
+            "Description": "Execute test 'download-bobbin-order-to-fls'",
+            "CustomDescription": "Execute test 'download-bobbin-order-to-fls'",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "19, 52, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "download-bobbin-order-to-fls",
+                "TestPath": "fls-rewinder\\download-bobbin-order-to-fls.tstest",
+                "TestUniqueId": "7828f4c4-ac93-4ed3-b712-c1e5d1168c61",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "Mg8OZhu+xfqSyqCbe1eKXrS1wwc=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "UdklipsdetaljerBorder",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=indexview"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "automationid=MomIndexWindow"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/weldingsignview[name=UserControl]/scrollviewer[0]/border[0]/grid[0]/scrollcontentpresenter[name=ScrollContentPresenter]/grid[name=LayoutRoot]/stackpanel[0]/border[1]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/grid[2]/weldingsignview[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/grid[1]/stackpanel[1]/border[2]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Border",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -1754,7 +592,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestq4cmdbkl.t5m",
+            "StepImageKey": "WebTest4gawbo0y.cnr",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1762,9 +600,56 @@
         }
       ]
     },
-    "IndependentDescriptors": [],
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": null,
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": null,
+              "NodeKind": 9,
+              "TechnologyType": 1,
+              "Name": "Element",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.DummyFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.DummyFindClause",
+                          "__value": {
+                            "Clause": "Name=f4bec6b2-9dca-4a2a-b75c-be8352835e60"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": null,
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
     "HtmlDescription": "",
-    "SilverlightEnabled": true,
+    "SilverlightEnabled": false,
     "IsSilverlightApp": false,
     "SilverlightAppWebUrl": "",
     "SilverlightAppLocalDirectory": "",
@@ -1774,25 +659,25 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "",
+    "TestClass": "Nov_Test.WebTest",
     "IsManual": false,
     "ResourceFilePath": "fls-rewinder\\WebTest.resx",
-    "HasCodeBehind": false,
+    "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
       "__value": {
         "ConnectionString": "",
-        "DefaultToGrid": true,
+        "DefaultToGrid": false,
         "DataRange": "",
         "LoadRecordsCount": null,
         "DataTableName": "",
-        "DataProvider": "",
+        "DataProvider": "Testdatadb.dbsrc",
         "DataEnabled": true,
         "HasBuiltinGrid": false,
-        "DataType": 4,
+        "DataType": 3,
         "BuiltInData": null,
         "BuiltInDocumentKey": null,
-        "TSQL": ""
+        "TSQL": "SELECT [Name]\r\nFROM [BobbinOrders]\r\nWHERE [IsActive] = 0"
       }
     },
     "VSProperties": {},
