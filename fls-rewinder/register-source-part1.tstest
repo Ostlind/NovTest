@@ -78,6 +78,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "NyKildeTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -163,7 +164,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "5e4ead63-9f54-474a-8339-6bccce52e464",
-            "Description": "radwatermarktextbox: Type 'klfa-01-for' into SearchTextBoxRadwatermarktextbox",
+            "Description": "radwatermarktextbox: Type 'klfa-01-for' into SearchTextBoxRadwatermarktextbox - DataDriven: [$($(currentLot))]",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
@@ -223,6 +224,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchTextBoxRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -290,7 +292,9 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "RecordedTextContent": "$($(currentLot))"
+                }
               }
             },
             "Enabled": true,
@@ -364,6 +368,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchTextBoxRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -509,6 +514,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchTextBoxRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -651,6 +657,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchButtonButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -793,6 +800,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKRadbutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -935,6 +943,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "ANNULLERButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1026,7 +1035,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\register-source.resx",
+    "ResourceFilePath": "fls-rewinder\\register-source-part1.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -1056,9 +1065,9 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "register-source",
+    "Name": "register-source-part1",
     "Owner": "",
-    "Path": "fls-rewinder\\register-source.tstest",
+    "Path": "fls-rewinder\\register-source-part1.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "b9bb5aa8-5629-4d03-99f1-e6990542011d",

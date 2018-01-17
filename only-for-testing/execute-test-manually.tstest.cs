@@ -50,39 +50,38 @@ namespace Nov_Test
         public void execute_test_manually_CodedStep()
         {
                 var bobbins = Helper.GetBobbinsByBobbinOrderName(Data["Name"].ToString());
+
                 foreach( var bobbin in bobbins )
                 {
+                    SetExtractedValue("currentBobbin", bobbin);
                     
                     var lots = Helper.GetLotsByBobbinName(bobbin.Name);
                     
-                foreach(var lot in lots)
-                {
-                    var weldings = Helper.GetWeldings(lot.Name);
+                    SetExtractedValue("lots", lots);
                     
-                    foreach(var welding in weldings)
+                    foreach(var lot in lots)
                     {
-                        SetExtractedValue("currentWelding", welding);    
+                        SetExtractedValue("currentLot", lot);
+                        
+                      //  this.ExecuteTest("lots\\lottest.tstest.cs");
+                        
+                        var weldings = Helper.GetWeldings(lot.Name);
+                        
+                        foreach(var welding in weldings)
+                        {
+                            SetExtractedValue("currentWelding", welding);    
+                        }
                     }
-                    
-                }
-                    
-                    
-                    
-                    
-                    SetExtractedValue("currentBobbin", bobbin);
-                    SetExtractedValue("lots",);
-                    SetExtractedValue("", );
-                    SetExtractedValue("")
-                    
-                    Log.WriteLine("Name is now : " + bobbin.Name);
                     
                     this.ExecuteTest("only-for-testing\\register-source-multiple-times.tstest");
                 }
                 
-                
-                var weldings = Helper.GetWeldings()
-                
-                foreach()
+        }
+    
+        [CodedStep(@"New Coded Step")]
+        public void executetestmanually_CodedStep()
+        {
+            
         }
     }
 }

@@ -1,0 +1,68 @@
+# Create test data
+
+1. go to https://10.40.168.67/LabClient/Logistics
+2. Enter project name/number 7102
+3. Select campaign
+4. select cradle
+5. enter length to produce i.e 1000m
+
+5. go to https://10.40.168.67/RewinderOverview/Views/paview.html?eq=KALEB1&eqPath=NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1
+6. download bobbin order to fls station
+
+7. Verify bobbin is available
+
+8. go to http://10.40.168.97/flsclient/
+9. Open MOM
+10. Register destination (bobbing()
+11. Register source, enter lot name, press search.
+12 override and enter batch nr and coil nr and length manually
+13. Sign
+
+
+###
+
+Register weldings
+
+14. select cutout checkbox
+15. do all checkbox steps
+
+
+###
+if a coil shift is required
+
+16. stop use of source
+17. Enter material left, (calculated weight)
+18. Sign a05
+19. Load new source
+
+###
+If all lots is used unload destination
+
+20. Ignore labgroup dialog
+21. Enter produced length, use bobbin order length for now.
+22 sign with a05
+23. automatic finishes the order, unloads.
+
+
+
+
+
+
+
+
+
+
+
+---
+
+add columns batch nr, coil nr, length, material left to the lot table.
+add column cutout, equimentid, visualinspector user , mpi user, isUsed   (foregin key to user table) in the welding table ie. 1m
+
+
+
+-----
+
+QA
+Should we create lab group before test?
+Iterate weldings instead of lots?
+Where should produced length come from?

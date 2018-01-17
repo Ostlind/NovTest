@@ -34,7 +34,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                var bobbins = Helper.GetBobbinsByBobbinOrderName(Data[\"Name\"].ToString());\r\n                foreach( var bobbin in bobbins )\r\n                {\r\n                    \r\n                    var lots = Helper.GetLotsByBobbinName(bobbin.Name);\r\n                    \r\n                foreach(var lot in lots)\r\n                {\r\n                    var weldings = Helper.GetWeldings(lot.Name);\r\n                    \r\n                    foreach(var welding in weldings)\r\n                    {\r\n                        SetExtractedValue(\"currentWelding\", welding);    \r\n                    }\r\n                    \r\n                }\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    SetExtractedValue(\"currentBobbin\", bobbin);\r\n                    SetExtractedValue(\"lots\",);\r\n                    SetExtractedValue(\"\", );\r\n                    SetExtractedValue(\"\")\r\n                    \r\n                    Log.WriteLine(\"Name is now : \" + bobbin.Name);\r\n                    \r\n                    this.ExecuteTest(\"only-for-testing\\\\register-source-multiple-times.tstest\");\r\n                }\r\n                \r\n                \r\n                var weldings = Helper.GetWeldings()\r\n                \r\n                foreach()",
+                "Code": "                var bobbins = Helper.GetBobbinsByBobbinOrderName(Data[\"Name\"].ToString());\r\n\r\n                foreach( var bobbin in bobbins )\r\n                {\r\n                    SetExtractedValue(\"currentBobbin\", bobbin);\r\n                    \r\n                    var lots = Helper.GetLotsByBobbinName(bobbin.Name);\r\n                    \r\n                    SetExtractedValue(\"lots\", lots);\r\n                    \r\n                    foreach(var lot in lots)\r\n                    {\r\n                        SetExtractedValue(\"currentLot\", lot);\r\n                        \r\n                      //  this.ExecuteTest(\"lots\\\\lottest.tstest.cs\");\r\n                        \r\n                        var weldings = Helper.GetWeldings(lot.Name);\r\n                        \r\n                        foreach(var welding in weldings)\r\n                        {\r\n                            SetExtractedValue(\"currentWelding\", welding);    \r\n                        }\r\n                    }\r\n                    \r\n                    this.ExecuteTest(\"only-for-testing\\\\register-source-multiple-times.tstest\");\r\n                }\r\n                ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -60,6 +60,46 @@
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "execute test manuallygzzkcims.jtl",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a068961a-49af-447e-8ffc-280ca28c882a",
+            "Description": "New Coded Step",
+            "CustomDescription": "CleanUp",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "executetestmanually_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "execute-test-manually35dbmwcr.el5",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

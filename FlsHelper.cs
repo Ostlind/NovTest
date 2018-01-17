@@ -409,6 +409,11 @@ namespace Nov_Test
         public int? WeldingPosition { get; set; }
         public string WeldingType { get; set; }
         public string Name { get; set; }
+        public int EquipmentId { get; set; }
+        public string VisualInspectorUser { get; set; }
+        public string MpiUser { get; set; }
+        public int CutoutLength { get; set; }
+        
     }
     [Serializable]
     public class Bobbin
@@ -419,19 +424,25 @@ namespace Nov_Test
 
         public IEnumerable<Lot> Lots { get; set; }
     }
-
+    
+    [Serializable]
     public class BobbinOrder
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsActive { get; set; }
     }
-
+    
+    [Serializable]
     public class Lot
     {
         public int BobbinId { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public IEnumerable<Welding> Weldings { get; set; }
+        public bool? IsUsed {get; set;}
+        public int MaterialLeft {get; set;}
+        public int CoilNumber { get; set;}
+        public string BatchNumber { get; set;}
     }
 }
