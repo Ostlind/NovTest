@@ -308,7 +308,7 @@ namespace Nov_Test
                 var lotNameList = new List<Lot>();
 
                 //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
-                var query = string.Format(@"SELECT [Id], [Name], [BobbinId] FROM [TestDataDb].[dbo].[Lots]");
+                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length] FROM [TestDataDb].[dbo].[Lots]");
 
                 var thisCommand = _sqlConnection.CreateCommand();
 
@@ -321,12 +321,22 @@ namespace Nov_Test
                         var nameTemp = thisReader["Name"].ToString();
                         var idTemp = (int)thisReader["Id"];
                         var bobbinIdTemp = (int)thisReader["BobbinId"];
+                        var batchNumberTemp = (string)thisReader["BatchNumber"];
+                        var isUsedTemp = (bool)thisReader["IsUsed"];
+                        var materialLeftTemp = (int)thisReader["MaterialLeft"];
+                        var coilNumberTemp = (int)thisReader["CoilNumber"];
+                        var lengthTemp = (int)thisReader["Length"];
 
                         var tempLot = new Lot()
                         {
                             Id = idTemp,
                             Name = nameTemp,
-                            BobbinId = bobbinIdTemp
+                            BobbinId = bobbinIdTemp,
+                            BatchNumber = batchNumberTemp,
+                            IsUsed = isUsedTemp,
+                            MaterialLeft = materialLeftTemp,
+                            CoilNumber = coilNumberTemp,
+                            Length = lengthTemp
                         };
 
                         lotNameList.Add(tempLot);
@@ -463,8 +473,9 @@ namespace Nov_Test
         public string Name { get; set; }
         public IEnumerable<Welding> Weldings { get; set; }
         public bool? IsUsed {get; set;}
-        public int MaterialLeft {get; set;}
-        public int CoilNumber { get; set;}
+        public int? MaterialLeft {get; set;}
+        public int? CoilNumber { get; set;}
         public string BatchNumber { get; set;}
+        public int Length { get; set; }
     }
 }
