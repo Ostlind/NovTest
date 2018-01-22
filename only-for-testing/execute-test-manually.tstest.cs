@@ -63,7 +63,7 @@ namespace Nov_Test
                     {
                         SetExtractedValue("currentLot", lot);
                         
-                      //  this.ExecuteTest("lots\\lottest.tstest.cs");
+                      // this.ExecuteTest("lots\\lottest.tstest.cs");
                         
                         var weldings = Helper.GetWeldings(lot.Name);
                         

@@ -66,3 +66,8 @@ QA
 Should we create lab group before test?
 Iterate weldings instead of lots?
 Where should produced length come from?
+
+
+---
+lot validation
+if validation is green proceed, if its yellow do the override, otherwise stop.

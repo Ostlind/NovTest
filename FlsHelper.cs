@@ -340,6 +340,28 @@ namespace Nov_Test
             }
         }
 
+        public static void SetBobbinOrderCompletedStatus(string bobbinName, bool status)
+        {
+            
+            if(string.IsNullOrWhiteSpace(bobbinName))
+            {
+                throw new ArgumentException("Bobbin name cannot be null or whitespace");
+            }
+            
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlConnection.Open();
+                
+                
+                var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = {1}", status, bobbinName);
+                
+                SqlCommand thisCommand = _sqlConnection.CreateCommand();
+
+                thisCommand.CommandText = query;
+                
+                thisCommand.ExecuteNonQuery();
+            }
+        }
 
         public static IEnumerable<Lot> GetLotsByBobbinName(string bobbinName)
         {
