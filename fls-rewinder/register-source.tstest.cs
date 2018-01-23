@@ -57,5 +57,16 @@ namespace Nov_Test
             SetExtractedValue("coilNumber",currentLot.CoilNumber);
             SetExtractedValue("lotLength" , currentLot.Length);
         }
+    
+        [CodedStep(@"radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(lotName)]")]
+        public void registersource_CodedStep1()
+        {
+            
+           var random = new Random().Next(1,12323).ToString();
+            
+            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox
+            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data["lotName"], typeof(string)))), 10, 100, false, true);
+            
+        }
     }
 }
