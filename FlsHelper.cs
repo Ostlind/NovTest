@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
-
-namespace Nov_Test  
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+namespace Nov_Test
 {
     public static class Helper
     {
@@ -106,6 +108,33 @@ namespace Nov_Test
             return bobbin;
         }
 
+
+        public static async Task<string> DownloadBobbinOrder(string bobbinOrderId)
+        {
+            var serverAdress = "10.40.168.77";
+            var url = string.Format("https://{0}/Af.SimaticIt.WebApi/api/SitBobbinOrdersController/StartBobbinOrder/{1}/NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1/noUser/false",serverAdress,bobbinOrderId);
+            var uri = new Uri(url);
+            string content = string.Empty;
+
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    var httpResponseMessage = await client.PostAsync(uri,null);
+
+                    if (httpResponseMessage.StatusCode == HttpStatusCode.OK)
+                    {
+                        // Do something...
+                    }
+                    
+                     content = httpResponseMessage.Content.ToString();
+                }
+                catch (OperationCanceledException) { }
+            }
+            
+            return content;
+        }
+
         public static IEnumerable<Bobbin> GetBobbins()
         {
             var query = @"SELECT [Name], [Id], [BobbinOrderId] FROM [TestDataDb].[dbo].[Bobbins]";
@@ -114,7 +143,7 @@ namespace Nov_Test
 
             using (_sqlConnection = new SqlConnection(ConnectionString))
             {
-                SqlConnection.Open();
+                _sqlConnection.Open();
 
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();
 
@@ -352,23 +381,23 @@ namespace Nov_Test
 
         public static void SetBobbinOrderCompletedStatus(string bobbinName, bool status)
         {
-            
-            if(string.IsNullOrWhiteSpace(bobbinName))
+
+            if (string.IsNullOrWhiteSpace(bobbinName))
             {
                 throw new ArgumentException("Bobbin name cannot be null or whitespace");
             }
-            
+
             using (_sqlConnection = new SqlConnection(ConnectionString))
             {
                 _sqlConnection.Open();
-                
-                
+
+
                 var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = {1}", status, bobbinName);
-                
+
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();
 
                 thisCommand.CommandText = query;
-                
+
                 thisCommand.ExecuteNonQuery();
             }
         }
@@ -445,7 +474,7 @@ namespace Nov_Test
         public string VisualInspectorUser { get; set; }
         public string MpiUser { get; set; }
         public int CutoutLength { get; set; }
-        
+
     }
     [Serializable]
     public class Bobbin
@@ -456,7 +485,7 @@ namespace Nov_Test
 
         public IEnumerable<Lot> Lots { get; set; }
     }
-    
+
     [Serializable]
     public class BobbinOrder
     {
@@ -464,7 +493,7 @@ namespace Nov_Test
         public string Name { get; set; }
         public bool IsActive { get; set; }
     }
-    
+
     [Serializable]
     public class Lot
     {
@@ -472,10 +501,10 @@ namespace Nov_Test
         public int Id { get; set; }
         public string Name { get; set; }
         public IEnumerable<Welding> Weldings { get; set; }
-        public bool? IsUsed {get; set;}
-        public int? MaterialLeft {get; set;}
-        public int? CoilNumber { get; set;}
-        public string BatchNumber { get; set;}
+        public bool? IsUsed { get; set; }
+        public int? MaterialLeft { get; set; }
+        public int? CoilNumber { get; set; }
+        public string BatchNumber { get; set; }
         public int Length { get; set; }
     }
 }

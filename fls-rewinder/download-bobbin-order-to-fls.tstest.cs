@@ -44,14 +44,15 @@ namespace Nov_Test
 
         #endregion
         
-        // Add your test methods here...
     
-        [CodedStep(@"Click 'DownloadImage'")]
-        public void downloadbobbinordertofls_CodedStep()
+    
+        [CodedStep(@"New Coded Step")]
+        public void downloadbobbinordertofls_CodedStep1()
         {
-            // Click 'DownloadImage0'
-            Pages.PressureRewindingOverview.DownloadImage0.Click(false);
+            string bobbinOrderName = Data["Name"].ToString();
             
+            Helper.DownloadBobbinOrder(bobbinOrderName);
+        
         }
     }
 }

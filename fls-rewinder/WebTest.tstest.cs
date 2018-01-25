@@ -49,7 +49,53 @@ namespace Nov_Test
         [CodedStep(@"New Coded Step")]
         public void WebTest_CodedStep()
         {
-            var bobbins = Helper.GetBobbinsByBobbinOrderName(Data["Name"].ToString());
+            //Iterate bobbins
+
+              
+            
+        
+            
+        // 1. donwload order (get bobbinId)
+
+        // 2. login fls
+        // 3. start order
+        // 4. open mom
+        // 5. add destination bobbinId
+            // Iterate lots
+            
+            var lots = Helper.GetLotsByBobbinName(Data["Name"].ToString());
+            
+            foreach( var lot in lots)
+            {
+                this.ExecuteTest("fls-rewinder\\register-source.tstest");
+                
+            }
+                
+                // 6. add current source (lot) from list
+                // 7. check bobbind reference, does this lot belong to right bobbin?
+                // 8. load source, enter values
+                // 9. iterate weldings 
+                    // 10.check if welding has right lot id
+                    // 11. execute current welding
+                    // 12. finsih weldings
+                    // 13. Repeat step 10 if there's more weldings
+                
+            // 11. unload lot (unload lot)
+         
+            // 10. repeat step 6 until lots are finished
+         // 11. unload bobbin (destination)
+         // 12. repeat step 1. until bobbins is finished 
+         
+            
+            
+            
+            
+        
+            
+        
+            
+          // 7. get all weldings
+          // 8. 
         }
     
         [CodedStep(@"Verify 'TextContent' 'Contains' '076' on 'x076Div'")]
@@ -59,6 +105,14 @@ namespace Nov_Test
          // var test =  Manager.ActiveBrowser.Find.ByContent(ArtOfTest.Common.StringCompareType.Contains, "076");
             // Verify 'TextContent' 'Contains' '076' on 'x076Div'
             //Pages.PressureRewindingOverviev.x076Div.AssertContent().TextContent(ArtOfTest.Common.StringCompareType.Contains, "076");
+            
+        }
+    
+        [CodedStep(@"Execute test 'start-bobbin-order'")]
+        public void WebTest_CodedStep2()
+        {
+            // Execute test 'start-bobbin-order'
+            this.ExecuteTest("fls-rewinder\\start-bobbin-order.tstest");
             
         }
     }

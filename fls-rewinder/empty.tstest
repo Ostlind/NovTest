@@ -21,54 +21,11 @@
       "Telerik.TestingFramework.Controls.KendoUI, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
-      "__value": [
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "cca11dd7-8af1-4ccb-ac22-ff59b8918f7e",
-            "Description": "New Coded Step",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
-              "__value": {
-                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 1,
-            "Id": "downloadbobbinordertofls_CodedStep1",
-            "StepState": 1,
-            "ContinueOnFailure": false,
-            "StepImageKey": "download-bobbin-order-to-flsidxg05sn.mjv",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        }
-      ]
+      "__value": []
     },
     "IndependentDescriptors": [
       {
@@ -79,26 +36,27 @@
           "Page": {
             "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
             "__value": {
-              "Path": "https://10.40.168.67/RewinderOverview/Views/paview.html",
-              "Query": "?eq=KALEB1&eqPath=NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1",
+              "Path": "http://10.40.168.97/flsclient/",
+              "Query": "",
               "BaseUrl": "",
               "EquivalentUrls": [],
               "Fragment": "",
-              "Title": "Pressure Rewinding Overview",
+              "Title": "FormFlex Line System",
               "CompareMode": 2,
               "AlwaysUseTitleInCompare": false,
-              "FriendlyName": "PressureRewindingOverview"
+              "FriendlyName": "FormFlexLineSystem"
             }
           },
           "Frame": null,
           "FindInfo": null,
           "FindExpression": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
             "__value": {
-              "uniqueKey": "GkR1foc4kh+0AiXx4rWVf3j2y58=",
-              "NodeKind": 4,
-              "TechnologyType": 1,
-              "Name": "DownloadImage0",
+              "uniqueKey": "SN9n9DgL9mjubWfpTl2fAFfQVN4=",
+              "NodeKind": 5,
+              "TechnologyType": 2,
+              "Name": "WDGTextblock",
+              "ContainerName": "SilverlightApp",
               "FindExpressions": [
                 {
                   "Key": 1,
@@ -109,7 +67,39 @@
                         {
                           "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
                           "__value": {
-                            "Clause": "TagIndex=img:119"
+                            "Clause": "id=silverlightControlHost"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "tagIndex=object:0"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": [
+                        1
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": 2,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                          "__value": {
+                            "Clause": "XamlTag=textblock"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                          "__value": {
+                            "Clause": "TextContent=~$(weldingType)"
                           }
                         }
                       ],
@@ -119,20 +109,20 @@
                   }
                 }
               ],
-              "BackupSearchClause": "/html[1]/body[1]/div[2]/div[2]/nov-pa-cradle[1]/div[1]/div[1]/tr[25]/td[1]/div[1]/div[1]/div[1]/span[1]/img[1]",
+              "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/grid[1]/radcombobox[1]/grid[1]/radtogglebutton[1]/grid[1]/contentcontrol[1]/contentpresenter[1]/grid[1]/textblock[1]",
               "DataBindingExpressions": {}
             }
           },
-          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlImage",
+          "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
           "IsIndependent": true,
           "DomStateKey": "",
-          "TechnologyType": 1,
+          "TechnologyType": 2,
           "Version": 200
         }
       }
     ],
     "HtmlDescription": "",
-    "SilverlightEnabled": false,
+    "SilverlightEnabled": true,
     "IsSilverlightApp": false,
     "SilverlightAppWebUrl": "",
     "SilverlightAppLocalDirectory": "",
@@ -142,9 +132,9 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.download_bobbin_order_to_fls",
+    "TestClass": "Nov_Test.empty",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\download-bobbin-order-to-fls.resx",
+    "ResourceFilePath": "fls-rewinder\\empty.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -167,20 +157,20 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "download-bobbin-order-to-fls",
+    "Name": "empty",
     "Owner": "",
-    "Path": "fls-rewinder\\download-bobbin-order-to-fls.tstest",
+    "Path": "fls-rewinder\\empty.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "7828f4c4-ac93-4ed3-b712-c1e5d1168c61",
-    "Id": "7828f4c4-ac93-4ed3-b712-c1e5d1168c61",
+    "UniqueId": "7bf238cc-d3f7-4cfc-881a-52949625cab2",
+    "Id": "7bf238cc-d3f7-4cfc-881a-52949625cab2",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }
