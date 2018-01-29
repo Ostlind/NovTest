@@ -285,7 +285,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(Data[\"Name\"].ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n            }\r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
+                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n            }\r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -311,6 +311,87 @@
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTestna5mjgoq.xcm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "d536e669-262f-4741-b036-2345c1dc7515",
+            "Description": "Execute test 'unregister-destination'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "unregister-destination",
+                "TestPath": "fls-rewinder\\unregister-destination.tstest",
+                "TestUniqueId": "e2c437b6-5876-4333-8082-fa3fe2e88d57",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestg5yucyvc.4v2",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5443411c-b4e8-4837-a9e6-b9ed4d5fd225",
+            "Description": "New Coded Step",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var currentBobbinName = Data[\"Name\"].ToString();\r\n            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, true);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "WebTest_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTest3g5i3lyh.gvf",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -604,7 +685,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": false,
+    "InheritParentDataSource": true,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

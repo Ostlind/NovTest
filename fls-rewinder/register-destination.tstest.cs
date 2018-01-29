@@ -46,10 +46,30 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void registerdestination_CodedStep()
+        [CodedStep(@"Set Environment Variables Test")]
+        public void SetEnvironmentVariablesTest()
         {
+           var bobbin = Helper.GetBobbinsByBobbinOrderName("1731006-107").FirstOrDefault();
+            Log.WriteLine(bobbin.Name);
+          SetExtractedValue("bobbinName", bobbin.Name);
+            
+             // SetExtractedValue("bobbinLength", bobbin.len)
+        }
+    
+        
 
+    
+        [CodedStep(@"Set Environment Variables")]
+        public void registerdestination_CodedStep1()
+        {
+            
+            var bobbin = GetExtractedValue("currentBobbin") as Bobbin;
+            
+            SetExtractedValue("bobbinName", bobbin.Name);
+            
+            
+             // SetExtractedValue("bobbinLength", bobbin.len)
+        
         }
     }
 }

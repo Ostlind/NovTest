@@ -47,11 +47,11 @@ namespace Nov_Test
     
     
         [CodedStep(@"New Coded Step")]
-        public void downloadbobbinordertofls_CodedStep1()
+        public async void downloadbobbinordertofls_CodedStep1()
         {
             string bobbinOrderName = Data["Name"].ToString();
-            
-            Helper.DownloadBobbinOrder(bobbinOrderName);
+            Log.WriteLine(bobbinOrderName);
+            await Helper.DownloadBobbinOrder(bobbinOrderName);
         
         }
     }

@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
+                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            Log.WriteLine(bobbinOrderName);\r\n            await Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

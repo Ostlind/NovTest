@@ -63,10 +63,19 @@ namespace Nov_Test
         // 5. add destination bobbinId
             // Iterate lots
             
-            var lots = Helper.GetLotsByBobbinName(Data["Name"].ToString());
+            var bobbinOrderName = Data["Name"].ToString();
+            SetExtractedValue("bobbinOrderName", bobbinOrderName);
+
+            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+            SetExtractedValue("currentBobbin", currentBobbin);
+            
+            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);
             
             foreach( var lot in lots)
             {
+                
+                SetExtractedValue("currentLot", lot);
+                
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
             }
@@ -114,6 +123,21 @@ namespace Nov_Test
             // Execute test 'start-bobbin-order'
             this.ExecuteTest("fls-rewinder\\start-bobbin-order.tstest");
             
+        }
+    
+        [CodedStep(@"New Coded Step")]
+        public void WebTest_CodedStep3()
+        {
+            var currentBobbinName = Data["Name"].ToString();
+            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, true);
+        }
+    
+        [CodedStep(@"Set Environment variables")]
+        public void SetEnvironmentVariables()
+        {
+            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(Data["Name"].ToString()).FirstOrDefault();
+            
+            SetExtractedValue("bobbinName", currentBobbin.Name );
         }
     }
 }

@@ -46,8 +46,8 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void registersource_CodedStep()
+        [CodedStep(@"Set Lot Variables")]
+        public void SetLotVariables()
         {
             var currentLot = GetExtractedValue("currentLot")as Lot;
             
@@ -59,7 +59,7 @@ namespace Nov_Test
         }
     
         [CodedStep(@"radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(lotName)]")]
-        public void registersource_CodedStep1()
+        public void EnterLotName()
         {
             
            var random = new Random().Next(1,12323).ToString();
