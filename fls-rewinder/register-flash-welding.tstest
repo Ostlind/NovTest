@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "02ded452-5125-4ecc-badb-30c303af6f0e",
-            "Description": "New Coded Step",
+            "Description": "Set Environment Variables Test",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            SetExtractedValue(\"weldingType\", \"IO\");",
+                "Code": "            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(\"1731006-108\").FirstOrDefault();\r\n            var currentLot = Helper.GetLotsByBobbinName(currentBobbin.Name).FirstOrDefault();\r\n            var currentWelding = Helper.GetWeldings(currentLot.Name).FirstOrDefault();\r\n            \r\n            string text  = \"WA - Fastgøring på spole\";\r\n            string equipmentId = \"12345\";\r\n            SetExtractedValue(\"weldingType\", text );\r\n            SetExtractedValue(\"equipmentId\", equipmentId );\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "registerflashwelding_CodedStep",
+            "Id": "SetEnvironmentVariablesTest",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-flash-welding0tlwikde.3w2",
@@ -125,6 +125,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FlashWeldingRadiobutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -278,6 +279,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item108Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -371,7 +373,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "e3f51b38-24db-41a6-918f-71c0a5f30d4c",
-            "Description": "Type '12345' into Item1Textbox0",
+            "Description": "Type '12345' into Item1Textbox0 - DataDriven: [$(equipmentId)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
@@ -430,6 +432,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item1Textbox0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -505,7 +508,9 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "TypedText": "$(equipmentId)"
+                }
               }
             },
             "Enabled": true,
@@ -579,6 +584,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FORMFLEXLINESYSTEMMainview",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -712,6 +718,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Radcombobox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -804,15 +811,15 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "570048ed-58a9-4b50-bf39-01620ffe8e81",
-            "Description": "LeftClick on WATextblock",
+            "Runtime ID": "f127c428-4ffd-4139-ad8f-b9e194522a8a",
+            "Description": "LeftClick on WDGTextblock",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "23, 25, Percentage, TopLeftCorner"
+                  "__value": "51, 25, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -861,10 +868,11 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "8bbjmOArXfb380V/VMRP3dV0Gjo=",
+                          "uniqueKey": "SN9n9DgL9mjubWfpTl2fAFfQVN4=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "WATextblock",
+                          "Name": "WDGTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -907,7 +915,7 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "TextContent=^$(weldingType)"
+                                        "Clause": "TextContent=~$(weldingType)"
                                       }
                                     }
                                   ],
@@ -940,7 +948,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-flash-weldingybm1mlq3.zig",
+            "StepImageKey": "register-flash-weldingktjm5npf.whr",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1010,6 +1018,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item134Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1162,6 +1171,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item6Textbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1315,6 +1325,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock2",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1460,6 +1471,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1595,6 +1607,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,

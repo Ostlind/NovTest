@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class download_bobbin_order : BaseWebAiiTest
+    public class login_fls_rewinder : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -46,16 +46,29 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"Click 'DownloadImage'")]
-        public void downloadbobbinorder_CodedStep()
+    
+        [CodedStep(@"Set Environment Variable")]
+        public void SetEnvironmentVariable()
         {
-            Element e = Find.ById("input1");
-            
-            
-            
-            // Click 'DownloadImage'
-            Pages.PressureRewindingOverview.DownloadImage.Click(false);
+            var bobbinOrderName = Data["Name"].ToString();
+
+            SetExtractedValue("bobbinOrderName", bobbinOrderName);
             
         }
+        
+        [CodedStep(@"Set Environment Variable Test")]
+        public void SetEnvironmentVariableTest()
+        {
+            SetExtractedValue("bobbinOrderName", "1731006-108");
+            
+        }
+    
+        [CodedStep(@"New Coded Step")]
+        public void loginflsrewinder_CodedStep()
+        {
+                Log.WriteLine("executed function");            
+        }
+    
+   
     }
 }

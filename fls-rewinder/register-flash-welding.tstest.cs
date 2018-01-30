@@ -46,10 +46,29 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void registerflashwelding_CodedStep()
+        [CodedStep(@"Set Environment Variables")]
+        public void SetEnvironmentVariables()
         {
-            SetExtractedValue("weldingType", "IO");
+            var currentLot = GetExtractedValue("currentLot") as Lot;
+            var currentWelding = Helper.GetWeldings(currentLot.Name).FirstOrDefault();
+            
+            SetExtractedValue("weldingType", currentWelding.WeldingType);
+            SetExtractedValue("equipmentId", currentWelding.EquipmentId);
+            
+        }
+        
+        [CodedStep(@"Set Environment Variables Test")]
+        public void SetEnvironmentVariablesTest()
+        {
+            var currentBobbin = Helper.GetBobbinsByBobbinOrderName("1731006-108").FirstOrDefault();
+            var currentLot = Helper.GetLotsByBobbinName(currentBobbin.Name).FirstOrDefault();
+            var currentWelding = Helper.GetWeldings(currentLot.Name).FirstOrDefault();
+            
+            string text  = "WA - Fastgøring på spole";
+            string equipmentId = "12345";
+            SetExtractedValue("weldingType", text );
+            SetExtractedValue("equipmentId", equipmentId );
+            
         }
     }
 }

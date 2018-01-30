@@ -58,7 +58,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
+            "Enabled": true,
             "Order": 1,
             "Id": "",
             "StepState": 0,
@@ -72,7 +72,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "ab4ee05b-3b72-4928-8115-7cffe858d01f",
+            "Runtime ID": "5e87f3bd-2124-49f3-b819-69bef381e011",
             "Description": "Execute test 'login-fls-rewinder'",
             "CustomDescription": null,
             "Step": {
@@ -99,12 +99,12 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
+            "Enabled": true,
             "Order": 2,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestfckeinle.l1b",
+            "StepImageKey": "WebTestsawtcz5h.p5j",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -265,7 +265,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 6,
             "Id": "",
             "StepState": 0,
@@ -305,7 +305,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 7,
             "Id": "WebTest_CodedStep",
             "StepState": 1,
@@ -346,7 +346,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 8,
             "Id": "",
             "StepState": 0,
@@ -386,7 +386,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 9,
             "Id": "WebTest_CodedStep3",
             "StepState": 1,
@@ -678,7 +678,7 @@
         "DataType": 3,
         "BuiltInData": null,
         "BuiltInDocumentKey": null,
-        "TSQL": "SELECT [Name]\r\nFROM [BobbinOrders]\r\nWHERE [IsActive] = 0"
+        "TSQL": "SELECT [Name]\r\nFROM [BobbinOrders]\r\nWHERE [IsActive] = 1"
       }
     },
     "VSProperties": {},

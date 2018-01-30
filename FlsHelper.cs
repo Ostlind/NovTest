@@ -112,7 +112,7 @@ namespace Nov_Test
         public static async Task<string> DownloadBobbinOrder(string bobbinOrderId)
         {
             var serverAdress = "10.40.168.77";
-            var url = string.Format("https://{0}/Af.SimaticIt.WebApi/api/SitBobbinOrdersController/StartBobbinOrder/{1}/NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1/noUser/false",serverAdress,bobbinOrderId);
+            var url = string.Format("http://{0}/Af.SimaticIt.WebApi/api/SitBobbinOrdersController/StartBobbinOrder/{1}/NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1/noUser/false", serverAdress, bobbinOrderId);
             var uri = new Uri(url);
             string content = string.Empty;
 
@@ -126,12 +126,12 @@ namespace Nov_Test
                     {
                         // Do something...
                     }
-                    
-                     content = httpResponseMessage.Content.ToString();
+
+                    content = await httpResponseMessage.Content.ReadAsStringAsync();
                 }
                 catch (OperationCanceledException) { }
             }
-            
+
             return content;
         }
 
@@ -268,7 +268,10 @@ namespace Nov_Test
             try
             {
 
-                GetBobbinsByBobbinOrderName("D_12345678-001");
+                //GetBobbinsByBobbinOrderName("D_12345678-001");
+
+                DownloadBobbinOrder("1731006-108").GetAwaiter().GetResult();
+
 
                 //GetBobbindOrderByName("D_12345678-001");
 
