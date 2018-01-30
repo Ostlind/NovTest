@@ -139,5 +139,13 @@ namespace Nov_Test
             
             SetExtractedValue("bobbinName", currentBobbin.Name );
         }
+    
+        [CodedStep(@"New Coded Step")]
+        public void WebTest_CodedStep4()
+        {
+                        
+            var bobbinOrderName = Data["Name"].ToString();
+            SetExtractedValue("bobbinOrderName", bobbinOrderName);
+        }
     }
 }

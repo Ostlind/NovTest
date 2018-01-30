@@ -49,7 +49,13 @@ namespace Nov_Test
         [CodedStep(@"Set Lot Variables")]
         public void SetLotVariables()
         {
-            var currentLot = GetExtractedValue("currentLot")as Lot;
+            var currentLot = GetExtractedValue("currentLot") as Lot;
+            Log.WriteLine(currentLot.Name);
+            Log.WriteLine(currentLot.MaterialLeft.ToString());
+            Log.WriteLine(currentLot.BatchNumber.ToString());
+            Log.WriteLine(currentLot.CoilNumber.ToString());
+            Log.WriteLine(currentLot.Length.ToString());
+            
             
             SetExtractedValue("lotName", currentLot.Name);
             SetExtractedValue("materialLeft", currentLot.MaterialLeft);

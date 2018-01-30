@@ -202,7 +202,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentLot = GetExtractedValue(\"currentLot\")as Lot;\r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);",
+                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -849,7 +849,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "eb00e669-280e-418c-a2a2-b6941d422220",
-            "Description": "Type '1' into Item0Textbox - DataDriven: [$(batchNumber)]",
+            "Description": "Type '1' into Item0Textbox",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
@@ -970,9 +970,7 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {
-                  "TypedText": "$(batchNumber)"
-                }
+                "DataBindingExpressions": {}
               }
             },
             "Enabled": true,
@@ -2786,7 +2784,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": false,
+    "InheritParentDataSource": true,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

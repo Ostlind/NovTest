@@ -31,6 +31,46 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
+            "Runtime ID": "7535978e-9fb4-4512-ac9e-4fc2c475ba50",
+            "Description": "New Coded Step",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "WebTest_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestqduthkqe.uwp",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
             "Runtime ID": "ee4a563b-b8e3-4bc8-bca0-60f11cdb1dc6",
             "Description": "Execute test 'download-bobbin-order-to-fls'",
             "CustomDescription": null,
@@ -59,7 +99,7 @@
               }
             },
             "Enabled": true,
-            "Order": 1,
+            "Order": 2,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -100,7 +140,7 @@
               }
             },
             "Enabled": true,
-            "Order": 2,
+            "Order": 3,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -142,8 +182,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
-            "Order": 3,
+            "Enabled": true,
+            "Order": 4,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -184,7 +224,7 @@
               }
             },
             "Enabled": false,
-            "Order": 4,
+            "Order": 5,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -224,8 +264,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
-            "Order": 5,
+            "Enabled": true,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -266,7 +306,7 @@
               }
             },
             "Enabled": false,
-            "Order": 6,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -305,8 +345,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
-            "Order": 7,
+            "Enabled": true,
+            "Order": 8,
             "Id": "WebTest_CodedStep",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -346,8 +386,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
-            "Order": 8,
+            "Enabled": true,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -386,8 +426,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
-            "Order": 9,
+            "Enabled": true,
+            "Order": 10,
             "Id": "WebTest_CodedStep3",
             "StepState": 1,
             "ContinueOnFailure": false,
