@@ -78,6 +78,21 @@ namespace Nov_Test
                 
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
+                var weldings = Helper.GetWeldings(lot.Name);
+                
+                var wireAttachWelding = weldings.FirstOrDefault(w => w.IsFirstWelding);
+                
+                foreach(var currentWelding in weldings){
+                    
+                    SetExtractedValue("currentWelding", currentWelding);
+                    
+                    if(currentWelding.WeldingType == "")
+                    {
+                        this.ExecuteStep()
+                    }
+                    
+                }
+                
             }
                 
                 // 6. add current source (lot) from list

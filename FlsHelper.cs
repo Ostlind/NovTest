@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
@@ -120,7 +121,7 @@ namespace Nov_Test
             {
                 try
                 {
-                    var httpResponseMessage = await client.PostAsync(uri,null);
+                    var httpResponseMessage = await client.PostAsync(uri, null);
 
                     if (httpResponseMessage.StatusCode == HttpStatusCode.OK)
                     {
@@ -382,6 +383,17 @@ namespace Nov_Test
             }
         }
 
+        public static Welding GetFirstWelding(string lotName)
+        {
+            if(string.IsNullOrEmpty(lotName))
+            {
+                throw new ArgumentNullException("Lot name cannot be null or empty");
+            }
+
+            var firstWelding = GetWeldings(lotName).FirstOrDefault(w => w.IsFirstWelding.Value);
+
+            return firstWelding;
+        }
         public static void SetBobbinOrderCompletedStatus(string bobbinName, bool status)
         {
 
@@ -520,4 +532,4 @@ namespace Nov_Test
         public string BatchNumber { get; set; }
         public int Length { get; set; }
     }
-}
+}                     
