@@ -1,0 +1,8 @@
+CS - Coilskift
+EC - Eddy Current-fejl
+ECG - EC-nr. slebet
+WD - Wiredefekt identificeret af NOV
+WDG - Wiredefekt slebet
+SS - Sammensvejsning
+IO - Inspiceret OK
+UW - Ukurant weld

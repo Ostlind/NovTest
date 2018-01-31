@@ -78,20 +78,43 @@ namespace Nov_Test
                 
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
-                var weldings = Helper.GetWeldings(lot.Name);
+                var weldings = Helper.GetWeldings(lot.Name).ToList().OrderBy(w => w.WeldingSequenceNumber);   
                 
-                var wireAttachWelding = weldings.FirstOrDefault(w => w.IsFirstWelding);
+                          
                 
-                foreach(var currentWelding in weldings){
+                
+                foreach(var currentWelding in weldings)
+                {
                     
                     SetExtractedValue("currentWelding", currentWelding);
+
+                    SetExtractedValue("weldingName", currentWelding.Name);
+
                     
-                    if(currentWelding.WeldingType == "")
+                    if(currentWelding.WeldingType == "CU")
+                    {    
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                    }
+                
+                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == "WA")
                     {
-                        this.ExecuteStep()
+                        this.ExecuteTest("fls-rewinder\\register-wa-flash-welding.tstest");
                     }
                     
+                    
+                        
+                    this.ExecuteTest("fls-rewinder\\register-flash-welding");
+                   
+                    this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
+                   
+                    this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
+                    
+                    this.ExecuteTest("fls-rewinder\\finish-welding");
+                    
+                    
                 }
+                
+                this.ExecuteStep("fls-rewinder\\unregister-source");
                 
             }
                 

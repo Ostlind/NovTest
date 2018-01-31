@@ -206,7 +206,7 @@
     "ExcludedFiles": [],
     "InDevelopmentFiles": [],
     "DisabledTranslators": [],
-    "SkipFindExpressionSetDataDrivenWarning": false,
+    "SkipFindExpressionSetDataDrivenWarning": true,
     "BugTrackerPersistableSettings": {},
     "ActiveBugTrackers": [],
     "BugTitleMask": "{Step name} step on {Test name} test failed.",

@@ -30,7 +30,7 @@ namespace Nov_Test
 
                 var weldings = new List<Welding>();
                 //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
-                var query = string.Format(@"SELECT we.[Id], we.[Name], we.WeldingType, we.[WeldingPosition], we.[LotId] ,we.[IsFirstWelding] FROM [TestDataDb].[dbo].[Weldings] as we INNER JOIN [TestDataDb].[dbo].Lots as lot on lot.Id = we.LotId AND lot.Name = '{0}'", lotName);
+                var query = string.Format(@"SELECT we.[Id], we.[Name], we.WeldingType, we.[WeldingPosition], we.[LotId] ,we.[IsFirstWelding], we.[EquipmentId], we.[VisualInspectorUser], we.[MpiUser], we.[CutoutLength], we.[WeldingSequenceNumber] FROM [TestDataDb].[dbo].[Weldings] as we INNER JOIN [TestDataDb].[dbo].Lots as lot on lot.Id = we.LotId AND lot.Name = '{0}'", lotName);
 
                 var thisCommand = _sqlConnection.CreateCommand();
 
@@ -43,11 +43,19 @@ namespace Nov_Test
                         var newWelding = new Welding()
                         {
                             Id = (int)thisReader["Id"],
-                            LotId = (int)thisReader["LotId"],
-                            WeldingPosition = (int)thisReader["WeldingPosition"],
                             Name = thisReader["Name"].ToString(),
-                            IsFirstWelding = (bool)thisReader["IsFirstWelding"],
-                            WeldingType = thisReader["WeldingType"].ToString()
+                            WeldingType = thisReader["WeldingType"].ToString(),
+                            WeldingPosition = (int)thisReader["WeldingPosition"],
+                            LotId = (int)thisReader["LotId"],
+                            CutoutLength = (int)thisReader["CutoutLength"],
+                            IsFirstWelding = (bool?)thisReader["IsFirstWelding"],
+                            EquipmentId = (int)thisReader["EquipmentId"],
+                            VisualInspectorUser = (string)thisReader["VisualInspectorUser"],
+                            MpiUser = (string)thisReader["MpiUser"],
+                            WeldingSequenceNumber = (int)thisReader["WeldingSequenceNumber"],
+
+
+
                         };
 
                         weldings.Add(newWelding);
@@ -271,6 +279,11 @@ namespace Nov_Test
 
                 //GetBobbinsByBobbinOrderName("D_12345678-001");
 
+
+                var weldings = Helper.GetWeldings("KAL10").ToList().OrderBy(w => w.WeldingSequenceNumber);
+
+
+
                 DownloadBobbinOrder("1731006-108").GetAwaiter().GetResult();
 
 
@@ -341,7 +354,7 @@ namespace Nov_Test
                 var lotNameList = new List<Lot>();
 
                 //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
-                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length] FROM [TestDataDb].[dbo].[Lots]");
+                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length], [Comment] FROM [TestDataDb].[dbo].[Lots]");
 
                 var thisCommand = _sqlConnection.CreateCommand();
 
@@ -385,12 +398,16 @@ namespace Nov_Test
 
         public static Welding GetFirstWelding(string lotName)
         {
-            if(string.IsNullOrEmpty(lotName))
+            if (string.IsNullOrEmpty(lotName))
             {
                 throw new ArgumentNullException("Lot name cannot be null or empty");
             }
 
+
             var firstWelding = GetWeldings(lotName).FirstOrDefault(w => w.IsFirstWelding.Value);
+
+
+
 
             return firstWelding;
         }
@@ -440,7 +457,7 @@ namespace Nov_Test
                 var lotNameList = new List<Lot>();
 
                 //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
-                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length] FROM [TestDataDb].[dbo].[Lots] WHERE [BobbinId] = '{0}' ", bobbinId);
+                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber], [Length], [Comment] FROM [TestDataDb].[dbo].[Lots] WHERE [BobbinId] = '{0}' ", bobbinId);
 
                 var thisCommand = _sqlConnection.CreateCommand();
 
@@ -469,6 +486,7 @@ namespace Nov_Test
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
                             Length = lengthTemp
+
                         };
 
                         lotNameList.Add(tempLot);
@@ -499,7 +517,7 @@ namespace Nov_Test
         public string VisualInspectorUser { get; set; }
         public string MpiUser { get; set; }
         public int CutoutLength { get; set; }
-
+        public int WeldingSequenceNumber { get; set; }
     }
     [Serializable]
     public class Bobbin
@@ -531,5 +549,6 @@ namespace Nov_Test
         public int? CoilNumber { get; set; }
         public string BatchNumber { get; set; }
         public int Length { get; set; }
+        public string Comment { get; set; }
     }
-}                     
+}
