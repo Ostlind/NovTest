@@ -58,7 +58,7 @@ namespace Nov_Test
         [CodedStep(@"Set Environment Variable Test")]
         public void SetEnvironmentVariableTest()
         {
-            var currentWelding = GetExtractedValue("currentWelding") as Welding;
+            //var currentWelding = GetExtractedValue("currentWelding") as Welding;
             
             SetExtractedValue("cutOutLength", 0);
         }

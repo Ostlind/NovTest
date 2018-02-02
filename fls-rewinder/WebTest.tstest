@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);",
+                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n           var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            SetExtractedValue(\"currentBobbin\", bobbin);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -237,6 +237,45 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
+            "Runtime ID": "85c92705-2098-420d-a093-82def2db88ed",
+            "Description": "Wait for '1000' msec.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
+              "__value": {
+                "WaitTime": 1000,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTest0ybvcckk.mry",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
             "Runtime ID": "d617824a-9e8e-4507-8cba-b871d0720068",
             "Description": "Execute test 'open-mom-dialog'",
             "CustomDescription": null,
@@ -265,7 +304,7 @@
               }
             },
             "Enabled": true,
-            "Order": 6,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -306,7 +345,7 @@
               }
             },
             "Enabled": false,
-            "Order": 7,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -325,7 +364,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).ToList().OrderBy(w => w.WeldingSequenceNumber);   \r\n                \r\n                          \r\n                \r\n                \r\n                foreach(var currentWelding in weldings)\r\n                {\r\n                    \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                    \r\n                    if(currentWelding.WeldingType == \"CU\")\r\n                    {    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                        \r\n                        continue;\r\n                    }\r\n           \r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                    }\r\n           \r\n                             \r\n                    if(currentWelding.WeldingType == \"CS\")\r\n                    {    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding.tstest\");\r\n                                 \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\unregister-source.tstest\");\r\n                        \r\n                        break;\r\n                    }\r\n                }\r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                this.ExecuteStep(\"fls-rewinder\\\\unregister-source\");\r\n                \r\n            }\r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
+                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);\r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).ToList().OrderBy(w => w.WeldingSequenceNumber);   \r\n                \r\n                          \r\n                \r\n                \r\n                foreach(var currentWelding in weldings)\r\n                {\r\n                    \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                    \r\n                    if(currentWelding.WeldingType == \"CU\")\r\n                    {    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                        \r\n                        continue;\r\n                    }\r\n           \r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                    }\r\n           \r\n                             \r\n                    if(currentWelding.WeldingType == \"CS\")\r\n                    {    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding.tstest\");\r\n                                 \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\unregister-source.tstest\");\r\n                        \r\n                        break;\r\n                    }\r\n                }\r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                this.ExecuteStep(\"fls-rewinder\\\\unregister-source\");\r\n                \r\n            }\r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -346,7 +385,7 @@
               }
             },
             "Enabled": true,
-            "Order": 8,
+            "Order": 9,
             "Id": "WebTest_CodedStep",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -387,7 +426,7 @@
               }
             },
             "Enabled": true,
-            "Order": 9,
+            "Order": 10,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -427,7 +466,7 @@
               }
             },
             "Enabled": true,
-            "Order": 10,
+            "Order": 11,
             "Id": "SetBobbinOrderCompleteStatus",
             "StepState": 1,
             "ContinueOnFailure": false,

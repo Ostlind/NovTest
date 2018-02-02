@@ -372,6 +372,8 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (int)thisReader["Comment"];
+                        
 
                         var tempLot = new Lot()
                         {
@@ -382,7 +384,8 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp
+                            Length = lengthTemp,
+                            Comment = commentTemp
                         };
 
                         lotNameList.Add(tempLot);
@@ -475,6 +478,8 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (string)thisReader["Comment"];
+                        
 
                         var tempLot = new Lot()
                         {
@@ -485,7 +490,8 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp
+                            Length = lengthTemp,
+                            Comment = commentTemp
 
                         };
 

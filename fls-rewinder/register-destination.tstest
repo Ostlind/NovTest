@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "b6d6bdda-79e0-4097-bd4d-ce1d26cd42df",
-            "Description": "Set Environment Variables Test",
+            "Description": "Set Environment Variables",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "           var bobbin = Helper.GetBobbinsByBobbinOrderName(\"1731006-107\").FirstOrDefault();\r\n            Log.WriteLine(bobbin.Name);\r\n          SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            \r\n             // SetExtractedValue(\"bobbinLength\", bobbin.len)",
+                "Code": "            \r\n            var bobbin = GetExtractedValue(\"currentBobbin\") as Bobbin;\r\n            \r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            \r\n            \r\n             // SetExtractedValue(\"bobbinLength\", bobbin.len)\r\n        ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariablesTest",
+            "Id": "SetEnvironmentVariables",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-destinationsvucwfzu.dku",

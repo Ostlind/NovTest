@@ -50,11 +50,14 @@ namespace Nov_Test
         public void SetLotVariables()
         {
             var currentLot = GetExtractedValue("currentLot") as Lot;
+           
             Log.WriteLine(currentLot.Name);
             Log.WriteLine(currentLot.MaterialLeft.ToString());
             Log.WriteLine(currentLot.BatchNumber.ToString());
             Log.WriteLine(currentLot.CoilNumber.ToString());
             Log.WriteLine(currentLot.Length.ToString());
+            Log.WriteLine(currentLot.Comment.ToString());
+            
             
             
             SetExtractedValue("lotName", currentLot.Name);
@@ -62,6 +65,8 @@ namespace Nov_Test
             SetExtractedValue("batchNumber" , currentLot.BatchNumber);
             SetExtractedValue("coilNumber",currentLot.CoilNumber);
             SetExtractedValue("lotLength" , currentLot.Length);
+            SetExtractedValue("comment" , currentLot.Comment);
+            
         }
     
         [CodedStep(@"radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(lotName)]")]

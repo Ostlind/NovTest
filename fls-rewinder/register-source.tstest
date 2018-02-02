@@ -202,7 +202,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);",
+                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n           \r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            Log.WriteLine(currentLot.Comment.ToString());\r\n            \r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);\r\n            SetExtractedValue(\"comment\" , currentLot.Comment);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -849,7 +849,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "eb00e669-280e-418c-a2a2-b6941d422220",
-            "Description": "Type '1' into Item0Textbox",
+            "Description": "Type '1' into Item0Textbox - DataDriven: [$(batchNumber)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
@@ -970,7 +970,9 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "TypedText": "$(batchNumber)"
+                }
               }
             },
             "Enabled": true,
@@ -2379,7 +2381,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "8fabdab2-456d-47fd-a912-f616a0fedbd3",
-            "Description": "radwatermarktextbox: Type 'jll' into ObligatoriskKommentarMaxLængde200Radwatermarktextbox",
+            "Description": "radwatermarktextbox: Type 'jll' into ObligatoriskKommentarMaxLængde200Radwatermarktextbox - DataDriven: [$(comment)]",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
@@ -2501,7 +2503,9 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "TypedText": "$(comment)"
+                }
               }
             },
             "Enabled": true,
@@ -2784,7 +2788,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

@@ -70,7 +70,7 @@ namespace Nov_Test
             SetExtractedValue("currentBobbin", currentBobbin);
             
             var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);
-            
+            Log.WriteLine("lots count: " + lots.Count().ToString());
             foreach( var lot in lots)
             {
                 
@@ -203,7 +203,10 @@ namespace Nov_Test
         {
                         
             var bobbinOrderName = Data["Name"].ToString();
+           var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+            
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
+            SetExtractedValue("currentBobbin", bobbin);
         }
  
     }
