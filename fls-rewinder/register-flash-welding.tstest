@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "02ded452-5125-4ecc-badb-30c303af6f0e",
-            "Description": "Set Environment Variables Test",
+            "Description": "Set Environment Variables",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "\r\n\r\n            string text = \"WA - Fastgøring på spole\";\r\n            string equipmentId = \"12345\";\r\n\r\n            SetExtractedValue(\"weldingName\", text);\r\n            SetExtractedValue(\"equipmentId\", equipmentId);\r\n",
+                "Code": "            var currentWelding = GetExtractedValue(\"currenWelding\") as Welding;\r\n\r\n            SetExtractedValue(\"weldingType\", currentWelding.WeldingType);\r\n            SetExtractedValue(\"equipmentId\", currentWelding.EquipmentId);\r\n",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariablesTest",
+            "Id": "SetEnvironmentVariables",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-flash-welding0tlwikde.3w2",
@@ -912,6 +912,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "ECGECNrSlebetRadcomboboxitem",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1855,6 +1856,7 @@
               "NodeKind": 5,
               "TechnologyType": 2,
               "Name": "LabTestRadtabcontrol",
+              "ContainerName": "SilverlightApp",
               "FindExpressions": [
                 {
                   "Key": 1,
@@ -1954,6 +1956,7 @@
               "NodeKind": 5,
               "TechnologyType": 2,
               "Name": "CSCoilskiftTextblock",
+              "ContainerName": "SilverlightApp",
               "FindExpressions": [
                 {
                   "Key": 1,
@@ -2047,6 +2050,7 @@
               "NodeKind": 5,
               "TechnologyType": 2,
               "Name": "ECGECNrSlebetRadcomboboxitem",
+              "ContainerName": "SilverlightApp",
               "FindExpressions": [
                 {
                   "Key": 1,

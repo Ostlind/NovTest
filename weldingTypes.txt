@@ -6,3 +6,4 @@ WDG - Wiredefekt slebet
 SS - Sammensvejsning
 IO - Inspiceret OK
 UW - Ukurant weld
+WA - Fastgøring på spole

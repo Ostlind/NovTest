@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class register_destination : BaseWebAiiTest
+    public class register_EC_welding : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -46,30 +46,10 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"Set Environment Variables Test")]
-        public void SetEnvironmentVariablesTest()
+        [CodedStep(@"New Coded Step")]
+        public void registerECwelding_CodedStep()
         {
-           var bobbin = Helper.GetBobbinsByBobbinOrderName("1731006-107").FirstOrDefault();
-            Log.WriteLine(bobbin.Name);
-          SetExtractedValue("bobbinName", bobbin.Name);
-            
-             // SetExtractedValue("bobbinLength", bobbin.len)
-        }
-    
-        
-
-    
-        [CodedStep(@"Set Environment Variables")]
-        public void SetEnvironmentVariables()
-        {
-            
-            var bobbin = GetExtractedValue("currentBobbin") as Bobbin;
-            
-            SetExtractedValue("bobbinName", bobbin.Name);
-            
-            
-             // SetExtractedValue("bobbinLength", bobbin.len)
-        
+            SetExtractedValue("name", "CS");
         }
     }
 }

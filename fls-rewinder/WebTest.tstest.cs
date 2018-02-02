@@ -94,26 +94,46 @@ namespace Nov_Test
                     if(currentWelding.WeldingType == "CU")
                     {    
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
+                   
+                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
+                    
+                        this.ExecuteTest("fls-rewinder\\finish-welding");
+                        
+                        continue;
                     }
+           
                 
                     if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == "WA")
                     {
                         this.ExecuteTest("fls-rewinder\\register-wa-flash-welding.tstest");
-                    }
-                    
-                    
                         
-                    this.ExecuteTest("fls-rewinder\\register-flash-welding");
+                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
                    
-                    this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
+                    
+                        this.ExecuteTest("fls-rewinder\\finish-welding");
+                    }
+           
+                             
+                    if(currentWelding.WeldingType == "CS")
+                    {    
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding.tstest");
+                                 
+                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
                    
-                    this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
+                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
                     
-                    this.ExecuteTest("fls-rewinder\\finish-welding");
-                    
-                    
+                        this.ExecuteTest("fls-rewinder\\finish-welding.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\unregister-source.tstest");
+                        
+                        break;
+                    }
                 }
                 
+                System.Threading.Thread.Sleep(1000);
                 this.ExecuteStep("fls-rewinder\\unregister-source");
                 
             }
@@ -163,8 +183,8 @@ namespace Nov_Test
             
         }
     
-        [CodedStep(@"New Coded Step")]
-        public void WebTest_CodedStep3()
+        [CodedStep(@"Set BobbinOrder Complete Status")]
+        public void SetBobbinOrderCompleteStatus()
         {
             var currentBobbinName = Data["Name"].ToString();
             Helper.SetBobbinOrderCompletedStatus(currentBobbinName, true);
@@ -178,12 +198,13 @@ namespace Nov_Test
             SetExtractedValue("bobbinName", currentBobbin.Name );
         }
     
-        [CodedStep(@"New Coded Step")]
-        public void WebTest_CodedStep4()
+        [CodedStep(@"Set Bobbin Name Environment Variable")]
+        public void SetBobbinNameEnvironmentVariable()
         {
                         
             var bobbinOrderName = Data["Name"].ToString();
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
         }
+ 
     }
 }

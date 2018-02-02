@@ -10,69 +10,15 @@
     "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
     "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
     "ProfilerConfigurations": {},
-    "CurrentReferences": [
-      "System",
-      "System.Core",
-      "ArtOfTest.WebAii, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
-      "ArtOfTest.WebAii.Design, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
-      "Telerik.WebAii.Controls.Html, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.WebAii.Controls.Xaml, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-    ],
+    "CurrentReferences": [],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
       "__value": [
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "443347fa-0dd3-4034-9fd7-98b1509e5f3e",
-            "Description": "Set Environment Variable",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
-              "__value": {
-                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"cutOutLength\", currentWelding.CutoutLength);",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 1,
-            "Id": "SetEnvironmentVariable",
-            "StepState": 1,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-oute5acofd4.mxs",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "6e12a59a-c7d5-461e-a41c-4987333bb28f",
-            "Description": "Click on UdklipsdetaljerRadiobutton",
+            "Runtime ID": "1a82fb29-1850-4ee7-a8da-4a122563b7f6",
+            "Description": "Click on FlashWeldingRadiobutton",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.RadioButtonSelectActionDescriptor",
@@ -121,11 +67,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "+iB+outVK4/zUvn4nzbLjftmHy0=",
+                          "uniqueKey": "j8Q57QiVSw9LCzN06VLNgmMWBQU=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "UdklipsdetaljerRadiobutton",
-                          "ContainerName": "SilverlightApp",
+                          "Name": "FlashWeldingRadiobutton0",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -162,19 +107,19 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlTag=border"
+                                        "Clause": "XamlTag=indexview"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "name=ContentInnerBorder"
+                                        "Clause": "automationid=MomIndexWindow"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlPath=/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/weldingsignview[name=UserControl]/scrollviewer[0]/border[0]/grid[0]/scrollcontentpresenter[name=ScrollContentPresenter]/grid[name=LayoutRoot]/stackpanel[0]/border[1]/grid[0]/radiobutton[0]"
+                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/weldingsignview[name=UserControl]/scrollviewer[0]/border[0]/grid[0]/scrollcontentpresenter[name=ScrollContentPresenter]/grid[name=LayoutRoot]/stackpanel[0]/border[2]/grid[0]/radiobutton[0]"
                                       }
                                     }
                                   ],
@@ -186,7 +131,7 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/grid[2]/weldingsignview[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/grid[1]/stackpanel[1]/border[2]/grid[1]/radiobutton[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/grid[2]/weldingsignview[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/grid[1]/stackpanel[1]/border[3]/grid[1]/radiobutton[1]",
                           "DataBindingExpressions": {}
                         }
                       },
@@ -205,11 +150,11 @@
               }
             },
             "Enabled": true,
-            "Order": 2,
+            "Order": 1,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outx31yth5d.x2f",
+            "StepImageKey": "register-ECG-weldingq3ozubzt.ao2",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -218,15 +163,15 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "598c78f5-9637-4dac-868b-55525ff12be2",
-            "Description": "LeftClick on Item95Grid",
+            "Runtime ID": "dede553a-553b-4f7a-b18d-4642925525a8",
+            "Description": "LeftClick on Item99Grid",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "87, 72, Percentage, TopLeftCorner"
+                  "__value": "60, 24, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -275,11 +220,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "M4VHBEPiNih8+wo0ZetPFf9Jruk=",
+                          "uniqueKey": "YMuvGk5K5j505JxEqQjFG8+Tyyo=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "Item95Grid",
-                          "ContainerName": "SilverlightApp",
+                          "Name": "Item99Grid",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -316,19 +260,19 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlTag=border"
+                                        "Clause": "XamlTag=indexview"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "name=ContentInnerBorder"
+                                        "Clause": "automationid=MomIndexWindow"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlPath=/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/editweldingview[name=UserControl]/grid[name=LayoutRoot]/grid[0]/textbox[0]/grid[name=RootElement]/border[name=Border]/grid[0]/scrollviewer[automationid=ContentElement]/border[0]/grid[0]"
+                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/editweldingview[name=UserControl]/grid[name=LayoutRoot]/grid[0]/grid[0]/textbox[0]/grid[name=RootElement]/border[name=Border]/grid[0]/scrollviewer[automationid=ContentElement]/border[0]/grid[0]"
                                       }
                                     }
                                   ],
@@ -340,7 +284,7 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/textbox[1]/grid[1]/border[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/grid[1]/textbox[1]/grid[1]/border[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]",
                           "DataBindingExpressions": {}
                         }
                       },
@@ -359,11 +303,11 @@
               }
             },
             "Enabled": true,
-            "Order": 3,
+            "Order": 2,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outfgvbvpjf.q5j",
+            "StepImageKey": "register-ECG-weldingxwhexqdn.k12",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -372,16 +316,16 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "98c09797-225a-442c-9e00-06133ca2dfa1",
-            "Description": "Type '100' into Item0Textbox1 - DataDriven: [$(cutOutLength)]",
+            "Runtime ID": "3ebbbef4-7adf-43f7-ae11-25543cd5f217",
+            "Description": "Type '12345' into Item1Textbox1",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
                 "SimulateRealTyping": true,
                 "SimulateRealUser": true,
-                "TypedText": "100",
-                "RecordedTextContent": "100",
+                "TypedText": "12345",
+                "RecordedTextContent": "12345",
                 "TimeBetweenKeypresses": 10,
                 "KeyHoldTime": 100,
                 "FireKeyEvents": false,
@@ -428,11 +372,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "694EmKf1kGYo/7Rpbd3sr2UTWrs=",
+                          "uniqueKey": "i7KNS0C1hkGV8wZUX1eGzVB1G78=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "Item0Textbox1",
-                          "ContainerName": "SilverlightApp",
+                          "Name": "Item1Textbox1",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -469,19 +412,19 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlTag=border"
+                                        "Clause": "XamlTag=indexview"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "name=ContentInnerBorder"
+                                        "Clause": "automationid=MomIndexWindow"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlPath=/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/editweldingview[name=UserControl]/grid[name=LayoutRoot]/grid[0]/textbox[0]"
+                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/editweldingview[name=UserControl]/grid[name=LayoutRoot]/grid[0]/grid[0]/textbox[0]"
                                       }
                                     }
                                   ],
@@ -493,7 +436,7 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/textbox[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/grid[1]/textbox[1]",
                           "DataBindingExpressions": {}
                         }
                       },
@@ -508,17 +451,15 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {
-                  "TypedText": "$(cutOutLength)"
-                }
+                "DataBindingExpressions": {}
               }
             },
             "Enabled": true,
-            "Order": 4,
+            "Order": 3,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outdeiqm5vq.e2l",
+            "StepImageKey": "register-ECG-weldingvzvxfns5.r5t",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -527,7 +468,434 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "d3d9c85f-0daf-4a29-a070-884dcf5097c3",
+            "Runtime ID": "bc024934-6445-4cd5-aaaa-b937e7202464",
+            "Description": "Press Tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
+              "__value": {
+                "SimulateRealUser": true,
+                "KeyCode": 9,
+                "RepeatCount": 1,
+                "HoldTime": 10,
+                "DelayBetweenRepitions": 50,
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {
+                  "TargetKey1": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TargetKey1",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "FormFlex Line System",
+                          "CompareMode": 2,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "FormFlexLineSystem"
+                        }
+                      },
+                      "Frame": null,
+                      "FindInfo": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "F6H/i6VmfXR/sW6MVHE1nMwk8TI=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "FORMFLEXLINESYSTEMMainview",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "id=silverlightControlHost"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlPath="
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/mainview[1]",
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.UserControl",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 2,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "register-ECG-weldingc4mvc3k3.lf5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "fedd9a1a-41c5-4dcb-b80a-0181db595350",
+            "Description": "radcombobox: drop down 'Open' action.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.WebAii.Design.Translators.Xaml.ComboBox.ComboToggleDropDownAction",
+              "__value": {
+                "ActionType": 0,
+                "ControlKey": "radcombobox",
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "SimulateRealUser": true,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {
+                  "radcombobox": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "radcombobox",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "FormFlex Line System",
+                          "CompareMode": 2,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "FormFlexLineSystem"
+                        }
+                      },
+                      "Frame": null,
+                      "FindInfo": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "CoiWId6oy277CEJ/BK7nh2nD/Uo=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "CSCoilskiftRadcombobox",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "id=silverlightControlHost"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlTag=indexview"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "automationid=MomIndexWindow"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlPath=/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[1]/radtabcontrol[0]/grid[0]/raddockpanel[0]/border[name=ContentBorder]/grid[0]/contentpresenter[name=ContentElement]/grid[0]/editweldingview[name=UserControl]/grid[name=LayoutRoot]/grid[0]/grid[0]/radcombobox[0]"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    2
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/grid[1]/radcombobox[1]",
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadComboBox",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 2,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "register-ECG-weldingpuoddbfw.r3w",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "82dcf45d-8a35-4bc7-99ca-782da75f3a5b",
+            "Description": "LeftClick on ECGECNrTextblock",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
+              "__value": {
+                "ClickPoint": {
+                  "__type": "ArtOfTest.Common.Design.ActionPoint",
+                  "__value": "72, 75, Percentage, TopLeftCorner"
+                },
+                "UseOffset": true,
+                "Button": 1048576,
+                "SimulateRealUser": true,
+                "ModiferKeysCode": 0,
+                "IsDoubleClick": false,
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {
+                  "TargetKey1": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TargetKey1",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "FormFlex Line System",
+                          "CompareMode": 2,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "FormFlexLineSystem"
+                        }
+                      },
+                      "Frame": null,
+                      "FindInfo": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "LXXBtW2p7/u7xzTivP4QfphQGqw=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "ECGECNrTextblock",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "id=silverlightControlHost"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "TextContent=^ECG - EC-nr. sl"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlTag=textblock"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[2]/radtabcontrol[1]/grid[1]/raddockpanel[1]/border[1]/grid[1]/contentpresenter[1]/grid[1]/editweldingview[1]/grid[1]/grid[1]/grid[1]/radcombobox[1]/grid[1]/popup[1]/grid[1]/border[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/itemspresenter[1]/stackpanel[1]/radcomboboxitem[3]/border[1]/grid[1]/contentpresenter[1]/grid[1]/textblock[1]",
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 2,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "register-ECG-weldingrhjpi4ge.bao",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "463dc241-2940-430a-a57d-19c43a4c8fcb",
             "Description": "Click GEMOGSIGNERButton",
             "CustomDescription": null,
             "Step": {
@@ -535,7 +903,7 @@
               "__value": {
                 "Offset": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "46, 26, Pixel, TopLeftCorner"
+                  "__value": "59, 5, Pixel, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "SimulateRealUser": true,
@@ -585,7 +953,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERButton",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -665,11 +1032,11 @@
               }
             },
             "Enabled": true,
-            "Order": 5,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outz5n00qdq.etp",
+            "StepImageKey": "register-ECG-welding0t2wb3ew.ngi",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -678,18 +1045,21 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "a66b76ce-25a6-434c-91fc-e6311ec05d2d",
-            "Description": "Click OKRadbutton",
+            "Runtime ID": "1b1411eb-af07-4154-8320-8c68b654eb6c",
+            "Description": "radwatermarktextbox: Type 'a05' into OperatørmedarbejdernrRadwatermarktextbox",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.ButtonActionDescriptor",
+              "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
-                "Offset": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "31, 10, Pixel, TopLeftCorner"
-                },
-                "UseOffset": true,
+                "ControlKey": "radwatermarktextbox",
+                "SimulateRealTyping": true,
                 "SimulateRealUser": true,
+                "TypedText": "a05",
+                "RecordedTextContent": "",
+                "TimeBetweenKeypresses": 10,
+                "KeyHoldTime": 100,
+                "FireKeyEvents": false,
+                "ClearCurrentText": true,
                 "TechnologyType": 6,
                 "WaitForNoMotion": true,
                 "WaitForNoMotionCheckInterval": 500,
@@ -732,157 +1102,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "jyn5nJwQGirpJ+d/6FrYIi5FeCk=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "OKRadbutton",
-                          "ContainerName": "SilverlightApp",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "AutomationId=OK"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=radbutton"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/radwindow[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/radconfirm[1]/grid[1]/stackpanel[1]/radbutton[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadButton",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 6,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outtle4rd0n.0ve",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "56ee79e4-3d16-4c8a-869b-90be29135bab",
-            "Description": "radwatermarktextbox: Type 'a05' into OperatørmedarbejdernrRadwatermarktextbox",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
-              "__value": {
-                "ControlKey": "radwatermarktextbox",
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
-                "TypedText": "a05",
-                "RecordedTextContent": "",
-                "TimeBetweenKeypresses": 10,
-                "KeyHoldTime": 100,
-                "FireKeyEvents": false,
-                "ClearCurrentText": true,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": true,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
                           "uniqueKey": "X6Gr43+ZjLYChhPygp+SmQAbJLo=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -948,11 +1171,11 @@
               }
             },
             "Enabled": true,
-            "Order": 7,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outyymlkmkv.pke",
+            "StepImageKey": "register-ECG-welding2xp12djq.gms",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -961,7 +1184,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "6ee68299-8074-4790-9421-190d38f49da1",
+            "Runtime ID": "bad6e536-160e-439b-a626-950b4fac3396",
             "Description": "Click OKButton",
             "CustomDescription": null,
             "Step": {
@@ -969,7 +1192,7 @@
               "__value": {
                 "Offset": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "10, 16, Pixel, TopLeftCorner"
+                  "__value": "53, 13, Pixel, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "SimulateRealUser": true,
@@ -1019,7 +1242,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1085,11 +1307,11 @@
               }
             },
             "Enabled": true,
-            "Order": 8,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-cut-outqsajkdw1.lli",
+            "StepImageKey": "register-ECG-weldingcm2qn4vd.nly",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1109,10 +1331,10 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.register_cut_out",
+    "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\register-cut-out.resx",
-    "HasCodeBehind": true,
+    "ResourceFilePath": "fls-rewinder\\weldings\\register-ECG-welding.resx",
+    "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
       "__value": {
@@ -1134,20 +1356,20 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "register-cut-out",
+    "Name": "register-ECG-welding",
     "Owner": "",
-    "Path": "fls-rewinder\\register-cut-out.tstest",
+    "Path": "fls-rewinder\\weldings\\register-ECG-welding.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "a68447d9-7ace-47d8-9083-194310b382c5",
-    "Id": "a68447d9-7ace-47d8-9083-194310b382c5",
+    "UniqueId": "1fe013cc-5f53-47b7-99ad-44acb411cecb",
+    "Id": "1fe013cc-5f53-47b7-99ad-44acb411cecb",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }
