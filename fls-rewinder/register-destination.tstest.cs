@@ -49,11 +49,10 @@ namespace Nov_Test
         [CodedStep(@"Set Environment Variables Test")]
         public void SetEnvironmentVariablesTest()
         {
-           var bobbin = Helper.GetBobbinsByBobbinOrderName("1731006-107").FirstOrDefault();
+           var bobbin = Helper.GetBobbinsByBobbinOrderName("1731006-125").FirstOrDefault();
             Log.WriteLine(bobbin.Name);
           SetExtractedValue("bobbinName", bobbin.Name);
             
-             // SetExtractedValue("bobbinLength", bobbin.len)
         }
     
         
@@ -68,7 +67,6 @@ namespace Nov_Test
             SetExtractedValue("bobbinName", bobbin.Name);
             
             
-             // SetExtractedValue("bobbinLength", bobbin.len)
         
         }
     }

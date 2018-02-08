@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "cca11dd7-8af1-4ccb-ac22-ff59b8918f7e",
-            "Description": "New Coded Step",
+            "Description": "Download Bobbin Order Test",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            Log.WriteLine(bobbinOrderName);\r\n            await Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
+                "Code": "            await Helper.DownloadBobbinOrder(\"1731006-125\");\r\n        ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "downloadbobbinordertofls_CodedStep1",
+            "Id": "DownloadBobbinOrderTest",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "download-bobbin-order-to-flsidxg05sn.mjv",
@@ -206,7 +206,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

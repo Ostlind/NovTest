@@ -69,8 +69,11 @@ namespace Nov_Test
             var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
             SetExtractedValue("currentBobbin", currentBobbin);
             
-            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name);
+            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();
+            
+            
             Log.WriteLine("lots count: " + lots.Count().ToString());
+            
             foreach( var lot in lots)
             {
                 
@@ -78,20 +81,20 @@ namespace Nov_Test
                 
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
-                var weldings = Helper.GetWeldings(lot.Name).ToList().OrderBy(w => w.WeldingSequenceNumber);   
-                
-                          
-                
+                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
                 
                 foreach(var currentWelding in weldings)
                 {
+                    Log.WriteLine("Processing welding: " + currentWelding.Name);
                     
+                    System.Threading.Thread.Sleep(1000);
+              
                     SetExtractedValue("currentWelding", currentWelding);
 
                     SetExtractedValue("weldingName", currentWelding.Name);
 
                     
-                    if(currentWelding.WeldingType == "CU")
+                    /*if(currentWelding.WeldingType == "CO")
                     {    
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
@@ -102,23 +105,25 @@ namespace Nov_Test
                         this.ExecuteTest("fls-rewinder\\finish-welding");
                         
                         continue;
-                    }
+                    }*/
            
                 
                     if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == "WA")
                     {
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
                         this.ExecuteTest("fls-rewinder\\register-wa-flash-welding.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
-                   
-                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
+      
                     
                         this.ExecuteTest("fls-rewinder\\finish-welding");
                     }
            
                              
-                    if(currentWelding.WeldingType == "CS")
-                    {    
+            /*        if(currentWelding.WeldingType == "CS")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
                         this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding.tstest");
                                  
                         this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
@@ -131,12 +136,16 @@ namespace Nov_Test
                         
                         break;
                     }
-                }
+                */} 
                 
                 System.Threading.Thread.Sleep(1000);
-                this.ExecuteStep("fls-rewinder\\unregister-source");
+             
+             this.ExecuteTest("fls-rewinder\\unregister-source-1");
                 
             }
+            
+                //this.ExecuteStep("fls-rewinder\\unregister-source");
+            
                 
                 // 6. add current source (lot) from list
                 // 7. check bobbind reference, does this lot belong to right bobbin?
@@ -207,6 +216,8 @@ namespace Nov_Test
             
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
             SetExtractedValue("currentBobbin", bobbin);
+            SetExtractedValue("bobbinName", bobbin.Name);
+            
         }
  
     }

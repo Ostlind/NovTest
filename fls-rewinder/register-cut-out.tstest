@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "443347fa-0dd3-4034-9fd7-98b1509e5f3e",
-            "Description": "Set Environment Variable",
+            "Description": "Set Environment Variable Test",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"cutOutLength\", currentWelding.CutoutLength);",
+                "Code": "            //var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"cutOutLength\", 0);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariable",
+            "Id": "SetEnvironmentVariableTest",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-cut-oute5acofd4.mxs",
