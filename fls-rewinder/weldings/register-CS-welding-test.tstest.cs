@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+
 using ArtOfTest.Common.UnitTesting;
 using ArtOfTest.WebAii.Core;
 using ArtOfTest.WebAii.Controls.HtmlControls;
@@ -18,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class login_fls_rewinder : BaseWebAiiTest
+    public class register_CS_welding__1_ : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -45,29 +46,25 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-    
         [CodedStep(@"Set Environment Variable")]
         public void SetEnvironmentVariable()
         {
-            var bobbinOrderName = Data["Name"].ToString();
-
-            SetExtractedValue("bobbinOrderName", bobbinOrderName);
+            var currentWelding = GetExtractedValue("currentWelding") as Welding;
+            
+            var equipmentId = currentWelding.EquipmentId;
+            
+            SetExtractedValue("equipmentId",equipmentId);
+            SetExtractedValue("weldingPosition",currentWelding.WeldingPosition);
             
         }
         
+            
         [CodedStep(@"Set Environment Variable Test")]
         public void SetEnvironmentVariableTest()
         {
-            SetExtractedValue("bobbinOrderName", "1731006-127");
+            SetExtractedValue("equipmentId","12345");
+            SetExtractedValue("weldingPosition","234");
             
         }
-    
-        [CodedStep(@"New Coded Step")]
-        public void loginflsrewinder_CodedStep()
-        {
-                Log.WriteLine("executed function");            
-        }
-    
-   
     }
 }

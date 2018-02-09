@@ -317,8 +317,8 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "bf199318-c555-4d75-8023-2c40ae823633",
-            "Description": "Execute test 'empty-destination'",
+            "Runtime ID": "8484bf3a-55a8-4d6b-aabb-43fe6445cc54",
+            "Description": "Execute test 'empty-destination-1'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
@@ -326,9 +326,9 @@
                 "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
-                "TestName": "empty-destination",
-                "TestPath": "fls-rewinder\\empty-destination.tstest",
-                "TestUniqueId": "0f7258ab-a3ce-40ee-bc87-bebfe26e1e0a",
+                "TestName": "empty-destination-1",
+                "TestPath": "fls-rewinder\\empty-destination-1.tstest",
+                "TestUniqueId": "444c1980-0883-4730-be43-c8aa672d57bd",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -349,7 +349,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTest4ll0fhyl.v4h",
+            "StepImageKey": "WebTesta105mpcv.4kq",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -405,7 +405,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   \r\n                \r\n                foreach(var currentWelding in weldings)\r\n                {\r\n                    Log.WriteLine(\"Processing welding: \" + currentWelding.Name);\r\n                    \r\n                    System.Threading.Thread.Sleep(1000);\r\n              \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                    \r\n                    /*if(currentWelding.WeldingType == \"CO\")\r\n                    {    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                        \r\n                        continue;\r\n                    }*/\r\n           \r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n      \r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding\");\r\n                    }\r\n           \r\n                             \r\n            /*        if(currentWelding.WeldingType == \"CS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding.tstest\");\r\n                                 \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-visual-test.tstest\");\r\n                   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-mpi.tstest\");\r\n                    \r\n                        this.ExecuteTest(\"fls-rewinder\\\\finish-welding.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\unregister-source.tstest\");\r\n                        \r\n                        break;\r\n                    }\r\n                */} \r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n             \r\n             this.ExecuteTest(\"fls-rewinder\\\\unregister-source-1\");\r\n                \r\n            }\r\n            \r\n                //this.ExecuteStep(\"fls-rewinder\\\\unregister-source\");\r\n            \r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
+                "Code": "            //Iterate bobbins\r\n\r\n              \r\n            \r\n        \r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   \r\n                \r\n                foreach(var currentWelding in weldings)\r\n                {\r\n                    Log.WriteLine(\"Processing welding: \" + currentWelding.Name);\r\n                    \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                  \r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n                        continue;\r\n                        \r\n                    }\r\n                             \r\n                   if(currentWelding.WeldingType == \"CS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding-test.tstest\");\r\n                                 \r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\unregister-source-1\");\r\n                        \r\n                        break;\r\n                    }\r\n                } \r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                \r\n            }\r\n            \r\n                //this.ExecuteStep(\"fls-rewinder\\\\unregister-source\");\r\n            \r\n                \r\n                // 6. add current source (lot) from list\r\n                // 7. check bobbind reference, does this lot belong to right bobbin?\r\n                // 8. load source, enter values\r\n                // 9. iterate weldings \r\n                    // 10.check if welding has right lot id\r\n                    // 11. execute current welding\r\n                    // 12. finsih weldings\r\n                    // 13. Repeat step 10 if there's more weldings\r\n                \r\n            // 11. unload lot (unload lot)\r\n         \r\n            // 10. repeat step 6 until lots are finished\r\n         // 11. unload bobbin (destination)\r\n         // 12. repeat step 1. until bobbins is finished \r\n         \r\n            \r\n            \r\n            \r\n            \r\n        \r\n            \r\n        \r\n            \r\n          // 7. get all weldings\r\n          // 8. ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -512,160 +512,6 @@
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTest3g5i3lyh.gvf",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "0ff6048c-0d26-4a76-9335-e9d0caa2435b",
-            "Description": "LeftClick on Item0Textboxview",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
-              "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "10, 36, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "SJVt8eozDiu5wq7AwvC3HsTRBU8=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "Item0Textboxview",
-                          "ContainerName": "SilverlightApp",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=scrollcontentpresenter"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "name=ScrollContentPresenter"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/textboxview[0]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/mainview[1]/grid[1]/grid[2]/formscontentcontrol[1]/grid[1]/loginmainview[1]/grid[1]/loginview[1]/grid[1]/grid[1]/textbox[1]/grid[1]/border[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]/scrollcontentpresenter[1]/textboxview[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.FrameworkElement",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 13,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTesttyqbamvq.yal",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

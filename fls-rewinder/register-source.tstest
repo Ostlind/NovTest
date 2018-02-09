@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "5e769b8c-ebb4-4dcc-9b09-5f161f80f50d",
-            "Description": "Set Lot Variables Test",
+            "Description": "Set Lot Variables",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            /*var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n           \r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            Log.WriteLine(currentLot.Comment.ToString());\r\n            \r\n            \r\n            */\r\n            SetExtractedValue(\"lotName\", \"test-lot-name\");\r\n            SetExtractedValue(\"materialLeft\", \"0\");\r\n            SetExtractedValue(\"batchNumber\" , \"1516\");\r\n            SetExtractedValue(\"coilNumber\",\"1\");\r\n            SetExtractedValue(\"lotLength\" , \"2000\");\r\n            SetExtractedValue(\"comment\" , \"this i a test comment\");\r\n            ",
+                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n           \r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            Log.WriteLine(currentLot.Comment.ToString());\r\n            \r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);\r\n            SetExtractedValue(\"comment\" , currentLot.Comment);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetLotVariablesTest",
+            "Id": "SetLotVariables",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-sourcektvmw52a.crd",
@@ -688,7 +688,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
+                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(false, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

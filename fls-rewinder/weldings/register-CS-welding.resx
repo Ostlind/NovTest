@@ -5749,4 +5749,8 @@
         AK+pf/QzXtMninSJQA2rWHHpOv8AjXh2tX1q+u6g6XMLK1zIQQ4II3Gt4RcY2ZyV5qUro//ZCw==
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="register-CS-weldingtdd3xktr.yr5" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
 </root>

@@ -87,26 +87,11 @@ namespace Nov_Test
                 {
                     Log.WriteLine("Processing welding: " + currentWelding.Name);
                     
-                    System.Threading.Thread.Sleep(1000);
-              
                     SetExtractedValue("currentWelding", currentWelding);
 
                     SetExtractedValue("weldingName", currentWelding.Name);
 
-                    
-                    /*if(currentWelding.WeldingType == "CO")
-                    {    
-                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
-                        
-                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
-                   
-                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
-                    
-                        this.ExecuteTest("fls-rewinder\\finish-welding");
-                        
-                        continue;
-                    }*/
-           
+                  
                 
                     if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == "WA")
                     {
@@ -114,33 +99,24 @@ namespace Nov_Test
                         
                         this.ExecuteTest("fls-rewinder\\register-wa-flash-welding.tstest");
                         
-      
-                    
-                        this.ExecuteTest("fls-rewinder\\finish-welding");
+                        continue;
+                        
                     }
-           
                              
-            /*        if(currentWelding.WeldingType == "CS")
+                   if(currentWelding.WeldingType == "CS")
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding-test.tstest");
                                  
-                        this.ExecuteTest("fls-rewinder\\register-visual-test.tstest");
-                   
-                        this.ExecuteTest("fls-rewinder\\register-mpi.tstest");
-                    
-                        this.ExecuteTest("fls-rewinder\\finish-welding.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\unregister-source.tstest");
+                        this.ExecuteTest("fls-rewinder\\unregister-source-1");
                         
                         break;
                     }
-                */} 
+                } 
                 
                 System.Threading.Thread.Sleep(1000);
-             
-             this.ExecuteTest("fls-rewinder\\unregister-source-1");
                 
             }
             

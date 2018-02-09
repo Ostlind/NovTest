@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "deffb836-a853-42d9-96d1-00d44a413100",
-            "Description": "Set Environment Variables Test",
+            "Description": "Set Environment Variables",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n            //var currentLot = Helper.GetLotByName(\"coil-test-demo-01\");\r\n            SetExtractedValue(\"equipmentId\", \"12345\");\r\n            SetExtractedValue(\"weldingPosition\", \"0\");\r\n            ",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            SetExtractedValue(\"equipmentId\", currentWelding.EquipmentId);\r\n            SetExtractedValue(\"weldingPosition\", currentWelding.WeldingPosition.ToString());\r\n            \r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariablesTest",
+            "Id": "SetEnvironmentVariables",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-wa-flash-weldingkfufzas1.cih",
@@ -125,6 +125,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FlashWeldingRadiobutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -278,6 +279,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item108Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -430,6 +432,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item1Textbox0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -580,6 +583,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Radcombobox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -733,6 +737,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "WATextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -878,6 +883,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock2",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1023,6 +1029,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1159,6 +1166,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1291,6 +1299,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SvejsningAfsluttetRadiobutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1444,6 +1453,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item120Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1596,6 +1606,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item5Textbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1749,6 +1760,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock3",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1902,6 +1914,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item20Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -2041,6 +2054,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -2177,6 +2191,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -2291,7 +2306,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": false,
+    "InheritParentDataSource": true,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,
