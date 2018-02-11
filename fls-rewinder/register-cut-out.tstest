@@ -822,16 +822,15 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "56ee79e4-3d16-4c8a-869b-90be29135bab",
-            "Description": "radwatermarktextbox: Type 'a05' into OperatørmedarbejdernrRadwatermarktextbox",
+            "Description": "radwatermarktextbox: Set text contents of OperatørmedarbejdernrRadwatermarktextbox to 'a05'",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "a05",
-                "RecordedTextContent": "",
+                "RecordedTextContent": "a05",
                 "TimeBetweenKeypresses": 10,
                 "KeyHoldTime": 100,
                 "FireKeyEvents": false,

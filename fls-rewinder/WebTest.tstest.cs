@@ -110,7 +110,7 @@ namespace Nov_Test
                         this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding-test.tstest");
                                  
                         
-                        this.ExecuteTest("fls-rewinder\\unregister-source-1");
+                     //   this.ExecuteTest("fls-rewinder\\unregister-source-1");
                         
                         break;
                     }
