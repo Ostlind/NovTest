@@ -49,9 +49,8 @@ namespace Nov_Test
         [CodedStep(@"Set Environment Variable Test")]
         public void SetEnvironmentVariableTest()
         {
-                                                
-                                                SetExtractedValue("equipmentId","12345");
-                                                SetExtractedValue("weldingPosition","500");
+           SetExtractedValue("equipmentId","12345");
+           SetExtractedValue("weldingPosition","500");
                                                 
         }
     }

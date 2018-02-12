@@ -23,7 +23,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                                                \r\n                                                SetExtractedValue(\"equipmentId\",\"12345\");\r\n                                                SetExtractedValue(\"weldingPosition\",\"500\");\r\n                                                ",
+                "Code": "           SetExtractedValue(\"equipmentId\",\"12345\");\r\n           SetExtractedValue(\"weldingPosition\",\"500\");\r\n                                                ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -858,6 +858,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "WDGTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3173,6 +3174,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock2",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3318,6 +3320,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item20Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3456,6 +3459,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3592,6 +3596,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
