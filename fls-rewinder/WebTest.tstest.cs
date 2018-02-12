@@ -46,14 +46,10 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void WebTest_CodedStep()
+        [CodedStep(@"Process Lots")]
+        public void ProcessLots()
         {
             //Iterate bobbins
-
-              
-            
-        
             
         // 1. donwload order (get bobbinId)
 
@@ -106,7 +102,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding.tstest");
                                  
                         break;
                     }
@@ -115,7 +111,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding.tstest");
                                  
                         continue;
                     }
@@ -124,7 +120,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding.tstest");
                                  
                         continue;
                     }
@@ -133,7 +129,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding.tstest");
                                  
                         continue;
                     }
@@ -142,7 +138,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-EC-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-EC-welding.tstest");
                                  
                         continue;
                     }
@@ -151,7 +147,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-SS-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-SS-welding.tstest");
                                  
                         continue;
                     }
@@ -160,7 +156,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-IO-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-IO-welding.tstest");
                         
                         continue;
                     }
@@ -169,7 +165,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding.tstest");
                                  
                         continue;
                     }
@@ -178,7 +174,7 @@ namespace Nov_Test
                     {   
                         this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
                         
-                        this.ExecuteTest("fls-rewinder\\weldings\\register-UW-welding-test.tstest");
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-UW-welding.tstest");
                         
                         continue;
                     }

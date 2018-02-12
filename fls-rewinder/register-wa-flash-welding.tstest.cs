@@ -52,7 +52,7 @@ namespace Nov_Test
             var currentWelding = GetExtractedValue("currentWelding") as Welding;
             
             SetExtractedValue("equipmentId", currentWelding.EquipmentId);
-            SetExtractedValue("weldingPosition", currentWelding.EquipmentId);
+            SetExtractedValue("weldingPosition", currentWelding.WeldingPosition);
             
         }
         

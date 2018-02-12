@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"equipmentId\", currentWelding.EquipmentId);\r\n            SetExtractedValue(\"weldingPosition\", currentWelding.EquipmentId);\r\n            ",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"equipmentId\", currentWelding.EquipmentId);\r\n            SetExtractedValue(\"weldingPosition\", currentWelding.WeldingPosition);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -2807,7 +2807,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "bd12619d-baf8-42ef-8051-1d3d0cf68d33",
+            "Runtime ID": "30da6506-3961-4213-9a18-89e4370acea6",
             "Description": "Click on SvejsningAfsluttetRadiobutton",
             "CustomDescription": null,
             "Step": {
@@ -2944,7 +2944,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-welding2igphmj0.nj0",
+            "StepImageKey": "register-wa-flash-weldingz1g3u3ww.zly",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -2953,7 +2953,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "d3cf2bf5-1fcd-42b8-a7a3-01657a57bb57",
+            "Runtime ID": "7d604572-7e02-47ea-979b-6209744a04cf",
             "Description": "LeftClick on Item120Grid",
             "CustomDescription": null,
             "Step": {
@@ -2961,7 +2961,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "88, 68, Percentage, TopLeftCorner"
+                  "__value": "89, 44, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -3097,7 +3097,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-welding0ojoqbdv.v5p",
+            "StepImageKey": "register-wa-flash-weldingpc52lvit.myh",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -3106,8 +3106,8 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "dd1dc1a1-1a6a-4d1e-b51a-f355721157a9",
-            "Description": "Set text contents of Item5Textbox to '0' - DataDriven: [$(weldingPosistion)][$(weldingPosistion)]",
+            "Runtime ID": "9f498fe0-26f3-4922-b4d2-5c2ff1ef97b6",
+            "Description": "Set text contents of Item5Textbox to '0' - DataDriven: [$(weldingPosition)][$(weldingPosition)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
@@ -3241,8 +3241,8 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(weldingPosistion)",
-                  "RecordedTextContent": "$(weldingPosistion)"
+                  "TypedText": "$(weldingPosition)",
+                  "RecordedTextContent": "$(weldingPosition)"
                 }
               }
             },
@@ -3251,7 +3251,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-weldinggyj10nkj.ssp",
+            "StepImageKey": "register-wa-flash-weldingvrzfnqd4.rcs",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -3260,7 +3260,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "e547ddd8-dab8-4e1f-87d6-e1ccec46631c",
+            "Runtime ID": "31071d8b-c4b1-407b-b198-9374d0155368",
             "Description": "LeftClick on GEMOGSIGNERTextblock2",
             "CustomDescription": null,
             "Step": {
@@ -3268,7 +3268,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "30, 82, Percentage, TopLeftCorner"
+                  "__value": "17, 69, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -3396,7 +3396,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-weldingyco5faka.0vh",
+            "StepImageKey": "register-wa-flash-weldingbyrz2pmp.iqa",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -3405,7 +3405,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "29a03967-6566-4502-babb-971b3467d116",
+            "Runtime ID": "822803c6-0ab6-4903-bdbe-eda35c143c27",
             "Description": "radwatermarktextbox: Set text contents of OperatørmedarbejdernrRadwatermarktextbox to 'a05'",
             "CustomDescription": null,
             "Step": {
@@ -3534,7 +3534,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-weldinggvbuo3gr.ivh",
+            "StepImageKey": "register-wa-flash-weldinghl0osxho.5jo",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -3543,7 +3543,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "78bd51fa-10cb-496e-b160-bfcc06e1dfa1",
+            "Runtime ID": "3e770333-6020-439f-85bc-3a3ddfb4f7f8",
             "Description": "LeftClick on OKTextblock",
             "CustomDescription": null,
             "Step": {
@@ -3551,7 +3551,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "101, 82, Percentage, TopLeftCorner"
+                  "__value": "95, 62, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -3679,7 +3679,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-wa-flash-weldingpmbdbmq2.2eo",
+            "StepImageKey": "register-wa-flash-welding35y3qnbb.5iw",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
