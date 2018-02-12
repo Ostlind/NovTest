@@ -103,6 +103,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "StopBrugAfKildeButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -253,6 +254,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "StopBrugAfKildeButton0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -406,6 +408,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock1",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -545,6 +548,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -623,17 +627,21 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "9027c014-8e55-44f7-a8ec-f693145e6af5",
-            "Description": "Press Return",
+            "Runtime ID": "0c58d432-21a6-4ca5-9676-451bb4429a20",
+            "Description": "LeftClick on OKTextblock",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
               "__value": {
+                "ClickPoint": {
+                  "__type": "ArtOfTest.Common.Design.ActionPoint",
+                  "__value": "81, 48, Percentage, TopLeftCorner"
+                },
+                "UseOffset": true,
+                "Button": 1048576,
                 "SimulateRealUser": true,
-                "KeyCode": 13,
-                "RepeatCount": 1,
-                "HoldTime": 10,
-                "DelayBetweenRepitions": 50,
+                "ModiferKeysCode": 0,
+                "IsDoubleClick": false,
                 "TechnologyType": 6,
                 "WaitForNoMotion": true,
                 "WaitForNoMotionCheckInterval": 500,
@@ -676,10 +684,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "X6Gr43+ZjLYChhPygp+SmQAbJLo=",
+                          "uniqueKey": "9Y8TXVCMjhB7SDcPxjaC9zDOoKI=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "Name": "OKTextblock",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -716,7 +724,13 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlPath=/canvas[0]/browserwindowpresenter[0]/signview[0]/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[0]/radwatermarktextbox[0]"
+                                        "Clause": "TextContent=OK"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlTag=textblock"
                                       }
                                     }
                                   ],
@@ -726,11 +740,11 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/signview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[1]/radwatermarktextbox[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/signview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]/grid[1]/border[1]/grid[1]/contentcontrol[1]/contentpresenter[1]/contentpresenter[1]/grid[1]/textblock[1]",
                           "DataBindingExpressions": {}
                         }
                       },
-                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadWatermarkTextBox",
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
                       "IsIndependent": false,
                       "DomStateKey": "",
                       "TechnologyType": 2,
@@ -749,7 +763,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "unregister-source-1dxuaf4ve.fv0",
+            "StepImageKey": "unregister-source-1e0nlge3f.fmk",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
