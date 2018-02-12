@@ -427,7 +427,7 @@ namespace Nov_Test
                 _sqlConnection.Open();
 
 
-                var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = {1}", status, bobbinName);
+                var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = {1}", Convert.ToInt32(status), bobbinName);
 
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();
 

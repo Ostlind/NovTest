@@ -222,7 +222,7 @@ namespace Nov_Test
         public void SetBobbinOrderCompleteStatus()
         {
             var currentBobbinName = Data["Name"].ToString();
-            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, true);
+            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, false);
         }
     
         [CodedStep(@"Set Environment variables")]
