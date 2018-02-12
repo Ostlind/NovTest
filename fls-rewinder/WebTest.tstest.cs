@@ -106,7 +106,7 @@ namespace Nov_Test
                         
                         this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding.tstest");
                                  
-                        break;
+                        continue;
                     }
                     
                     if(currentWelding.WeldingType == "WDG")

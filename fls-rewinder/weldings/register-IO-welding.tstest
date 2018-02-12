@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "07de7478-eedb-4bb3-91f0-49fab5c9db89",
-            "Description": "Set Environment Variable Test",
+            "Description": "Set Environment Variable",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            SetExtractedValue(\"equipmentId\",\"12345\");\r\n            SetExtractedValue(\"weldingPosition\",\"234\");\r\n            ",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            var equipmentId = currentWelding.EquipmentId;\r\n            \r\n            SetExtractedValue(\"equipmentId\",equipmentId);\r\n            SetExtractedValue(\"weldingPosition\",currentWelding.WeldingPosition);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariableTest",
+            "Id": "SetEnvironmentVariable",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-IO-weldingavlzp5fb.ftm",

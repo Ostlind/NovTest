@@ -1411,13 +1411,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "29af2a8c-f5e0-4feb-8ba2-dae69b035ca6",
-            "Description": "Type '100' into Item2Textbox - DataDriven: [$(lotLength)][$(lotLength)]",
+            "Description": "Set text contents of Item2Textbox to '100' - DataDriven: [$(lotLength)][$(lotLength)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "100",
                 "RecordedTextContent": "100",
                 "TimeBetweenKeypresses": 10,
