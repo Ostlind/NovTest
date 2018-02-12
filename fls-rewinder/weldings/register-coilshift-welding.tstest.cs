@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class register_EC_welding : BaseWebAiiTest
+    public class register_coilshift_welding : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -46,10 +46,13 @@ namespace Nov_Test
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
-        public void registerECwelding_CodedStep()
+        [CodedStep(@"Set Environment Variable Test")]
+        public void SetEnvironmentVariableTest()
         {
-            SetExtractedValue("name", "CS");
+                                                
+                                                SetExtractedValue("equipmentId","12345");
+                                                SetExtractedValue("weldingPosition","500");
+                                                
         }
     }
 }

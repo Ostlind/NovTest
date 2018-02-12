@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "b6d6bdda-79e0-4097-bd4d-ce1d26cd42df",
-            "Description": "Set Environment Variables",
+            "Description": "Set Environment Variables Test",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n            var bobbin = GetExtractedValue(\"currentBobbin\") as Bobbin;\r\n            \r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            \r\n            \r\n        ",
+                "Code": "           var bobbin = Helper.GetBobbinsByBobbinOrderName(\"1731006-107\").FirstOrDefault();\r\n            Log.WriteLine(bobbin.Name);\r\n          SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            \r\n             // SetExtractedValue(\"bobbinLength\", bobbin.len)",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariables",
+            "Id": "SetEnvironmentVariablesTest",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-destinationsvucwfzu.dku",
@@ -537,13 +537,14 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "a88832ec-d143-4586-8388-490d4791a744",
-            "Description": "radwatermarktextbox: Set text contents of SearchTextBoxRadwatermarktextbox to '' - DataDriven: [$(bobbinName)][$(bobbinName)]",
+            "Description": "radwatermarktextbox: Type 'KAL-EA01' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(bobbinName)]",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "KAL-EA01",
                 "RecordedTextContent": "",
                 "TimeBetweenKeypresses": 10,
@@ -665,8 +666,7 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(bobbinName)",
-                  "RecordedTextContent": "$(bobbinName)"
+                  "TypedText": "$(bobbinName)"
                 }
               }
             },
@@ -1256,15 +1256,16 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "703c4748-0245-48e4-a41a-5630b32eb88f",
-            "Description": "radwatermarktextbox: Set text contents of OperatørmedarbejdernrRadwatermarktextbox to 'a05'",
+            "Description": "radwatermarktextbox: Type 'A05' into OperatørmedarbejdernrRadwatermarktextbox",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "A05",
-                "RecordedTextContent": "a05",
+                "RecordedTextContent": "",
                 "TimeBetweenKeypresses": 10,
                 "KeyHoldTime": 100,
                 "FireKeyEvents": false,
@@ -1394,18 +1395,17 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "a6b8639e-ca68-40ff-84ac-6ee322977b96",
-            "Description": "Click OKButton",
+            "Runtime ID": "7b06680c-b2cb-41cc-a13c-abb3bfafa184",
+            "Description": "Press Return",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.ButtonActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
               "__value": {
-                "Offset": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "25, 18, Pixel, TopLeftCorner"
-                },
-                "UseOffset": true,
                 "SimulateRealUser": true,
+                "KeyCode": 13,
+                "RepeatCount": 1,
+                "HoldTime": 10,
+                "DelayBetweenRepitions": 50,
                 "TechnologyType": 6,
                 "WaitForNoMotion": true,
                 "WaitForNoMotionCheckInterval": 500,
@@ -1424,10 +1424,10 @@
                   }
                 },
                 "Elements": {
-                  "target": {
+                  "TargetKey1": {
                     "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
                     "__value": {
-                      "Name": "target",
+                      "Name": "TargetKey1",
                       "Region": null,
                       "Page": {
                         "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
@@ -1448,10 +1448,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "7Nq+dn9KsqsyzNQ5LngeZ+9jjS4=",
+                          "uniqueKey": "X6Gr43+ZjLYChhPygp+SmQAbJLo=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "OKButton",
+                          "Name": "OperatørmedarbejdernrRadwatermarktextbox",
                           "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
@@ -1489,7 +1489,7 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlPath=/canvas[0]/browserwindowpresenter[0]/signview[0]/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/stackpanel[0]/button[0]"
+                                        "Clause": "XamlPath=/canvas[0]/browserwindowpresenter[0]/signview[0]/grid[name=LayoutRoot]/border[name=WindowOuterBorder]/border[name=WindowInnerBorder]/grid[0]/border[name=ContentOuterBorder]/border[name=ContentInnerBorder]/contentpresenter[name=ContentElement]/grid[0]/grid[0]/radwatermarktextbox[0]"
                                       }
                                     }
                                   ],
@@ -1499,11 +1499,11 @@
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/signview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]",
+                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/signview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/grid[1]/radwatermarktextbox[1]",
                           "DataBindingExpressions": {}
                         }
                       },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Button",
+                      "HtmlControlType": "Telerik.WebAii.Controls.Xaml.RadWatermarkTextBox",
                       "IsIndependent": false,
                       "DomStateKey": "",
                       "TechnologyType": 2,
@@ -1522,7 +1522,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-destinationlwafwl22.upf",
+            "StepImageKey": "register-destinationkfwczwdz.xqn",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1567,7 +1567,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

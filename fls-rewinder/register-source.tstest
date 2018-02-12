@@ -31,47 +31,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "5e769b8c-ebb4-4dcc-9b09-5f161f80f50d",
-            "Description": "Set Lot Variables",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
-              "__value": {
-                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n           \r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            Log.WriteLine(currentLot.Comment.ToString());\r\n            \r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);\r\n            SetExtractedValue(\"comment\" , currentLot.Comment);\r\n            ",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 1,
-            "Id": "SetLotVariables",
-            "StepState": 1,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-sourcektvmw52a.crd",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "4ea68d3c-bdbe-4baa-a6eb-81120309d784",
+            "Runtime ID": "8316787e-bd3f-442f-bbc8-ea1638ce5127",
             "Description": "Verify NyKildeButton is Enabled.",
             "CustomDescription": null,
             "Step": {
@@ -83,7 +43,7 @@
                   "__value": {
                     "Name": "IsEnabled",
                     "Index": null,
-                    "TypeName": "System.Boolean",
+                    "TypeName": "System.Nullable`1[System.Boolean]",
                     "IsAttachedProperty": false,
                     "AttachedPropertyOwner": null
                   }
@@ -223,11 +183,11 @@
               }
             },
             "Enabled": true,
-            "Order": 2,
+            "Order": 1,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-sourcem2lua30r.t0e",
+            "StepImageKey": "register-sourceswtj04op.ptd",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -236,7 +196,47 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "899e2d94-7832-4e13-b6d0-76b27c2adb56",
+            "Runtime ID": "5e769b8c-ebb4-4dcc-9b09-5f161f80f50d",
+            "Description": "Set Lot Variables",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "SetLotVariables",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "register-sourcektvmw52a.crd",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6eb6af57-8548-4eb3-95d8-959cdb84fb40",
             "Description": "LeftClick on NyKildeTextblock",
             "CustomDescription": null,
             "Step": {
@@ -244,7 +244,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "40, 69, Percentage, TopLeftCorner"
+                  "__value": "67, 55, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -373,307 +373,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "register-sourceosljeh4w.ism",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "3d28f455-4cf4-4aa9-8084-7b9fe93293f0",
-            "Description": "LeftClick on Item19Grid",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
-              "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "11, 50, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "d2Vax3270/8tSjNR4pVon01AQ1U=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "Item19Grid",
-                          "ContainerName": "SilverlightApp",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=radwatermarktextbox"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "automationid=SearchTextBox"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/grid[name=RootElement]/scrollviewer[automationid=ContentElement]/border[0]/grid[0]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/loadsourcematerialview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/validatematerial[1]/grid[1]/radwatermarktextbox[1]/grid[1]/scrollviewer[1]/border[1]/grid[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Grid",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 4,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-sourcejspwxgjz.sbd",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "161f6d7e-2434-4ec5-bb59-a47c8db9e787",
-            "Description": "LeftClick on NyKildeTextblock",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
-              "__value": {
-                "ClickPoint": {
-                  "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "54, 21, Percentage, TopLeftCorner"
-                },
-                "UseOffset": true,
-                "Button": 1048576,
-                "SimulateRealUser": true,
-                "ModiferKeysCode": 0,
-                "IsDoubleClick": false,
-                "TechnologyType": 6,
-                "WaitForNoMotion": true,
-                "WaitForNoMotionCheckInterval": 500,
-                "VirtualizingContainerOffset": 0.0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {
-                  "TargetKey1": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "TargetKey1",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://10.40.168.97/flsclient/",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "FormFlex Line System",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "FormFlexLineSystem"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "9KMMWDCk5PHETx47+t8TW0cFQdo=",
-                          "NodeKind": 5,
-                          "TechnologyType": 2,
-                          "Name": "NyKildeTextblock",
-                          "ContainerName": "SilverlightApp",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=silverlightControlHost"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagIndex=object:0"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "Key": 2,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=Ny kilde"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlTag=textblock"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]/grid[1]/border[1]/grid[1]/contentcontrol[1]/contentpresenter[1]/contentpresenter[1]/grid[1]/textblock[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 2,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 5,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-sourcehs3pf5d4.cmb",
+            "StepImageKey": "WebTesttd43j3sz.51i",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -688,7 +388,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(false, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
+                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -709,7 +409,7 @@
               }
             },
             "Enabled": true,
-            "Order": 6,
+            "Order": 4,
             "Id": "EnterLotName",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -852,7 +552,7 @@
               }
             },
             "Enabled": true,
-            "Order": 7,
+            "Order": 5,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -995,7 +695,7 @@
               }
             },
             "Enabled": true,
-            "Order": 8,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1135,7 +835,7 @@
               }
             },
             "Enabled": true,
-            "Order": 9,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1149,12 +849,13 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "eb00e669-280e-418c-a2a2-b6941d422220",
-            "Description": "Set text contents of Item0Textbox to '1' - DataDriven: [$(batchNumber)][$(batchNumber)]",
+            "Description": "Type '1' into Item0Textbox",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "1",
                 "RecordedTextContent": "1",
                 "TimeBetweenKeypresses": 10,
@@ -1269,14 +970,11 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {
-                  "TypedText": "$(batchNumber)",
-                  "RecordedTextContent": "$(batchNumber)"
-                }
+                "DataBindingExpressions": {}
               }
             },
             "Enabled": true,
-            "Order": 10,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1416,7 +1114,7 @@
               }
             },
             "Enabled": true,
-            "Order": 11,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1430,12 +1128,13 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "962fb0c7-4ef6-41eb-a94e-c6dc8873119d",
-            "Description": "Set text contents of Item1Textbox to '1234' - DataDriven: [$(coilNumber)][$(coilNumber)]",
+            "Description": "Type '1234' into Item1Textbox - DataDriven: [$(coilNumber)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "1234",
                 "RecordedTextContent": "1234",
                 "TimeBetweenKeypresses": 10,
@@ -1551,13 +1250,12 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(coilNumber)",
-                  "RecordedTextContent": "$(coilNumber)"
+                  "TypedText": "$(coilNumber)"
                 }
               }
             },
             "Enabled": true,
-            "Order": 12,
+            "Order": 10,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1697,7 +1395,7 @@
               }
             },
             "Enabled": true,
-            "Order": 13,
+            "Order": 11,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1711,12 +1409,13 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "29af2a8c-f5e0-4feb-8ba2-dae69b035ca6",
-            "Description": "Set text contents of Item2Textbox to '100' - DataDriven: [$(lotLength)][$(lotLength)]",
+            "Description": "Type '100' into Item2Textbox - DataDriven: [$(lotLength)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "100",
                 "RecordedTextContent": "100",
                 "TimeBetweenKeypresses": 10,
@@ -1832,13 +1531,12 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(lotLength)",
-                  "RecordedTextContent": "$(lotLength)"
+                  "TypedText": "$(lotLength)"
                 }
               }
             },
             "Enabled": true,
-            "Order": 14,
+            "Order": 12,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -1978,7 +1676,7 @@
               }
             },
             "Enabled": true,
-            "Order": 15,
+            "Order": 13,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2116,7 +1814,7 @@
               }
             },
             "Enabled": true,
-            "Order": 16,
+            "Order": 14,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2252,7 +1950,7 @@
               }
             },
             "Enabled": true,
-            "Order": 17,
+            "Order": 15,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2391,7 +2089,7 @@
               }
             },
             "Enabled": true,
-            "Order": 18,
+            "Order": 16,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2527,7 +2225,7 @@
               }
             },
             "Enabled": true,
-            "Order": 19,
+            "Order": 17,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2667,7 +2365,7 @@
               }
             },
             "Enabled": true,
-            "Order": 20,
+            "Order": 18,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2681,13 +2379,14 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "8fabdab2-456d-47fd-a912-f616a0fedbd3",
-            "Description": "radwatermarktextbox: Set text contents of ObligatoriskKommentarMaxLængde200Radwatermarktextbox to '' - DataDriven: [$(comment)][$(comment)]",
+            "Description": "radwatermarktextbox: Type 'jll' into ObligatoriskKommentarMaxLængde200Radwatermarktextbox",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealUser": false,
+                "SimulateRealTyping": true,
+                "SimulateRealUser": true,
                 "TypedText": "jll",
                 "RecordedTextContent": "",
                 "TimeBetweenKeypresses": 10,
@@ -2802,14 +2501,11 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {
-                  "TypedText": "$(comment)",
-                  "RecordedTextContent": "$(comment)"
-                }
+                "DataBindingExpressions": {}
               }
             },
             "Enabled": true,
-            "Order": 21,
+            "Order": 19,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -2946,7 +2642,7 @@
               }
             },
             "Enabled": true,
-            "Order": 22,
+            "Order": 20,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -3050,206 +2746,6 @@
           "TechnologyType": 2,
           "Version": 200
         }
-      },
-      {
-        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-        "__value": {
-          "Name": "$$Independent$$",
-          "Region": null,
-          "Page": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-            "__value": {
-              "Path": "http://10.40.168.97/flsclient/",
-              "Query": "",
-              "BaseUrl": "",
-              "EquivalentUrls": [],
-              "Fragment": "",
-              "Title": "FormFlex Line System",
-              "CompareMode": 2,
-              "AlwaysUseTitleInCompare": false,
-              "FriendlyName": "FormFlexLineSystem"
-            }
-          },
-          "Frame": null,
-          "FindInfo": null,
-          "FindExpression": {
-            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-            "__value": {
-              "uniqueKey": "mzw/BgpY0bc1guNprXkHEliA/Sc=",
-              "NodeKind": 5,
-              "TechnologyType": 2,
-              "Name": "NyKildeButton",
-              "ContainerName": "SilverlightApp",
-              "FindExpressions": [
-                {
-                  "Key": 1,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "id=silverlightControlHost"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "tagIndex=object:0"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": [
-                        1
-                      ]
-                    }
-                  }
-                },
-                {
-                  "Key": 2,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "XamlTag=border"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "name=ContentInnerBorder"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "XamlPath=/contentpresenter[name=ContentElement]/grid[0]/stackpanel[0]/button[0]"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": [
-                        2
-                      ]
-                    }
-                  }
-                }
-              ],
-              "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]",
-              "DataBindingExpressions": {}
-            }
-          },
-          "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Button",
-          "IsIndependent": true,
-          "DomStateKey": "",
-          "TechnologyType": 2,
-          "Version": 200
-        }
-      },
-      {
-        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-        "__value": {
-          "Name": "$$Independent$$",
-          "Region": null,
-          "Page": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-            "__value": {
-              "Path": "http://10.40.168.97/flsclient/",
-              "Query": "",
-              "BaseUrl": "",
-              "EquivalentUrls": [],
-              "Fragment": "",
-              "Title": "FormFlex Line System",
-              "CompareMode": 2,
-              "AlwaysUseTitleInCompare": false,
-              "FriendlyName": "FormFlexLineSystem"
-            }
-          },
-          "Frame": null,
-          "FindInfo": null,
-          "FindExpression": {
-            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
-            "__value": {
-              "uniqueKey": "mzw/BgpY0bc1guNprXkHEliA/Sc=",
-              "NodeKind": 5,
-              "TechnologyType": 2,
-              "Name": "NyKildeButton",
-              "ContainerName": "SilverlightApp",
-              "FindExpressions": [
-                {
-                  "Key": 1,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "id=silverlightControlHost"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "tagIndex=object:0"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": [
-                        1
-                      ]
-                    }
-                  }
-                },
-                {
-                  "Key": 2,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "XamlTag=border"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "name=ContentInnerBorder"
-                          }
-                        },
-                        {
-                          "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                          "__value": {
-                            "Clause": "XamlPath=/contentpresenter[name=ContentElement]/grid[0]/stackpanel[0]/button[0]"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": [
-                        2
-                      ]
-                    }
-                  }
-                }
-              ],
-              "BackupSearchClause": "/popup[1]/canvas[1]/browserwindowpresenter[1]/indexview[1]/grid[1]/border[1]/border[1]/grid[1]/border[1]/border[1]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]",
-              "DataBindingExpressions": {}
-            }
-          },
-          "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Button",
-          "IsIndependent": true,
-          "DomStateKey": "",
-          "TechnologyType": 2,
-          "Version": 200
-        }
       }
     ],
     "HtmlDescription": "",
@@ -3288,7 +2784,7 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": false,
+    "InheritParentDataSource": true,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,

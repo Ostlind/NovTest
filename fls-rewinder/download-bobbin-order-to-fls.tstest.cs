@@ -45,19 +45,13 @@ namespace Nov_Test
         #endregion
         
     
-                [CodedStep(@"Download Bobbin Order")]
-        public async void DownloadBobbinOrder()
+    
+        [CodedStep(@"New Coded Step")]
+        public async void downloadbobbinordertofls_CodedStep1()
         {
             string bobbinOrderName = Data["Name"].ToString();
             Log.WriteLine(bobbinOrderName);
             await Helper.DownloadBobbinOrder(bobbinOrderName);
-        
-        }
-    
-        [CodedStep(@"Download Bobbin Order Test")]
-        public async void DownloadBobbinOrderTest()
-        {
-            await Helper.DownloadBobbinOrder("1731006-134");
         
         }
     }

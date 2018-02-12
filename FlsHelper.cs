@@ -6,12 +6,6 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Telerik.TestingFramework.Controls.KendoUI;
-using Telerik.WebAii.Controls.Html;
-using Telerik.WebAii.Controls.Xaml;
-using System.Text;
-
-using ArtOfTest.WebAii.Core;
 namespace Nov_Test
 {
     public static class Helper
@@ -305,9 +299,8 @@ namespace Nov_Test
 
                 //var weldings = GetWeldings(lot.Name);
             }
-            catch
+            catch (Exception ex)
             {
-            
                 throw;
             }
         }
@@ -379,8 +372,6 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
-                        var commentTemp = (string)thisReader["Comment"];
-                        
 
                         var tempLot = new Lot()
                         {
@@ -391,8 +382,7 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp,
-                            Comment = commentTemp
+                            Length = lengthTemp
                         };
 
                         lotNameList.Add(tempLot);
@@ -485,8 +475,6 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
-                        var commentTemp = (string)thisReader["Comment"];
-                        
 
                         var tempLot = new Lot()
                         {
@@ -497,8 +485,7 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp,
-                            Comment = commentTemp
+                            Length = lengthTemp
 
                         };
 

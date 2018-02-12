@@ -19,7 +19,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class register_CS_welding__1_ : BaseWebAiiTest
+    public class register_IO_welding : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -49,22 +49,24 @@ namespace Nov_Test
         [CodedStep(@"Set Environment Variable")]
         public void SetEnvironmentVariable()
         {
-            var currentWelding = GetExtractedValue("currentWelding") as Welding;
-            
-            var equipmentId = currentWelding.EquipmentId;
-            
-            SetExtractedValue("equipmentId",equipmentId);
-            SetExtractedValue("weldingPosition",currentWelding.WeldingPosition);
-            
+                        var currentWelding = GetExtractedValue("currentWelding") as Welding;
+                        
+                        var equipmentId = currentWelding.EquipmentId;
+                        
+                        SetExtractedValue("equipmentId",equipmentId);
+                        SetExtractedValue("weldingPosition",currentWelding.WeldingPosition);
+                        
         }
         
-            
+        
+        
         [CodedStep(@"Set Environment Variable Test")]
         public void SetEnvironmentVariableTest()
         {
-            SetExtractedValue("equipmentId","12345");
-            SetExtractedValue("weldingPosition","234");
-            
+                        
+                        SetExtractedValue("equipmentId","12345");
+                        SetExtractedValue("weldingPosition","500");
+                        
         }
     }
 }

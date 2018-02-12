@@ -91,7 +91,6 @@ namespace Nov_Test
 
                     SetExtractedValue("weldingName", currentWelding.Name);
 
-                  
                 
                     if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == "WA")
                     {
@@ -109,10 +108,79 @@ namespace Nov_Test
                         
                         this.ExecuteTest("fls-rewinder\\weldings\\register-CS-welding-test.tstest");
                                  
-                        
-                     //   this.ExecuteTest("fls-rewinder\\unregister-source-1");
-                        
                         break;
+                    }
+                    
+                    if(currentWelding.WeldingType == "WDG")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding-test.tstest");
+                                 
+                        continue;
+                    }
+                    
+                    if(currentWelding.WeldingType == "WD")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding-test.tstest");
+                                 
+                        continue;
+                    }
+                    
+                    if(currentWelding.WeldingType == "ECG")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-ECG-welding-test.tstest");
+                                 
+                        continue;
+                    }
+
+                    if(currentWelding.WeldingType == "EC")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-EC-welding-test.tstest");
+                                 
+                        continue;
+                    }
+                    
+                    if(currentWelding.WeldingType == "SS")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-SS-welding-test.tstest");
+                                 
+                        continue;
+                    }
+                    
+                    if(currentWelding.WeldingType == "IO")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-IO-welding-test.tstest");
+                        
+                        continue;
+                    }
+                    
+                    if(currentWelding.WeldingType == "WD")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-WD-welding-test.tstest");
+                                 
+                        continue;
+                    }
+                                        
+                    if(currentWelding.WeldingType == "UW")
+                    {   
+                        this.ExecuteTest("fls-rewinder\\register-cut-out.tstest");
+                        
+                        this.ExecuteTest("fls-rewinder\\weldings\\register-UW-welding-test.tstest");
+                        
+                        continue;
                     }
                 } 
                 

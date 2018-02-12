@@ -20,10 +20,7 @@
       "Telerik.WebAii.Controls.Xaml.Wpf, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.TestingFramework.Controls.KendoUI, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
@@ -31,17 +28,18 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "cca11dd7-8af1-4ccb-ac22-ff59b8918f7e",
-            "Description": "New Coded Step",
+            "Runtime ID": "aaf1b967-ca91-45b8-8ea2-fbe98d690555",
+            "Description": "Execute test 'login-fls-rewinder'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            Log.WriteLine(bobbinOrderName);\r\n            await Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "login-fls-rewinder",
+                "TestPath": "fls-rewinder\\login-fls-rewinder.tstest",
+                "TestUniqueId": "5f03ed1f-d76a-4bd2-a338-90c84847a66c",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -59,10 +57,10 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "downloadbobbinordertofls_CodedStep1",
-            "StepState": 1,
+            "Id": "",
+            "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "download-bobbin-order-to-flsidxg05sn.mjv",
+            "StepImageKey": "mainTestvsirgnjs.jie",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -71,16 +69,18 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "c111bb75-b3f6-48f6-838b-f8ff42d2f0ba",
-            "Description": "Wait for '5000' msec.",
+            "Runtime ID": "120adccf-9379-48a2-8248-e49233db1b29",
+            "Description": "Execute test 'WebTest'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "WaitTime": 5000,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "WebTest",
+                "TestPath": "rewinder-overview\\WebTest.tstest",
+                "TestUniqueId": "a0981c62-7fe9-44e5-a39a-3f702d7f069e",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -101,7 +101,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "download-bobbin-order-to-flsspnjvmaz.hqs",
+            "StepImageKey": "mainTestdgm15kud.tdc",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -109,67 +109,7 @@
         }
       ]
     },
-    "IndependentDescriptors": [
-      {
-        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-        "__value": {
-          "Name": "",
-          "Region": null,
-          "Page": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-            "__value": {
-              "Path": "https://10.40.168.67/RewinderOverview/Views/paview.html",
-              "Query": "?eq=KALEB1&eqPath=NOV-KAL-SITE.NOV-PRODUCTION-AREA.KALEB1",
-              "BaseUrl": "",
-              "EquivalentUrls": [],
-              "Fragment": "",
-              "Title": "Pressure Rewinding Overview",
-              "CompareMode": 2,
-              "AlwaysUseTitleInCompare": false,
-              "FriendlyName": "PressureRewindingOverview"
-            }
-          },
-          "Frame": null,
-          "FindInfo": null,
-          "FindExpression": {
-            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-            "__value": {
-              "uniqueKey": "GkR1foc4kh+0AiXx4rWVf3j2y58=",
-              "NodeKind": 4,
-              "TechnologyType": 1,
-              "Name": "DownloadImage0",
-              "FindExpressions": [
-                {
-                  "Key": 1,
-                  "Value": {
-                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                    "__value": {
-                      "Clauses": [
-                        {
-                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                          "__value": {
-                            "Clause": "TagIndex=img:119"
-                          }
-                        }
-                      ],
-                      "Constraints": [],
-                      "ChainStops": []
-                    }
-                  }
-                }
-              ],
-              "BackupSearchClause": "/html[1]/body[1]/div[2]/div[2]/nov-pa-cradle[1]/div[1]/div[1]/tr[25]/td[1]/div[1]/div[1]/div[1]/span[1]/img[1]",
-              "DataBindingExpressions": {}
-            }
-          },
-          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlImage",
-          "IsIndependent": true,
-          "DomStateKey": "",
-          "TechnologyType": 1,
-          "Version": 200
-        }
-      }
-    ],
+    "IndependentDescriptors": [],
     "HtmlDescription": "",
     "SilverlightEnabled": false,
     "IsSilverlightApp": false,
@@ -181,10 +121,10 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.download_bobbin_order_to_fls",
+    "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\download-bobbin-order-to-fls.resx",
-    "HasCodeBehind": true,
+    "ResourceFilePath": "fls-rewinder\\mainTest.resx",
+    "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
       "__value": {
@@ -206,20 +146,20 @@
     "DeploymentItems": [],
     "IsTestFragment": false,
     "StopTestListOnFailure": false,
-    "InheritParentDataSource": true,
+    "InheritParentDataSource": false,
     "BrowserType": 0,
     "QcId": 0,
     "QcFilePath": null,
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "download-bobbin-order-to-fls",
+    "Name": "mainTest",
     "Owner": "",
-    "Path": "fls-rewinder\\download-bobbin-order-to-fls.tstest",
+    "Path": "fls-rewinder\\mainTest.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "7828f4c4-ac93-4ed3-b712-c1e5d1168c61",
-    "Id": "7828f4c4-ac93-4ed3-b712-c1e5d1168c61",
+    "UniqueId": "84ce658e-c1d5-4335-831a-9756447b2442",
+    "Id": "84ce658e-c1d5-4335-831a-9756447b2442",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

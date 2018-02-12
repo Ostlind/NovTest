@@ -29,7 +29,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\weldings\\register-coilshift-welding.resx",
+    "ResourceFilePath": "MainFlowTest.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -59,13 +59,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "register-coilshift-welding",
+    "Name": "MainFlowTest",
     "Owner": "",
-    "Path": "fls-rewinder\\weldings\\register-coilshift-welding.tstest",
+    "Path": "MainFlowTest.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "bb3ee89c-cce4-417d-9808-6779cc87aa14",
-    "Id": "bb3ee89c-cce4-417d-9808-6779cc87aa14",
+    "UniqueId": "9a8585c3-34d5-48c9-ac70-b5d2b0f7d5ed",
+    "Id": "9a8585c3-34d5-48c9-ac70-b5d2b0f7d5ed",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

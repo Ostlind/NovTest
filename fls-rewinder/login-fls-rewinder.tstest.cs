@@ -58,7 +58,7 @@ namespace Nov_Test
         [CodedStep(@"Set Environment Variable Test")]
         public void SetEnvironmentVariableTest()
         {
-            SetExtractedValue("bobbinOrderName", "1731006-127");
+            SetExtractedValue("bobbinOrderName", "1731006-108");
             
         }
     

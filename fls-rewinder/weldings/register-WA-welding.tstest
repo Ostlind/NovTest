@@ -27,7 +27,7 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "",
+    "TestClass": "Nov_Test.register_WA_welding",
     "IsManual": false,
     "ResourceFilePath": "fls-rewinder\\weldings\\register-WA-welding.resx",
     "HasCodeBehind": false,

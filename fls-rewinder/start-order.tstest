@@ -348,13 +348,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "322d85d0-73bf-4e89-8535-2f097eea59b6",
-            "Description": "Type 'a05' into EmployeeTextBoxTextbox",
+            "Description": "Set text contents of EmployeeTextBoxTextbox to 'a05'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "a05",
                 "RecordedTextContent": "a05",
                 "TimeBetweenKeypresses": 10,

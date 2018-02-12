@@ -50,14 +50,11 @@ namespace Nov_Test
         public void SetLotVariables()
         {
             var currentLot = GetExtractedValue("currentLot") as Lot;
-           
             Log.WriteLine(currentLot.Name);
             Log.WriteLine(currentLot.MaterialLeft.ToString());
             Log.WriteLine(currentLot.BatchNumber.ToString());
             Log.WriteLine(currentLot.CoilNumber.ToString());
             Log.WriteLine(currentLot.Length.ToString());
-            Log.WriteLine(currentLot.Comment.ToString());
-            
             
             
             SetExtractedValue("lotName", currentLot.Name);
@@ -65,31 +62,6 @@ namespace Nov_Test
             SetExtractedValue("batchNumber" , currentLot.BatchNumber);
             SetExtractedValue("coilNumber",currentLot.CoilNumber);
             SetExtractedValue("lotLength" , currentLot.Length);
-            SetExtractedValue("comment" , currentLot.Comment);
-            
-        }
-        
-        [CodedStep(@"Set Lot Variables Test")]
-        public void SetLotVariablesTest()
-        {
-            /*var currentLot = GetExtractedValue("currentLot") as Lot;
-           
-            Log.WriteLine(currentLot.Name);
-            Log.WriteLine(currentLot.MaterialLeft.ToString());
-            Log.WriteLine(currentLot.BatchNumber.ToString());
-            Log.WriteLine(currentLot.CoilNumber.ToString());
-            Log.WriteLine(currentLot.Length.ToString());
-            Log.WriteLine(currentLot.Comment.ToString());
-            
-            
-            */
-            SetExtractedValue("lotName", "test-lot-name");
-            SetExtractedValue("materialLeft", "0");
-            SetExtractedValue("batchNumber" , "1516");
-            SetExtractedValue("coilNumber","1");
-            SetExtractedValue("lotLength" , "2000");
-            SetExtractedValue("comment" , "this i a test comment");
-            
         }
     
         [CodedStep(@"radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(lotName)]")]
@@ -99,7 +71,7 @@ namespace Nov_Test
            var random = new Random().Next(1,12323).ToString();
             
             // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox
-            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(false, random + ((string)(System.Convert.ChangeType(Data["lotName"], typeof(string)))), 10, 100, false, true);
+            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data["lotName"], typeof(string)))), 10, 100, false, true);
             
         }
     }
