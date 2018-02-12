@@ -18,12 +18,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "c6c24e78-d96d-4aad-be5f-821420be9abc",
-            "Description": "Set Environment Variable Test",
+            "Description": "Set Environment Variable",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                                    \r\n                                    SetExtractedValue(\"equipmentId\",\"12345\");\r\n                                    SetExtractedValue(\"weldingPosition\",\"500\");\r\n                                    ",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            var equipmentId = currentWelding.EquipmentId;\r\n            \r\n            SetExtractedValue(\"equipmentId\",equipmentId);\r\n            SetExtractedValue(\"weldingPosition\",currentWelding.WeldingPosition);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -45,7 +45,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariableTest",
+            "Id": "SetEnvironmentVariable",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-SS-weldinglwk2hb5v.acj",
@@ -858,6 +858,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SSTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3173,6 +3174,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock2",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3318,6 +3320,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item20Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3456,6 +3459,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3592,6 +3596,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,

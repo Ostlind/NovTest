@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            SetExtractedValue(\"name\", \"CS\");",
+                "Code": "",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "registerECwelding_CodedStep",
+            "Id": "",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-EC-weldingdg12pndj.jio",

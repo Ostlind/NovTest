@@ -10,7 +10,21 @@
     "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
     "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
     "ProfilerConfigurations": {},
-    "CurrentReferences": [],
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+    ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
       "__value": [
@@ -18,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "25a4b885-1c11-4583-8efe-4f751a423a17",
-            "Description": "Set Environment Variable Test",
+            "Description": "Set Environment Variable",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                                    \r\n                                    SetExtractedValue(\"equipmentId\",\"12345\");\r\n                                    SetExtractedValue(\"weldingPosition\",\"500\");\r\n                                    ",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            var equipmentId = currentWelding.EquipmentId;\r\n            \r\n            SetExtractedValue(\"equipmentId\",equipmentId);\r\n            SetExtractedValue(\"weldingPosition\",currentWelding.WeldingPosition);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -45,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariableTest",
+            "Id": "SetEnvironmentVariable",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-UW-welding0lpzvhji.t5z",
@@ -858,6 +872,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "UWUkurantTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3173,6 +3188,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERTextblock2",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3318,6 +3334,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item20Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3456,6 +3473,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3592,6 +3610,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,

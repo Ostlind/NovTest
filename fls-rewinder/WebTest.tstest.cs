@@ -79,8 +79,10 @@ namespace Nov_Test
                 
                 var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
                 
-                foreach(var currentWelding in weldings)
+                foreach(var welding in weldings)
                 {
+                    var currentWelding = welding;
+                    
                     Log.WriteLine("Processing welding: " + currentWelding.Name);
                     
                     SetExtractedValue("currentWelding", currentWelding);
