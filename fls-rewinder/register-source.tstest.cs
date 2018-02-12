@@ -62,6 +62,8 @@ namespace Nov_Test
             SetExtractedValue("batchNumber" , currentLot.BatchNumber);
             SetExtractedValue("coilNumber",currentLot.CoilNumber);
             SetExtractedValue("lotLength" , currentLot.Length);
+            SetExtractedValue("comment" , currentLot.Comment);
+            
         }
     
         [CodedStep(@"radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox - DataDriven: [$(lotName)]")]
@@ -71,7 +73,7 @@ namespace Nov_Test
            var random = new Random().Next(1,12323).ToString();
             
             // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox
-            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data["lotName"], typeof(string)))), 10, 100, false, true);
+            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(false, random + ((string)(System.Convert.ChangeType(Data["lotName"], typeof(string)))), 10, 100, false, true);
             
         }
     }

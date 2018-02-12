@@ -32,7 +32,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "cca11dd7-8af1-4ccb-ac22-ff59b8918f7e",
-            "Description": "New Coded Step",
+            "Description": "Download Bobbin Order",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "downloadbobbinordertofls_CodedStep1",
+            "Id": "DownBobbinOrder",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "download-bobbin-order-to-flsidxg05sn.mjv",

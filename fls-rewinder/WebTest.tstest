@@ -112,8 +112,8 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "5e87f3bd-2124-49f3-b819-69bef381e011",
-            "Description": "Execute test 'login-fls-rewinder'",
+            "Runtime ID": "f0aefc06-869d-4472-a4e7-c06f62fc2bbe",
+            "Description": "Execute test 'login-fls-rewinder-a11'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
@@ -121,9 +121,9 @@
                 "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
-                "TestName": "login-fls-rewinder",
-                "TestPath": "fls-rewinder\\login-fls-rewinder.tstest",
-                "TestUniqueId": "5f03ed1f-d76a-4bd2-a338-90c84847a66c",
+                "TestName": "login-fls-rewinder-a11",
+                "TestPath": "fls-rewinder\\login-fls-rewinder-a11.tstest",
+                "TestUniqueId": "f3a29d30-ed13-4d4c-b274-e1304c5dfc6c",
                 "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
@@ -139,12 +139,12 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": false,
+            "Enabled": true,
             "Order": 3,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestsawtcz5h.p5j",
+            "StepImageKey": "WebTestdnofx1oi.xoo",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -223,7 +223,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 5,
             "Id": "",
             "StepState": 0,
@@ -262,7 +262,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 6,
             "Id": "",
             "StepState": 0,
@@ -303,12 +303,53 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTestpezroevc.k5c",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f4e47f8e-08e0-48bb-94c7-da5be93209b1",
+            "Description": "Execute test 'empty-bobbin'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "empty-bobbin",
+                "TestPath": "fls-rewinder\\empty-bobbin.tstest",
+                "TestUniqueId": "310c6962-5616-426e-bf69-1c506b73a609",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": false,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestbbr3mkok.tgi",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -344,8 +385,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 8,
+            "Enabled": false,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -385,7 +426,7 @@
               }
             },
             "Enabled": true,
-            "Order": 9,
+            "Order": 10,
             "Id": "WebTest_CodedStep",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -426,7 +467,7 @@
               }
             },
             "Enabled": true,
-            "Order": 10,
+            "Order": 11,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -466,11 +507,55 @@
               }
             },
             "Enabled": true,
-            "Order": 11,
+            "Order": 12,
             "Id": "SetBobbinOrderCompleteStatus",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTest3g5i3lyh.gvf",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7560ee84-9595-4600-8a00-bf8826035c99",
+            "Description": "Handle 'Confirm' dialog.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ConfirmDialogHandlerDescriptor",
+              "__value": {
+                "HandlerTimeout": 5000,
+                "DialogType": 1,
+                "HandleButton": 0,
+                "InitializationTime": 250,
+                "WaitOnElements": false,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 13,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "WebTestsgqoxfle.muz",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

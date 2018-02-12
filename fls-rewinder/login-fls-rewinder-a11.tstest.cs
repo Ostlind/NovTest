@@ -18,7 +18,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace Nov_Test
 {
 
-    public class login_fls_rewinder : BaseWebAiiTest
+    public class login_fls_rewinder_a11 : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 

@@ -373,13 +373,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "77b4752e-2d5c-45c0-97a4-3f0b8cb22468",
-            "Description": "Type '12345' into Item1Textbox0 - DataDriven: [$(equipmentId)][$(equipmentId)]",
+            "Description": "Set text contents of Item1Textbox0 to '12345' - DataDriven: [$(equipmentId)][$(equipmentId)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "12345",
                 "RecordedTextContent": "12345",
                 "TimeBetweenKeypresses": 10,
@@ -1827,16 +1826,15 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "f92cd893-2b83-4fb0-bd1b-575ed78ef07a",
-            "Description": "radwatermarktextbox: Type 'af2' into OperatørmedarbejdernrRadwatermarktextbox",
+            "Description": "radwatermarktextbox: Set text contents of OperatørmedarbejdernrRadwatermarktextbox to 'af2'",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "af2",
-                "RecordedTextContent": "",
+                "RecordedTextContent": "af2",
                 "TimeBetweenKeypresses": 10,
                 "KeyHoldTime": 100,
                 "FireKeyEvents": false,

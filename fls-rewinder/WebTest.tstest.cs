@@ -218,23 +218,7 @@ namespace Nov_Test
           // 8. 
         }
     
-        [CodedStep(@"Verify 'TextContent' 'Contains' '076' on 'x076Div'")]
-        public void WebTest_CodedStep1()
-        {
-            
-         // var test =  Manager.ActiveBrowser.Find.ByContent(ArtOfTest.Common.StringCompareType.Contains, "076");
-            // Verify 'TextContent' 'Contains' '076' on 'x076Div'
-            //Pages.PressureRewindingOverviev.x076Div.AssertContent().TextContent(ArtOfTest.Common.StringCompareType.Contains, "076");
-            
-        }
-    
-        [CodedStep(@"Execute test 'start-bobbin-order'")]
-        public void WebTest_CodedStep2()
-        {
-            // Execute test 'start-bobbin-order'
-            this.ExecuteTest("fls-rewinder\\start-bobbin-order.tstest");
-            
-        }
+
     
         [CodedStep(@"Set BobbinOrder Complete Status")]
         public void SetBobbinOrderCompleteStatus()

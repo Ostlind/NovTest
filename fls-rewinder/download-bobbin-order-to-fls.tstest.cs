@@ -46,8 +46,8 @@ namespace Nov_Test
         
     
     
-        [CodedStep(@"New Coded Step")]
-        public async void downloadbobbinordertofls_CodedStep1()
+        [CodedStep(@"Download Bobbin Order")]
+        public async void DownBobbinOrder()
         {
             string bobbinOrderName = Data["Name"].ToString();
             Log.WriteLine(bobbinOrderName);

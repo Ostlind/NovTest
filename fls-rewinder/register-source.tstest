@@ -31,6 +31,46 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
+            "Runtime ID": "5e769b8c-ebb4-4dcc-9b09-5f161f80f50d",
+            "Description": "Set Lot Variables",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);\r\n            SetExtractedValue(\"comment\" , currentLot.Comment);\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "SetLotVariables",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "register-sourcektvmw52a.crd",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
             "Runtime ID": "8316787e-bd3f-442f-bbc8-ea1638ce5127",
             "Description": "Verify NyKildeButton is Enabled.",
             "CustomDescription": null,
@@ -183,51 +223,11 @@
               }
             },
             "Enabled": true,
-            "Order": 1,
+            "Order": 2,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
             "StepImageKey": "register-sourceswtj04op.ptd",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "5e769b8c-ebb4-4dcc-9b09-5f161f80f50d",
-            "Description": "Set Lot Variables",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
-              "__value": {
-                "Code": "            var currentLot = GetExtractedValue(\"currentLot\") as Lot;\r\n            Log.WriteLine(currentLot.Name);\r\n            Log.WriteLine(currentLot.MaterialLeft.ToString());\r\n            Log.WriteLine(currentLot.BatchNumber.ToString());\r\n            Log.WriteLine(currentLot.CoilNumber.ToString());\r\n            Log.WriteLine(currentLot.Length.ToString());\r\n            \r\n            \r\n            SetExtractedValue(\"lotName\", currentLot.Name);\r\n            SetExtractedValue(\"materialLeft\", currentLot.MaterialLeft);\r\n            SetExtractedValue(\"batchNumber\" , currentLot.BatchNumber);\r\n            SetExtractedValue(\"coilNumber\",currentLot.CoilNumber);\r\n            SetExtractedValue(\"lotLength\" , currentLot.Length);",
-                "RequiresSilverlight": false,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 2,
-            "Id": "SetLotVariables",
-            "StepState": 1,
-            "ContinueOnFailure": false,
-            "StepImageKey": "register-sourcektvmw52a.crd",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -388,7 +388,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(true, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
+                "Code": "            \r\n           var random = new Random().Next(1,12323).ToString();\r\n            \r\n            // radwatermarktextbox: Type 'test-lot-02' into SearchTextBoxRadwatermarktextbox\r\n            Pages.FormFlexLineSystem.SilverlightApp.SearchTextBoxRadwatermarktextbox.SetText(false, random + ((string)(System.Convert.ChangeType(Data[\"lotName\"], typeof(string)))), 10, 100, false, true);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -849,13 +849,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "eb00e669-280e-418c-a2a2-b6941d422220",
-            "Description": "Type '1' into Item0Textbox",
+            "Description": "Set text contents of Item0Textbox to '1' - DataDriven: [$(batchNumber)][$(batchNumber)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "1",
                 "RecordedTextContent": "1",
                 "TimeBetweenKeypresses": 10,
@@ -970,7 +969,10 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "TypedText": "$(batchNumber)",
+                  "RecordedTextContent": "$(batchNumber)"
+                }
               }
             },
             "Enabled": true,
@@ -1128,13 +1130,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "962fb0c7-4ef6-41eb-a94e-c6dc8873119d",
-            "Description": "Type '1234' into Item1Textbox - DataDriven: [$(coilNumber)]",
-            "CustomDescription": null,
+            "Description": "Set text contents of Item1Textbox to '1234' - DataDriven: [$(coilNumber)][$(coilNumber)]",
+            "CustomDescription": "Set text contents of Item1Textbox to '1234' - DataDriven: [$(coilNumber)][$(coilNumber)]",
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "1234",
                 "RecordedTextContent": "1234",
                 "TimeBetweenKeypresses": 10,
@@ -1250,7 +1251,8 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(coilNumber)"
+                  "TypedText": "$(coilNumber)",
+                  "RecordedTextContent": "$(coilNumber)"
                 }
               }
             },
@@ -1409,7 +1411,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "29af2a8c-f5e0-4feb-8ba2-dae69b035ca6",
-            "Description": "Type '100' into Item2Textbox - DataDriven: [$(lotLength)]",
+            "Description": "Type '100' into Item2Textbox - DataDriven: [$(lotLength)][$(lotLength)]",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
@@ -1531,7 +1533,8 @@
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {
-                  "TypedText": "$(lotLength)"
+                  "TypedText": "$(lotLength)",
+                  "RecordedTextContent": "$(lotLength)"
                 }
               }
             },
@@ -2379,14 +2382,13 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "8fabdab2-456d-47fd-a912-f616a0fedbd3",
-            "Description": "radwatermarktextbox: Type 'jll' into ObligatoriskKommentarMaxLængde200Radwatermarktextbox",
+            "Description": "radwatermarktextbox: Set text contents of ObligatoriskKommentarMaxLængde200Radwatermarktextbox to '' - DataDriven: [$(comment)][$(comment)]",
             "CustomDescription": null,
             "Step": {
               "__type": "Telerik.WebAii.Design.Translators.Xaml.WatermarkTextBox.WatermarkTextBoxSetTextAction",
               "__value": {
                 "ControlKey": "radwatermarktextbox",
-                "SimulateRealTyping": true,
-                "SimulateRealUser": true,
+                "SimulateRealUser": false,
                 "TypedText": "jll",
                 "RecordedTextContent": "",
                 "TimeBetweenKeypresses": 10,
@@ -2501,7 +2503,10 @@
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
-                "DataBindingExpressions": {}
+                "DataBindingExpressions": {
+                  "TypedText": "$(comment)",
+                  "RecordedTextContent": "$(comment)"
+                }
               }
             },
             "Enabled": true,

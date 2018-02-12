@@ -280,7 +280,7 @@ namespace Nov_Test
                 //GetBobbinsByBobbinOrderName("D_12345678-001");
 
 
-                var weldings = Helper.GetWeldings("KAL10").ToList().OrderBy(w => w.WeldingSequenceNumber);
+                var weldings = Helper.GetWeldings("coil-test-demo-01").OrderBy(w => w.WeldingSequenceNumber).ToList();
 
 
 
@@ -372,6 +372,8 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (string)thisReader["Comment"];
+
 
                         var tempLot = new Lot()
                         {
@@ -382,7 +384,8 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp
+                            Length = lengthTemp,
+                            Comment = commentTemp
                         };
 
                         lotNameList.Add(tempLot);
@@ -475,6 +478,7 @@ namespace Nov_Test
                         var materialLeftTemp = (int)thisReader["MaterialLeft"];
                         var coilNumberTemp = (int)thisReader["CoilNumber"];
                         var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (string)thisReader["Comment"];
 
                         var tempLot = new Lot()
                         {
@@ -485,7 +489,8 @@ namespace Nov_Test
                             IsUsed = isUsedTemp,
                             MaterialLeft = materialLeftTemp,
                             CoilNumber = coilNumberTemp,
-                            Length = lengthTemp
+                            Length = lengthTemp,
+                            Comment = commentTemp
 
                         };
 
