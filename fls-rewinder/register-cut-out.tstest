@@ -32,12 +32,12 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "443347fa-0dd3-4034-9fd7-98b1509e5f3e",
-            "Description": "Set Environment Variable Test",
+            "Description": "Set Environment Variable",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"cutOutLength\", 0);",
+                "Code": "            var currentWelding = GetExtractedValue(\"currentWelding\") as Welding;\r\n            \r\n            SetExtractedValue(\"cutOutLength\", currentWelding.CutoutLength);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "SetEnvironmentVariableTest",
+            "Id": "SetEnvironmentVariable",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "register-cut-oute5acofd4.mxs",
@@ -125,6 +125,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "UdklipsdetaljerRadiobutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -278,6 +279,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item95Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -430,6 +432,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Textbox1",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -582,6 +585,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "GEMOGSIGNERButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -732,6 +736,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKRadbutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -877,6 +882,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OperatørmedarbejdernrRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1013,6 +1019,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
