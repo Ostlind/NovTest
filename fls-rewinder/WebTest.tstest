@@ -520,17 +520,14 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "7560ee84-9595-4600-8a00-bf8826035c99",
-            "Description": "Handle 'Confirm' dialog.",
+            "Runtime ID": "723d0229-9cd6-43a9-81b5-10c8be36da2f",
+            "Description": "Wait for '60000' msec.",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ConfirmDialogHandlerDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
               "__value": {
-                "HandlerTimeout": 5000,
-                "DialogType": 1,
-                "HandleButton": 0,
-                "InitializationTime": 250,
-                "WaitOnElements": false,
+                "WaitTime": 60000,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
                 "Pause": 0,
@@ -538,9 +535,7 @@
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
                 "Elements": {},
@@ -555,7 +550,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestsgqoxfle.muz",
+            "StepImageKey": "WebTestwp3xnqdl.wts",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

@@ -71,20 +71,22 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "58d42df4-ac2c-4894-a274-39702e05b316",
-            "Description": "radmenuitem: 'Tømme Bobbin' click action.",
+            "Runtime ID": "7f552192-c6cb-4daf-a73c-3c6c178f859f",
+            "Description": "Desktop command: HoverOver on TømmeBobbinRadmenuitem",
             "CustomDescription": null,
             "Step": {
-              "__type": "Telerik.WebAii.Design.Translators.Xaml.Menu.ItemClickAction",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightDesktopActionDescriptor",
               "__value": {
-                "ItemDescription": "Tømme Bobbin",
-                "IsInPopup": true,
-                "ControlKey": "radmenuitem",
+                "DesktopCommandType": 11,
+                "Offset": {
+                  "__type": "ArtOfTest.Common.Design.ActionPoint",
+                  "__value": "0, 0, Percentage, AbsoluteCenter"
+                },
+                "SimulateRealUser": true,
                 "TechnologyType": 6,
                 "WaitForNoMotion": true,
                 "WaitForNoMotionCheckInterval": 500,
                 "VirtualizingContainerOffset": 0.0,
-                "SimulateRealUser": true,
                 "Pause": 0,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
@@ -99,10 +101,10 @@
                   }
                 },
                 "Elements": {
-                  "radmenuitem": {
+                  "TargetKey1": {
                     "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
                     "__value": {
-                      "Name": "radmenuitem",
+                      "Name": "TargetKey1",
                       "Region": null,
                       "Page": {
                         "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
@@ -210,7 +212,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "empty-destinationge1kersw.hxd",
+            "StepImageKey": "empty-bobbinbx4ixfwi.spi",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -275,6 +277,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "TømmeBobbinRadmenuitem0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -428,6 +431,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item19Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -580,6 +584,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchTextBoxRadwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -725,6 +730,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "SearchButtonButton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -881,6 +887,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKButton0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1020,6 +1027,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1165,6 +1173,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item22Grid",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1302,6 +1311,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Textbox0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1437,6 +1447,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FORMFLEXLINESYSTEMMainview",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1572,6 +1583,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Passwordbox0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1710,6 +1722,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FORMFLEXLINESYSTEMMainview",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1848,6 +1861,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "ObligatoriskKommentarMaxLængde200Radwatermarktextbox",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1987,6 +2001,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKTextblock0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -2123,6 +2138,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKRadbutton",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -2268,6 +2284,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "ANNULLERTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
