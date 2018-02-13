@@ -312,7 +312,7 @@ namespace Nov_Test
                 throw new ArgumentException("Lot name cannot be null or whitespace.");
             }
 
-            var query = String.Format(@"SELECT [Id], [Name], [BobbinId] FROM [TestDataDb].[dbo].[Lots] WHERE [Name] LIKE '{0}'", lotName);
+            var query = String.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length], [Comment] FROM [TestDataDb].[dbo].[Lots] WHERE [Name] LIKE '{0}'", lotName);
 
             Lot lotTemp = null;
 
@@ -328,16 +328,30 @@ namespace Nov_Test
                 {
                     while (thisReader.Read())
                     {
-                        var id = (int)thisReader["Id"];
-                        var name = thisReader["Name"].ToString();
-                        var bobbinId = (int)thisReader["BobbinId"];
+                        var nameTemp = thisReader["Name"].ToString();
+                        var idTemp = (int)thisReader["Id"];
+                        var bobbinIdTemp = (int)thisReader["BobbinId"];
+                        var batchNumberTemp = (string)thisReader["BatchNumber"];
+                        var isUsedTemp = (bool)thisReader["IsUsed"];
+                        var materialLeftTemp = (int)thisReader["MaterialLeft"];
+                        var coilNumberTemp = (int)thisReader["CoilNumber"];
+                        var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (string)thisReader["Comment"];
 
-                        lotTemp = new Lot
+
+                        var tempLot = new Lot()
                         {
-                            Id = id,
-                            Name = name,
-                            BobbinId = bobbinId
+                            Id = idTemp,
+                            Name = nameTemp,
+                            BobbinId = bobbinIdTemp,
+                            BatchNumber = batchNumberTemp,
+                            IsUsed = isUsedTemp,
+                            MaterialLeft = materialLeftTemp,
+                            CoilNumber = coilNumberTemp,
+                            Length = lengthTemp,
+                            Comment = commentTemp
                         };
+
                     }
                 }
             }
@@ -427,7 +441,7 @@ namespace Nov_Test
                 _sqlConnection.Open();
 
 
-                var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = {1}", Convert.ToInt32(status), bobbinName);
+                var query = string.Format("UPDATE [dbo].[BobbinOrders] SET IsActive = {0} WHERE [Name] = N'{1}'", Convert.ToInt32(status), bobbinName);
 
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();
 

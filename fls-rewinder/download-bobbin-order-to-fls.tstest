@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            Log.WriteLine(bobbinOrderName);\r\n            await Helper.DownloadBobbinOrder(bobbinOrderName);\r\n        ",
+                "Code": "            string bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            Log.WriteLine(\"Downloading bobbin order: {0}\", bobbinOrderName);\r\n\r\n            Helper.DownloadBobbinOrder(bobbinOrderName).GetAwaiter().GetResult();\r\n        ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -59,7 +59,7 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "DownBobbinOrder",
+            "Id": "DownloadBobbinOrder",
             "StepState": 1,
             "ContinueOnFailure": false,
             "StepImageKey": "download-bobbin-order-to-flsidxg05sn.mjv",

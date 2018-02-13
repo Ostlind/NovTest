@@ -153,50 +153,6 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "9aa386eb-916e-44ce-9cbe-cbeb666c1b34",
-            "Description": "Handle 'Confirm' dialog.",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ConfirmDialogHandlerDescriptor",
-              "__value": {
-                "HandlerTimeout": 5000,
-                "DialogType": 1,
-                "HandleButton": 0,
-                "InitializationTime": 250,
-                "WaitOnElements": false,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 4,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTest3wnlg3hs.mq4",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
             "Runtime ID": "7315848c-ced1-4ea6-95db-b4ca2207b057",
             "Description": "'Maximize' the browser.",
             "CustomDescription": null,
@@ -227,7 +183,7 @@
               }
             },
             "Enabled": true,
-            "Order": 5,
+            "Order": 4,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -268,7 +224,7 @@
               }
             },
             "Enabled": true,
-            "Order": 6,
+            "Order": 5,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -307,7 +263,7 @@
               }
             },
             "Enabled": true,
-            "Order": 7,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -348,7 +304,7 @@
               }
             },
             "Enabled": true,
-            "Order": 8,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -389,7 +345,7 @@
               }
             },
             "Enabled": true,
-            "Order": 9,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -430,7 +386,7 @@
               }
             },
             "Enabled": true,
-            "Order": 10,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -470,7 +426,7 @@
               }
             },
             "Enabled": true,
-            "Order": 11,
+            "Order": 10,
             "Id": "ProcessLots",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -511,7 +467,7 @@
               }
             },
             "Enabled": true,
-            "Order": 12,
+            "Order": 11,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -551,7 +507,7 @@
               }
             },
             "Enabled": true,
-            "Order": 13,
+            "Order": 12,
             "Id": "SetBobbinOrderCompleteStatus",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -595,7 +551,7 @@
               }
             },
             "Enabled": true,
-            "Order": 14,
+            "Order": 13,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,

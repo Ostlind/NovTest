@@ -47,11 +47,13 @@ namespace Nov_Test
     
     
         [CodedStep(@"Download Bobbin Order")]
-        public async void DownBobbinOrder()
+        public async void DownloadBobbinOrder()
         {
             string bobbinOrderName = Data["Name"].ToString();
-            Log.WriteLine(bobbinOrderName);
-            await Helper.DownloadBobbinOrder(bobbinOrderName);
+            
+            Log.WriteLine("Downloading bobbin order: {0}", bobbinOrderName);
+
+            Helper.DownloadBobbinOrder(bobbinOrderName).GetAwaiter().GetResult();
         
         }
     }
