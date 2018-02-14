@@ -20,7 +20,10 @@
       "Telerik.WebAii.Controls.Xaml.Wpf, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.TestingFramework.Controls.KendoUI, Version=2017.3.1206.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
@@ -28,13 +31,13 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "3fe22137-1813-4e28-9a15-4216cfd614e2",
-            "Description": "New Coded Step",
+            "Runtime ID": "ebb67069-a458-419e-b18f-12b831746891",
+            "Description": "Set Bobbin Name Environment Variable",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                var bobbins = Helper.GetBobbinsByBobbinOrderName(Data[\"Name\"].ToString());\r\n\r\n                foreach( var bobbin in bobbins )\r\n                {\r\n                    SetExtractedValue(\"currentBobbin\", bobbin);\r\n                    \r\n                    var lots = Helper.GetLotsByBobbinName(bobbin.Name);\r\n                    \r\n                    SetExtractedValue(\"lots\", lots);\r\n                    \r\n                    foreach(var lot in lots)\r\n                    {\r\n                        SetExtractedValue(\"currentLot\", lot);\r\n                        \r\n                      // this.ExecuteTest(\"lots\\\\lottest.tstest.cs\");\r\n                        \r\n                        var weldings = Helper.GetWeldings(lot.Name);\r\n                        \r\n                        foreach(var welding in weldings)\r\n                        {\r\n                            SetExtractedValue(\"currentWelding\", welding);    \r\n                        }\r\n                    }\r\n                    \r\n                    this.ExecuteTest(\"only-for-testing\\\\register-source-multiple-times.tstest\");\r\n                }\r\n                ",
+                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            SetExtractedValue(\"currentBobbin\", bobbin);\r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -56,10 +59,10 @@
             },
             "Enabled": true,
             "Order": 1,
-            "Id": "execute_test_manually_CodedStep",
+            "Id": "SetBobbinNameEnvironmentVariable",
             "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "execute test manuallygzzkcims.jtl",
+            "StepImageKey": "run-bobbin-order-pre-logfbinqnme.t1g",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -68,13 +71,13 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "a068961a-49af-447e-8ffc-280ca28c882a",
-            "Description": "New Coded Step",
-            "CustomDescription": "CleanUp",
+            "Runtime ID": "158c4e53-0828-4e9d-a7fe-2c6dec4257b8",
+            "Description": "Process Lots",
+            "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            ",
+                "Code": "\r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            \r\n            Helper.WriteLogAsync(\"##################################\");\r\n            \r\n            Helper.WriteLogAsync(string.Format(\"Starting processing bobbin order: '{0}' \",bobbinOrderName));\r\n       \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            Helper.WriteLogAsync(string.Format(\"Using bobbin: '{0}'\", currentBobbin.Name));\r\n            \r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            Helper.WriteLogAsync(string.Format(\"Proccessing lots, number of lots :'{0}'\", lots.Count));\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                Helper.WriteLogAsync(string.Format(\"Starting proccessing lot; Name:'{0}', Bobbin Order:'{1}', Bobbin name:'{2}'\", lot.Name, bobbinOrderName, currentBobbin.Name));\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   \r\n                \r\n                Helper.WriteLogAsync(string.Format(\"Starting proccessing weldings, number of weldings: '{0}'\", weldings.Count));\r\n                    \r\n                foreach(var welding in weldings)\r\n                {\r\n                    \r\n                    Helper.WriteLogAsync(string.Format(\"Starting proccessing welding; Name :'{0}', Bobbin Order:'{1}', Bobbin name:'{2}', Lot name:'{3}', Welding type:'{4}'\", welding.Name,  bobbinOrderName, currentBobbin.Name, lot.Name, welding.WeldingType ));\r\n                    \r\n                    var currentWelding = welding;\r\n                    \r\n                    \r\n                }\r\n            \r\n                Helper.WriteLogAsync(string.Format(\"Done proccessing weldings\"));\r\n                \r\n                \r\n            }\r\n            Helper.WriteLogAsync(string.Format(\"Done proccessing lots\"));\r\n\r\n            Helper.WriteLogAsync(string.Format(\"Done proccessing bobbine order:'{0}'\", bobbinOrderName ));\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -96,50 +99,10 @@
             },
             "Enabled": true,
             "Order": 2,
-            "Id": "executetestmanually_CodedStep",
+            "Id": "ProcessLots",
             "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "execute-test-manually35dbmwcr.el5",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "2ba53b43-ec5b-41cb-9ab6-df1864da9619",
-            "Description": "Manual: ",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ManualStepActionDescriptor",
-              "__value": {
-                "Description": null,
-                "ExecutionTimeout": 1,
-                "WaitOnElements": false,
-                "WaitOnElementsTimeout": 0,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 3,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "execute-test-manuallysuq1ntpt.an0",
+            "StepImageKey": "run-bobbin-order-pre-log4xmdsow2.ul4",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -159,9 +122,9 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.execute_test_manually",
+    "TestClass": "Nov_Test.run_bobbin_order_pre_log",
     "IsManual": false,
-    "ResourceFilePath": "only-for-testing\\execute-test-manually.resx",
+    "ResourceFilePath": "fls-rewinder\\run-bobbin-order-pre-log.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -170,7 +133,7 @@
         "DefaultToGrid": false,
         "DataRange": "",
         "LoadRecordsCount": null,
-        "DataTableName": "BobbinOrders",
+        "DataTableName": "",
         "DataProvider": "Testdatadb.dbsrc",
         "DataEnabled": true,
         "HasBuiltinGrid": false,
@@ -191,13 +154,13 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "execute-test-manually",
+    "Name": "run-bobbin-order-pre-log",
     "Owner": "",
-    "Path": "only-for-testing\\execute-test-manually.tstest",
+    "Path": "fls-rewinder\\run-bobbin-order-pre-log.tstest",
     "Priority": 0,
     "TestType": 0,
-    "UniqueId": "365acaa9-2ee4-4491-ba29-7db53cda0635",
-    "Id": "365acaa9-2ee4-4491-ba29-7db53cda0635",
+    "UniqueId": "9101b2b9-a916-476a-acd8-74ca41e621cb",
+    "Id": "9101b2b9-a916-476a-acd8-74ca41e621cb",
     "ProjectId": "cde191f9-0fa2-438c-9da7-77f811829d76",
     "Version": 200
   }

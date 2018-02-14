@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.IO;
 namespace Nov_Test
 {
     public static class Helper
@@ -65,6 +66,28 @@ namespace Nov_Test
                 // SetExtractedValue("lotNames", String.Join(",", lotNameList));
 
                 return weldings;
+            }
+        }
+        
+        public static void WriteLogAsync(string text)
+        {
+            string directoryName = DateTime.Now.ToShortDateString();
+
+            FileInfo fi = new FileInfo(".\\" + directoryName);
+
+            bool exists = Directory.Exists(fi.FullName);
+
+            if (!exists)
+            {
+                Directory.CreateDirectory(fi.FullName);
+            }
+
+            var pathstring = Path.Combine(fi.FullName, String.Format("{0}.txt", DateTime.Now.ToString("yyyy-MM-dd HH.mm")));
+
+            // ".\\nov-test " + logFileName +".txt"
+            using (StreamWriter outputFile = new StreamWriter(pathstring, true))
+            {
+                outputFile.WriteLine(DateTime.Now.ToLongTimeString() + ": " + text);
             }
         }
 
