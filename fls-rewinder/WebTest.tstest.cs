@@ -63,6 +63,7 @@ namespace Nov_Test
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
 
             var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+            
             SetExtractedValue("currentBobbin", currentBobbin);
             
             var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();
@@ -77,7 +78,10 @@ namespace Nov_Test
                 
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
-                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
+                this.ExecuteTest("fls-rewinder\\unregister-source-1.tstest");
+                
+                
+             /*  var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
                 
                 foreach(var welding in weldings)
                 {
@@ -180,40 +184,11 @@ namespace Nov_Test
                         
                         continue;
                     }
-                } 
+                }*/ 
                 
                 System.Threading.Thread.Sleep(1000);
                 
             }
-            
-                //this.ExecuteStep("fls-rewinder\\unregister-source");
-            
-                
-                // 6. add current source (lot) from list
-                // 7. check bobbind reference, does this lot belong to right bobbin?
-                // 8. load source, enter values
-                // 9. iterate weldings 
-                    // 10.check if welding has right lot id
-                    // 11. execute current welding
-                    // 12. finsih weldings
-                    // 13. Repeat step 10 if there's more weldings
-                
-            // 11. unload lot (unload lot)
-         
-            // 10. repeat step 6 until lots are finished
-         // 11. unload bobbin (destination)
-         // 12. repeat step 1. until bobbins is finished 
-         
-            
-            
-            
-            
-        
-            
-        
-            
-          // 7. get all weldings
-          // 8. 
         }
     
 

@@ -99,7 +99,6 @@ namespace Nov_Test
                     
                     var currentWelding = welding;
                     
-                    
                 }
             
                 Helper.WriteLogAsync(string.Format("Done proccessing weldings"));
