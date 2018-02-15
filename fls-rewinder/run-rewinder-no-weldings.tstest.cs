@@ -83,6 +83,7 @@ namespace Nov_Test
         public void SetBobbinOrderCompleteStatus()
         {
             var currentBobbinName = Data["Name"].ToString();
+            
             Helper.SetBobbinOrderCompletedStatus(currentBobbinName, false);
         }
     
@@ -99,10 +100,13 @@ namespace Nov_Test
         {
                         
             var bobbinOrderName = Data["Name"].ToString();
-           var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+           
+            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
             
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
+            
             SetExtractedValue("currentBobbin", bobbin);
+            
             SetExtractedValue("bobbinName", bobbin.Name);
             
         }

@@ -51,10 +51,13 @@ namespace Nov_Test
         {
                         
             var bobbinOrderName = Data["Name"].ToString();
+            
             var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
             
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
+            
             SetExtractedValue("currentBobbin", bobbin);
+            
             SetExtractedValue("bobbinName", bobbin.Name);
             
         }

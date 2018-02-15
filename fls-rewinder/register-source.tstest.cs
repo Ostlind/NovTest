@@ -55,6 +55,7 @@ namespace Nov_Test
             Log.WriteLine(currentLot.BatchNumber.ToString());
             Log.WriteLine(currentLot.CoilNumber.ToString());
             Log.WriteLine(currentLot.Length.ToString());
+            Log.WriteLine(currentLot.Comment.ToString());
             
             
             SetExtractedValue("lotName", currentLot.Name);

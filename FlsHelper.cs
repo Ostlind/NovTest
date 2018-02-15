@@ -216,9 +216,6 @@ namespace Nov_Test
                 _sqlConnection.Open();
                 var bobbinsList = new List<Bobbin>();
 
-                //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
-
-
                 var query = string.Format(@"SELECT [Name], [Id] ,[BobbinOrderId] FROM [TestDataDb].[dbo].[Bobbins] WHERE [BobbinOrderId] = {0}", bobbinOrder.Id);
 
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();

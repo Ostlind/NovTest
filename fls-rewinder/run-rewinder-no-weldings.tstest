@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n           var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            SetExtractedValue(\"currentBobbin\", bobbin);\r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            ",
+                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n           \r\n            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            \r\n            SetExtractedValue(\"currentBobbin\", bobbin);\r\n            \r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -445,7 +445,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var currentBobbinName = Data[\"Name\"].ToString();\r\n            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, false);",
+                "Code": "            var currentBobbinName = Data[\"Name\"].ToString();\r\n            \r\n            Helper.SetBobbinOrderCompletedStatus(currentBobbinName, false);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
