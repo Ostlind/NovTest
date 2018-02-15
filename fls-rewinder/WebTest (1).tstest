@@ -831,7 +831,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "83642754-17fa-430c-a805-16bf400779a9",
+            "Runtime ID": "46e70f7b-8355-4851-9b49-f25e5e5c8339",
             "Description": "Execute test 'reject-bobbin-order'",
             "CustomDescription": null,
             "Step": {
@@ -863,7 +863,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTest (1)p5fyc0zf.3h4",
+            "StepImageKey": "WebTest (1)53f4tanv.niq",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

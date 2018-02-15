@@ -3851,7 +3851,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "a1377126-f759-4de8-a496-21b72274264c",
-            "Description": "Execute test 'unregister-source-1'",
+            "Description": "Execute test 'unregister-source'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
@@ -3859,8 +3859,8 @@
                 "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
-                "TestName": "unregister-source-1",
-                "TestPath": "fls-rewinder\\unregister-source-1.tstest",
+                "TestName": "unregister-source",
+                "TestPath": "fls-rewinder\\unregister-source.tstest",
                 "TestUniqueId": "c8291120-b9a6-4327-aa2d-952ad2ce341e",
                 "Pause": 0,
                 "RunsAgainstVersion": "",

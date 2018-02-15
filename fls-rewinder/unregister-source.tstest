@@ -687,6 +687,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "OKTextblock",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -784,7 +785,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\unregister-source-1.resx",
+    "ResourceFilePath": "fls-rewinder\\unregister-source.resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -814,9 +815,9 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "unregister-source-1",
+    "Name": "unregister-source",
     "Owner": "",
-    "Path": "fls-rewinder\\unregister-source-1.tstest",
+    "Path": "fls-rewinder\\unregister-source.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "c8291120-b9a6-4327-aa2d-952ad2ce341e",

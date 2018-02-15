@@ -143,7 +143,7 @@
             "Order": 3,
             "Id": "",
             "StepState": 0,
-            "ContinueOnFailure": false,
+            "ContinueOnFailure": true,
             "StepImageKey": "WebTestdnofx1oi.xoo",
             "QcId": 0,
             "QcVersionStamp": 0,
@@ -405,7 +405,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            //Iterate bobbins\r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\unregister-source-1.tstest\");\r\n                \r\n                \r\n             /*  var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   \r\n                \r\n                foreach(var welding in weldings)\r\n                {\r\n                    var currentWelding = welding;\r\n                    \r\n                    Log.WriteLine(\"Processing welding: \" + currentWelding.Name);\r\n                    \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n                        continue;\r\n                        \r\n                    }\r\n                             \r\n                   if(currentWelding.WeldingType == \"CS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WDG\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-ECG-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WD\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-WD-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"ECG\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-ECG-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n\r\n                    if(currentWelding.WeldingType == \"EC\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-EC-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"SS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-SS-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"IO\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-IO-welding.tstest\");\r\n                        \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WD\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-WD-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                                        \r\n                    if(currentWelding.WeldingType == \"UW\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-UW-welding.tstest\");\r\n                        \r\n                        continue;\r\n                    }\r\n                }*/ \r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                \r\n            }",
+                "Code": "            //Iterate bobbins\r\n            \r\n        // 1. donwload order (get bobbinId)\r\n\r\n        // 2. login fls\r\n        // 3. start order\r\n        // 4. open mom\r\n        // 5. add destination bobbinId\r\n            // Iterate lots\r\n            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   \r\n                \r\n                foreach(var welding in weldings)\r\n                {\r\n                    var currentWelding = welding;\r\n                    \r\n                    Log.WriteLine(\"Processing welding: \" + currentWelding.Name);\r\n                    \r\n                    SetExtractedValue(\"currentWelding\", currentWelding);\r\n\r\n                    SetExtractedValue(\"weldingName\", currentWelding.Name);\r\n\r\n                \r\n                    if(currentWelding.IsFirstWelding.Value && currentWelding.WeldingType == \"WA\")\r\n                    {\r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-wa-flash-welding.tstest\");\r\n                        \r\n                        continue;\r\n                        \r\n                    }\r\n                             \r\n                   if(currentWelding.WeldingType == \"CS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-CS-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WDG\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-ECG-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WD\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-WD-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"ECG\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-ECG-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n\r\n                    if(currentWelding.WeldingType == \"EC\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-EC-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"SS\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-SS-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"IO\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-IO-welding.tstest\");\r\n                        \r\n                        continue;\r\n                    }\r\n                    \r\n                    if(currentWelding.WeldingType == \"WD\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-WD-welding.tstest\");\r\n                                 \r\n                        continue;\r\n                    }\r\n                                        \r\n                    if(currentWelding.WeldingType == \"UW\")\r\n                    {   \r\n                        this.ExecuteTest(\"fls-rewinder\\\\register-cut-out.tstest\");\r\n                        \r\n                        this.ExecuteTest(\"fls-rewinder\\\\weldings\\\\register-UW-welding.tstest\");\r\n                        \r\n                        continue;\r\n                    }\r\n                } \r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                \r\n            }",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -551,92 +551,6 @@
             "StepState": 0,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTestwp3xnqdl.wts",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "f447398b-0243-44be-91e9-01564dd955e0",
-            "Description": "Refresh Browser",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.RefreshBrowserActionDescriptor",
-              "__value": {
-                "UsejQuery": false,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 14,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTest4hrbnsh4.bwh",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "77896046-2ab3-413c-bdcf-eec37b577433",
-            "Description": "Handle 'Confirm' dialog.",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ConfirmDialogHandlerDescriptor",
-              "__value": {
-                "HandlerTimeout": 5000,
-                "DialogType": 1,
-                "HandleButton": 0,
-                "InitializationTime": 250,
-                "WaitOnElements": false,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
-            "Order": 15,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "WebTestbshv4qgr.fcf",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -905,9 +819,9 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "Nov Test.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "Nov_Test.WebTest",
+    "TestClass": "Nov_Test.run_rewinder",
     "IsManual": false,
-    "ResourceFilePath": "fls-rewinder\\WebTest.resx",
+    "ResourceFilePath": "fls-rewinder\\run-rewinder.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -937,9 +851,9 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "WebTest",
+    "Name": "run-rewinder",
     "Owner": "",
-    "Path": "fls-rewinder\\WebTest.tstest",
+    "Path": "fls-rewinder\\run-rewinder.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "8cc6bbfd-fb6b-45e3-9642-937b6dc41bd0",

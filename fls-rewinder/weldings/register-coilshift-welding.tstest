@@ -872,6 +872,7 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "CSCoilskiftTextblock0",
+                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -3689,7 +3690,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "086569ac-721e-46b5-a8c1-02ca210a6d83",
-            "Description": "Execute test 'unregister-source-1'",
+            "Description": "Execute test 'unregister-source'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
@@ -3697,8 +3698,8 @@
                 "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
-                "TestName": "unregister-source-1",
-                "TestPath": "fls-rewinder\\unregister-source-1.tstest",
+                "TestName": "unregister-source",
+                "TestPath": "fls-rewinder\\unregister-source.tstest",
                 "TestUniqueId": "c8291120-b9a6-4327-aa2d-952ad2ce341e",
                 "Pause": 0,
                 "RunsAgainstVersion": "",

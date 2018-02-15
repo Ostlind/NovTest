@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-
+using System.Threading;
 using ArtOfTest.Common.UnitTesting;
 using ArtOfTest.WebAii.Core;
 using ArtOfTest.WebAii.Controls.HtmlControls;
@@ -14,12 +14,13 @@ using ArtOfTest.WebAii.Design;
 using ArtOfTest.WebAii.Design.Execution;
 using ArtOfTest.WebAii.ObjectModel;
 using ArtOfTest.WebAii.Silverlight;
+
 using ArtOfTest.WebAii.Silverlight.UI;
 
 namespace Nov_Test
 {
 
-    public class WebTest : BaseWebAiiTest
+    public class run_rewinder : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -78,10 +79,7 @@ namespace Nov_Test
                 
                 this.ExecuteTest("fls-rewinder\\register-source.tstest");
                 
-                this.ExecuteTest("fls-rewinder\\unregister-source-1.tstest");
-                
-                
-             /*  var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
+                var weldings = Helper.GetWeldings(lot.Name).Where(w => w.LotId == lot.Id).OrderBy(w => w.WeldingSequenceNumber).ToList();   
                 
                 foreach(var welding in weldings)
                 {
@@ -184,7 +182,7 @@ namespace Nov_Test
                         
                         continue;
                     }
-                }*/ 
+                } 
                 
                 System.Threading.Thread.Sleep(1000);
                 
