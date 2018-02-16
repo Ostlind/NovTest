@@ -51,10 +51,20 @@ namespace Nov_Test
         {
                         
             var bobbinOrderName = Data["Name"].ToString();
-            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+           
+            var bobbinOrderId = int.Parse(Data["Id"].ToString());
+            
+            var bobbin = Helper.GetBobbinByBobbinOrderId(bobbinOrderId);
+
+            if(bobbin == null)
+            {
+                throw new ArgumentNullException("could not find bobbin");
+            }
             
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
+            
             SetExtractedValue("currentBobbin", bobbin);
+            
             SetExtractedValue("bobbinName", bobbin.Name);
             
         }
@@ -63,21 +73,18 @@ namespace Nov_Test
         public void ProcessLots()
         {
 
-            var bobbinOrderName = Data["Name"].ToString();
+                   
+            var currentBobbin = GetExtractedValue("currentBobbin") as Bobbin;
+            
+            var bobbinOrderName = GetExtractedValue("bobbinOrderName").ToString();
             
             Helper.WriteLogAsync("##################################");
             
             Helper.WriteLogAsync(string.Format("Starting processing bobbin order: '{0}' ",bobbinOrderName));
        
-            SetExtractedValue("bobbinOrderName", bobbinOrderName);
-
-            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
-            
             Helper.WriteLogAsync(string.Format("Using bobbin: '{0}'", currentBobbin.Name));
             
-            SetExtractedValue("currentBobbin", currentBobbin);
-            
-            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();
+            var lots = Helper.GetLotsByBobbinId(currentBobbin.Id).OrderBy( lot => lot.CoilNumber).ToList();
             
             Helper.WriteLogAsync(string.Format("Proccessing lots, number of lots :'{0}'", lots.Count));
             

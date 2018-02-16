@@ -219,5 +219,19 @@ namespace Nov_Test
             
         }
  
+    
+        [CodedStep(@"Wait For Download")]
+        public void WaitForDownload()
+        {
+                        // Wait for '120000' msec.
+                        var currentIteration = this.Data.IterationIndex;
+                        var numberOfRows = this.ExecutionContext.DataSource.Rows.Count - 1;
+            
+                        if(currentIteration != numberOfRows)
+                        {
+                            System.Threading.Thread.Sleep(120000);
+                        }
+                        
+        }
     }
 }

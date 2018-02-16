@@ -14,6 +14,8 @@ using ArtOfTest.WebAii.Design;
 using ArtOfTest.WebAii.Design.Execution;
 using ArtOfTest.WebAii.ObjectModel;
 using ArtOfTest.WebAii.Silverlight;
+using System.Runtime.Serialization;
+
 
 using ArtOfTest.WebAii.Silverlight.UI;
 
@@ -112,5 +114,19 @@ namespace Nov_Test
             
         }
  
+    
+        [CodedStep(@"Wait For Download")]
+        public void WaitForDownload()
+        {
+            // Wait for '120000' msec.
+            var currentIteration = this.Data.IterationIndex;
+            var numberOfRows = this.ExecutionContext.DataSource.Rows.Count - 1;
+
+            if(currentIteration != numberOfRows)
+            {
+                System.Threading.Thread.Sleep(120000);
+            }
+            
+        }
     }
 }

@@ -693,6 +693,7 @@ namespace Nov_Test
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsActive { get; set; }
+        public string FlsStationName { get; set; }
     }
 
     [Serializable]

@@ -139,7 +139,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 3,
             "Id": "",
             "StepState": 0,
@@ -182,12 +182,149 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 4,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
             "StepImageKey": "WebTestv53zfg5l.thg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "83c5a05c-473b-45ef-a1a3-8a3c561dfe90",
+            "Description": "Click Item0Button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.ButtonActionDescriptor",
+              "__value": {
+                "Offset": {
+                  "__type": "ArtOfTest.Common.Design.ActionPoint",
+                  "__value": "14, 19, Pixel, TopLeftCorner"
+                },
+                "UseOffset": true,
+                "SimulateRealUser": true,
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {
+                  "target": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "target",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "FormFlex Line System",
+                          "CompareMode": 2,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "FormFlexLineSystem"
+                        }
+                      },
+                      "Frame": null,
+                      "FindInfo": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "3T0wZvUZ63u2FyR5VO0ETKCUA+4=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "Item0Button",
+                          "ContainerName": "SilverlightApp",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "id=silverlightControlHost"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlPath=/grid[0]/stackpanel[1]/button[0]"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/mainview[1]/grid[1]/stackpanel[2]/button[1]",
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Button",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 2,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": false,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "run-rewinder-no-weldingsirk0gvb2.ygg",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -223,8 +360,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 5,
+            "Enabled": false,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -262,8 +399,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 6,
+            "Enabled": false,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -303,8 +440,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 7,
+            "Enabled": false,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -344,8 +481,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 8,
+            "Enabled": false,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -384,8 +521,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 9,
+            "Enabled": false,
+            "Order": 10,
             "Id": "ProcessLots",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -425,8 +562,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 10,
+            "Enabled": false,
+            "Order": 11,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
@@ -465,8 +602,8 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
-            "Order": 11,
+            "Enabled": false,
+            "Order": 12,
             "Id": "SetBobbinOrderCompleteStatus",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -479,13 +616,14 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "723d0229-9cd6-43a9-81b5-10c8be36da2f",
-            "Description": "Wait for '120000' msec.",
+            "Runtime ID": "0ef7eeea-0926-4559-9f3d-9d341540afe2",
+            "Description": "Wait For Download",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "WaitTime": 120000,
+                "Code": "            // Wait for '120000' msec.\r\n            var currentIteration = this.Data.IterationIndex;\r\n            var numberOfRows = this.ExecutionContext.DataSource.Rows.Count - 1;\r\n\r\n            if(currentIteration != numberOfRows)\r\n            {\r\n                System.Threading.Thread.Sleep(120000);\r\n            }\r\n            ",
+                "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
@@ -505,11 +643,11 @@
               }
             },
             "Enabled": true,
-            "Order": 12,
-            "Id": "",
-            "StepState": 0,
+            "Order": 13,
+            "Id": "WaitForDownload",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestwp3xnqdl.wts",
+            "StepImageKey": "run-rewinder-no-weldingsuutcgfez.bng",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

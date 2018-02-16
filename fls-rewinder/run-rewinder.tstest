@@ -520,13 +520,14 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "723d0229-9cd6-43a9-81b5-10c8be36da2f",
-            "Description": "Wait for '120000' msec.",
+            "Runtime ID": "20c47b65-6ec7-49f6-9921-fb417d22e9e3",
+            "Description": "Wait For Download",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "WaitTime": 120000,
+                "Code": "                        // Wait for '120000' msec.\r\n                        var currentIteration = this.Data.IterationIndex;\r\n                        var numberOfRows = this.ExecutionContext.DataSource.Rows.Count - 1;\r\n            \r\n                        if(currentIteration != numberOfRows)\r\n                        {\r\n                            System.Threading.Thread.Sleep(120000);\r\n                        }\r\n                        ",
+                "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
@@ -547,10 +548,10 @@
             },
             "Enabled": true,
             "Order": 13,
-            "Id": "",
-            "StepState": 0,
+            "Id": "WaitForDownload",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTestwp3xnqdl.wts",
+            "StepImageKey": "run-rewinder5izfw3rf.k5v",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

@@ -120,7 +120,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "3e5d1678-f3e3-45c3-9e3c-d80d42accaed",
+            "Runtime ID": "3b8db838-be1f-439a-994c-8743b10ab034",
             "Description": "LeftClick on Item0Textboxview",
             "CustomDescription": null,
             "Step": {
@@ -128,7 +128,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "6, 43, Percentage, TopLeftCorner"
+                  "__value": "25, 86, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -181,7 +181,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Textboxview",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -265,7 +264,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinderuyumqaj0.xsp",
+            "StepImageKey": "login-fls-rewinder-a11sjax4ejn.f2c",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -274,14 +273,14 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "3a193b5e-6142-4927-87cf-e917f43b89ef",
+            "Runtime ID": "b5e14f02-96ce-4aff-9f94-fdfe1fa8bf15",
             "Description": "Set text contents of LoginUserNameTextbox to 'a11'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.TextBoxSetTextActionDescriptor",
               "__value": {
                 "SimulateRealUser": false,
-                "TypedText": "a05",
+                "TypedText": "a11",
                 "RecordedTextContent": "a11",
                 "TimeBetweenKeypresses": 10,
                 "KeyHoldTime": 100,
@@ -333,7 +332,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "LoginUserNameTextbox",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -409,7 +407,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinderuhcdir2s.dbp",
+            "StepImageKey": "login-fls-rewinder-a11swgyxsqr.r1r",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -418,7 +416,142 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "98e8acf9-2ce2-4c8b-84a9-2e811b3758fb",
+            "Runtime ID": "fb32558f-a76e-4636-8172-84a83a168123",
+            "Description": "Press Tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
+              "__value": {
+                "SimulateRealUser": true,
+                "KeyCode": 9,
+                "RepeatCount": 1,
+                "HoldTime": 10,
+                "DelayBetweenRepitions": 50,
+                "TechnologyType": 6,
+                "WaitForNoMotion": true,
+                "WaitForNoMotionCheckInterval": 500,
+                "VirtualizingContainerOffset": 0.0,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {
+                      "RunsAgainstVersion": ""
+                    }
+                  }
+                },
+                "Elements": {
+                  "TargetKey1": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TargetKey1",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "http://10.40.168.97/flsclient/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "FormFlex Line System",
+                          "CompareMode": 2,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "FormFlexLineSystem"
+                        }
+                      },
+                      "Frame": null,
+                      "FindInfo": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "F6H/i6VmfXR/sW6MVHE1nMwk8TI=",
+                          "NodeKind": 5,
+                          "TechnologyType": 2,
+                          "Name": "FORMFLEXLINESYSTEMMainview",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "id=silverlightControlHost"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagIndex=object:0"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Key": 2,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Silverlight.XamlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
+                                      "__value": {
+                                        "Clause": "XamlPath="
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/mainview[1]",
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.UserControl",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 2,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "login-fls-rewinder-a11orlsc1h4.xn0",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3564c1c5-97a8-4269-9c4f-62ac29f46219",
             "Description": "Type 'nov' into Item0Passwordbox",
             "CustomDescription": null,
             "Step": {
@@ -475,7 +608,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item0Passwordbox",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -558,11 +690,11 @@
               }
             },
             "Enabled": true,
-            "Order": 5,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinder5gioh5oj.niy",
+            "StepImageKey": "login-fls-rewinder-a11fyivgbow.d1w",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -571,7 +703,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "e7f010a9-b63d-4950-bb05-77231233788f",
+            "Runtime ID": "275c771d-6e1b-4c49-8cfa-779184f33a7e",
             "Description": "Press Tab",
             "CustomDescription": null,
             "Step": {
@@ -628,7 +760,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "FORMFLEXLINESYSTEMMainview",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -694,11 +825,11 @@
               }
             },
             "Enabled": true,
-            "Order": 6,
+            "Order": 7,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinderbh5b5iu2.hqw",
+            "StepImageKey": "login-fls-rewinder-a11wxc0b4kd.mo2",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -707,15 +838,15 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "a8e3c837-e4ac-4891-8ce6-b48efe78803e",
-            "Description": "Press Down (3 times)",
+            "Runtime ID": "8de2d666-5c31-4985-8bc6-9ba50b98584f",
+            "Description": "Press Down (2 times)",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightKeyPressActionDescriptor",
               "__value": {
                 "SimulateRealUser": true,
                 "KeyCode": 40,
-                "RepeatCount": 3,
+                "RepeatCount": 2,
                 "HoldTime": 10,
                 "DelayBetweenRepitions": 50,
                 "TechnologyType": 6,
@@ -764,7 +895,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "Item1Radcombobox",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -844,11 +974,11 @@
               }
             },
             "Enabled": true,
-            "Order": 7,
+            "Order": 8,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinder0nxfxxak.fqx",
+            "StepImageKey": "login-fls-rewinder-a113qo5nc0h.tka",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -857,7 +987,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "1fe8c2dc-9bc5-47ec-9455-1220ec3617c8",
+            "Runtime ID": "43fe424b-fa27-4e96-9867-63f7a2e5e36e",
             "Description": "LeftClick on LOGINDTextblock",
             "CustomDescription": null,
             "Step": {
@@ -865,7 +995,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "43, 41, Percentage, TopLeftCorner"
+                  "__value": "5, 62, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -989,11 +1119,11 @@
               }
             },
             "Enabled": true,
-            "Order": 8,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinder-a11fozxiwdh.44t",
+            "StepImageKey": "login-fls-rewinder-a11ahrqrwli.xbm",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -1002,18 +1132,21 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "4a0a8c31-f9c9-4f40-aa43-798dfe372aed",
-            "Description": "Click OKButton",
+            "Runtime ID": "2a58ec74-3948-45ca-b068-a161e47d5d16",
+            "Description": "LeftClick on OKTextblock",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.ButtonActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Silverlight.Descriptors.SilverlightClickActionDescriptor",
               "__value": {
-                "Offset": {
+                "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "52, 7, Pixel, TopLeftCorner"
+                  "__value": "47, 69, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
+                "Button": 1048576,
                 "SimulateRealUser": true,
+                "ModiferKeysCode": 0,
+                "IsDoubleClick": false,
                 "TechnologyType": 6,
                 "WaitForNoMotion": true,
                 "WaitForNoMotionCheckInterval": 500,
@@ -1032,10 +1165,10 @@
                   }
                 },
                 "Elements": {
-                  "target": {
+                  "TargetKey1": {
                     "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
                     "__value": {
-                      "Name": "target",
+                      "Name": "TargetKey1",
                       "Region": null,
                       "Page": {
                         "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
@@ -1056,11 +1189,10 @@
                       "FindExpression": {
                         "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
                         "__value": {
-                          "uniqueKey": "E+YpGNZCi1NM//YYlEgk7ji16bY=",
+                          "uniqueKey": "9Y8TXVCMjhB7SDcPxjaC9zDOoKI=",
                           "NodeKind": 5,
                           "TechnologyType": 2,
-                          "Name": "OKButton1",
-                          "ContainerName": "SilverlightApp",
+                          "Name": "OKTextblock",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -1097,35 +1229,27 @@
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "XamlTag=contentpresenter"
+                                        "Clause": "TextContent=OK"
                                       }
                                     },
                                     {
                                       "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
                                       "__value": {
-                                        "Clause": "name=ContentPresenter"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Silverlight.XamlFindClause",
-                                      "__value": {
-                                        "Clause": "XamlPath=/grid[0]/stackpanel[0]/button[0]"
+                                        "Clause": "XamlTag=textblock"
                                       }
                                     }
                                   ],
                                   "Constraints": [],
-                                  "ChainStops": [
-                                    2
-                                  ]
+                                  "ChainStops": []
                                 }
                               }
                             }
                           ],
-                          "BackupSearchClause": "/popup[1]/selectroleview[1]/grid[1]/grid[2]/border[5]/border[1]/grid[1]/border[2]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]",
+                          "BackupSearchClause": "/popup[1]/selectroleview[1]/grid[1]/grid[2]/border[5]/border[1]/grid[1]/border[2]/contentpresenter[1]/grid[1]/stackpanel[1]/button[1]/grid[1]/border[1]/grid[1]/contentcontrol[1]/contentpresenter[1]/contentpresenter[1]/grid[1]/textblock[1]",
                           "DataBindingExpressions": {}
                         }
                       },
-                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.Button",
+                      "HtmlControlType": "ArtOfTest.WebAii.Silverlight.UI.TextBlock",
                       "IsIndependent": false,
                       "DomStateKey": "",
                       "TechnologyType": 2,
@@ -1140,50 +1264,11 @@
               }
             },
             "Enabled": true,
-            "Order": 9,
-            "Id": "",
-            "StepState": 0,
-            "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinder-a11nsaswrot.zb1",
-            "QcId": 0,
-            "QcVersionStamp": 0,
-            "Version": 200
-          }
-        },
-        {
-          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
-          "__value": {
-            "Runtime ID": "d719f996-0ba9-46ee-9884-74aadfaab6e4",
-            "Description": "Wait for '250' msec.",
-            "CustomDescription": null,
-            "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
-              "__value": {
-                "WaitTime": 250,
-                "WaitOnElements": true,
-                "WaitOnElementsTimeout": 30000,
-                "UseStepWaitOnElementsTimout": false,
-                "Pause": 0,
-                "RunsAgainstVersion": "",
-                "Constraints": {
-                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
-                  "__value": {
-                    "ConstraintValues": {}
-                  }
-                },
-                "Elements": {},
-                "StepType": 4,
-                "LogMessageOnFailure": "",
-                "EditorType": "",
-                "DataBindingExpressions": {}
-              }
-            },
-            "Enabled": true,
             "Order": 10,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinderaldqppmk.hwx",
+            "StepImageKey": "login-fls-rewinder-a110jwt1q5p.pjp",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
