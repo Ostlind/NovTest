@@ -51,15 +51,9 @@ namespace Nov_Test
         public void ProcessLots()
         {
       
-            var bobbinOrderName = Data["Name"].ToString();
-
-            SetExtractedValue("bobbinOrderName", bobbinOrderName);
-
-            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+            var currentBobbin = GetExtractedValue("currentBobbin") as Bobbin;
             
-            SetExtractedValue("currentBobbin", currentBobbin);
-            
-            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();
+            var lots = Helper.GetLotsByBobbinId(currentBobbin.Id).OrderBy( lot => lot.CoilNumber).ToList();
             
             Log.WriteLine("lots count: " + lots.Count().ToString());
             
@@ -98,10 +92,17 @@ namespace Nov_Test
         [CodedStep(@"Set Bobbin Name Environment Variable")]
         public void SetBobbinNameEnvironmentVariable()
         {
-                        
+            
             var bobbinOrderName = Data["Name"].ToString();
            
-            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();
+            var bobbinOrderId = int.Parse(Data["Id"].ToString());
+            
+            var bobbin = Helper.GetBobbinByBobbinOrderId(bobbinOrderId);
+
+            if(bobbin == null)
+            {
+                throw new ArgumentNullException("could not find bobbin");
+            }
             
             SetExtractedValue("bobbinOrderName", bobbinOrderName);
             

@@ -857,7 +857,7 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "e5e831ab-d30e-4650-a4cc-6db8d0fd0078",
+            "Runtime ID": "1fe8c2dc-9bc5-47ec-9455-1220ec3617c8",
             "Description": "LeftClick on LOGINDTextblock",
             "CustomDescription": null,
             "Step": {
@@ -865,7 +865,7 @@
               "__value": {
                 "ClickPoint": {
                   "__type": "ArtOfTest.Common.Design.ActionPoint",
-                  "__value": "32, 7, Percentage, TopLeftCorner"
+                  "__value": "43, 41, Percentage, TopLeftCorner"
                 },
                 "UseOffset": true,
                 "Button": 1048576,
@@ -918,7 +918,6 @@
                           "NodeKind": 5,
                           "TechnologyType": 2,
                           "Name": "LOGINDTextblock",
-                          "ContainerName": "SilverlightApp",
                           "FindExpressions": [
                             {
                               "Key": 1,
@@ -994,7 +993,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "login-fls-rewinderaxxbhpoz.spw",
+            "StepImageKey": "login-fls-rewinder-a11fozxiwdh.44t",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

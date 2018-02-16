@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.IO;
 namespace Nov_Test
 {
     public static class Helper
@@ -68,28 +68,6 @@ namespace Nov_Test
                 return weldings;
             }
         }
-        
-        public static void WriteLogAsync(string text)
-        {
-            string directoryName = DateTime.Now.ToShortDateString();
-
-            FileInfo fi = new FileInfo(".\\" + directoryName);
-
-            bool exists = Directory.Exists(fi.FullName);
-
-            if (!exists)
-            {
-                Directory.CreateDirectory(fi.FullName);
-            }
-
-            var pathstring = Path.Combine(fi.FullName, String.Format("{0}.txt", DateTime.Now.ToString("yyyy-MM-dd HH.mm")));
-
-            // ".\\nov-test " + logFileName +".txt"
-            using (StreamWriter outputFile = new StreamWriter(pathstring, true))
-            {
-                outputFile.WriteLine(DateTime.Now.ToLongTimeString() + ": " + text);
-            }
-        }
 
         public static String nameof<T, TT>(T obj, Expression<Func<T, TT>> propertyAccessor)
         {
@@ -101,6 +79,38 @@ namespace Nov_Test
                 return memberExpression.Member.Name;
             }
             return null;
+        }
+        public static Bobbin GetBobbinByBobbinOrderId(int bobbinOrderId)
+        {
+            
+            Bobbin bobbin = null;
+
+            var query = string.Format(@"SELECT [Name], [Id], [BobbinOrderId] FROM [TestDataDb].[dbo].[Bobbins] WHERE [BobbinOrderId] = {0}", bobbinOrderId);
+
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlConnection.Open();
+
+                var thisCommand = _sqlConnection.CreateCommand();
+
+                thisCommand.CommandText = query;
+
+                using (var thisReader = thisCommand.ExecuteReader())
+                {
+                    while (thisReader.Read())
+                    {
+                        bobbin = new Bobbin
+                        {
+                            Name = thisReader["Name"].ToString(),
+                            Id = (int)thisReader["Id"],
+                            BobbinOrderId = (int)thisReader["BobbinOrderId"],
+                            Lots = null,
+                        };
+                    }
+                }
+            }
+
+            return bobbin;
         }
 
         public static Bobbin GetBobbin(string bobbinName)
@@ -139,6 +149,46 @@ namespace Nov_Test
 
             return bobbin;
         }
+
+        public static Bobbin GetBobbinById(int bobbinId)
+        {
+            if (bobbinId == 0)
+            {
+                throw new ArgumentException("Bobbin Id cannot be zero");
+            }
+
+            Bobbin bobbin = null;
+
+            var query = string.Format(@"SELECT [Name], [Id], [BobbinOrderId] FROM [TestDataDb].[dbo].[Bobbins] WHERE [Id] = {0}", bobbinId);
+
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlConnection.Open();
+
+                var thisCommand = _sqlConnection.CreateCommand();
+
+                thisCommand.CommandText = query;
+
+                using (var thisReader = thisCommand.ExecuteReader())
+                {
+                    while (thisReader.Read())
+                    {
+                        bobbin = new Bobbin
+                        {
+                            Name = thisReader["Name"].ToString(),
+                            Id = (int)thisReader["Id"],
+                            BobbinOrderId = (int)thisReader["BobbinOrderId"],
+                            Lots = null,
+                        };
+                    }
+                }
+            }
+
+            return bobbin;
+        }
+
+
+
 
 
         public static async Task<string> DownloadBobbinOrder(string bobbinOrderId)
@@ -201,6 +251,29 @@ namespace Nov_Test
             return bobbins;
         }
 
+        public static void WriteLogAsync(string text)
+        {
+            string directoryName = DateTime.Now.ToShortDateString();
+
+            FileInfo fi = new FileInfo(".\\" + directoryName);
+
+            bool exists = Directory.Exists(fi.FullName);
+
+            if (!exists)
+            {
+                Directory.CreateDirectory(fi.FullName);
+            }
+
+            var pathstring = Path.Combine(fi.FullName, String.Format("{0}.txt", DateTime.Now.ToString("yyyy-MM-dd HH.mm")));
+
+            // ".\\nov-test " + logFileName +".txt"
+            using (StreamWriter outputFile = new StreamWriter(pathstring, true))
+            {
+                outputFile.WriteLine(DateTime.Now.ToLongTimeString() + ": " + text);
+            }
+        }
+
+
         public static IEnumerable<Bobbin> GetBobbinsByBobbinOrderName(string bobbinOrderName)
         {
             if (string.IsNullOrWhiteSpace(bobbinOrderName))
@@ -216,6 +289,9 @@ namespace Nov_Test
                 _sqlConnection.Open();
                 var bobbinsList = new List<Bobbin>();
 
+                //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
+
+
                 var query = string.Format(@"SELECT [Name], [Id] ,[BobbinOrderId] FROM [TestDataDb].[dbo].[Bobbins] WHERE [BobbinOrderId] = {0}", bobbinOrder.Id);
 
                 SqlCommand thisCommand = _sqlConnection.CreateCommand();
@@ -227,7 +303,9 @@ namespace Nov_Test
                     while (thisReader.Read())
                     {
                         var id = (int)thisReader["Id"];
+
                         var name = thisReader["Name"].ToString();
+
                         var bobbinOrderId = (int)thisReader["BobbinOrderId"];
 
                         var newBobbin = new Bobbin
@@ -300,12 +378,13 @@ namespace Nov_Test
                 //GetBobbinsByBobbinOrderName("D_12345678-001");
 
 
-                var weldings = Helper.GetWeldings("coil-test-demo-01").OrderBy(w => w.WeldingSequenceNumber).ToList();
+                //var weldings = Helper.GetWeldings("coil-test-demo-01").OrderBy(w => w.WeldingSequenceNumber).ToList();
 
+                WriteLogAsync("hejsane");
 
-
-                DownloadBobbinOrder("1731006-108").GetAwaiter().GetResult();
-
+                // DownloadBobbinOrder("1731006-159").GetAwaiter().GetResult();
+                //var value = Convert.ToInt32(false);
+                //SetBobbinOrderCompletedStatus("1731006-151", false);
 
                 //GetBobbindOrderByName("D_12345678-001");
 
@@ -332,7 +411,7 @@ namespace Nov_Test
                 throw new ArgumentException("Lot name cannot be null or whitespace.");
             }
 
-            var query = String.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber],[Length], [Comment] FROM [TestDataDb].[dbo].[Lots] WHERE [Name] LIKE '{0}'", lotName);
+            var query = String.Format(@"SELECT [Id], [Name], [BobbinId] FROM [TestDataDb].[dbo].[Lots] WHERE [Name] LIKE '{0}'", lotName);
 
             Lot lotTemp = null;
 
@@ -348,30 +427,16 @@ namespace Nov_Test
                 {
                     while (thisReader.Read())
                     {
-                        var nameTemp = thisReader["Name"].ToString();
-                        var idTemp = (int)thisReader["Id"];
-                        var bobbinIdTemp = (int)thisReader["BobbinId"];
-                        var batchNumberTemp = (string)thisReader["BatchNumber"];
-                        var isUsedTemp = (bool)thisReader["IsUsed"];
-                        var materialLeftTemp = (int)thisReader["MaterialLeft"];
-                        var coilNumberTemp = (int)thisReader["CoilNumber"];
-                        var lengthTemp = (int)thisReader["Length"];
-                        var commentTemp = (string)thisReader["Comment"];
+                        var id = (int)thisReader["Id"];
+                        var name = thisReader["Name"].ToString();
+                        var bobbinId = (int)thisReader["BobbinId"];
 
-
-                        var tempLot = new Lot()
+                        lotTemp = new Lot
                         {
-                            Id = idTemp,
-                            Name = nameTemp,
-                            BobbinId = bobbinIdTemp,
-                            BatchNumber = batchNumberTemp,
-                            IsUsed = isUsedTemp,
-                            MaterialLeft = materialLeftTemp,
-                            CoilNumber = coilNumberTemp,
-                            Length = lengthTemp,
-                            Comment = commentTemp
+                            Id = id,
+                            Name = name,
+                            BobbinId = bobbinId
                         };
-
                     }
                 }
             }
@@ -536,6 +601,60 @@ namespace Nov_Test
                 }
 
                 // SetExtractedValue("lotNames", String.Join(",", lotNameList));
+
+                return lotNameList;
+            }
+        }
+
+        public static IEnumerable<Lot> GetLotsByBobbinId(int bobbinId)
+        {
+            
+          
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlConnection.Open();
+
+                var lotNameList = new List<Lot>();
+
+                //This is a simple SQL command that will go through all the values in the "City" column from the table "Table_1"
+                var query = string.Format(@"SELECT [Id], [Name], [BobbinId], [BatchNumber], [IsUsed], [MaterialLeft], [CoilNumber], [Length], [Comment] FROM [TestDataDb].[dbo].[Lots] WHERE [BobbinId] = {0}", bobbinId);
+
+                var thisCommand = _sqlConnection.CreateCommand();
+
+                thisCommand.CommandText = query;
+
+                using (var thisReader = thisCommand.ExecuteReader())
+                {
+                    while (thisReader.Read())
+                    {
+                        var nameTemp = thisReader["Name"].ToString();
+                        var idTemp = (int)thisReader["Id"];
+                        var bobbinIdTemp = (int)thisReader["BobbinId"];
+                        var batchNumberTemp = (string)thisReader["BatchNumber"];
+                        var isUsedTemp = (bool)thisReader["IsUsed"];
+                        var materialLeftTemp = (int)thisReader["MaterialLeft"];
+                        var coilNumberTemp = (int)thisReader["CoilNumber"];
+                        var lengthTemp = (int)thisReader["Length"];
+                        var commentTemp = (string)thisReader["Comment"];
+
+                        var tempLot = new Lot()
+                        {
+                            Id = idTemp,
+                            Name = nameTemp,
+                            BobbinId = bobbinIdTemp,
+                            BatchNumber = batchNumberTemp,
+                            IsUsed = isUsedTemp,
+                            MaterialLeft = materialLeftTemp,
+                            CoilNumber = coilNumberTemp,
+                            Length = lengthTemp,
+                            Comment = commentTemp
+
+                        };
+
+                        lotNameList.Add(tempLot);
+
+                    }
+                }
 
                 return lotNameList;
             }

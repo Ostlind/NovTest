@@ -37,7 +37,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "                        \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n           \r\n            var bobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            \r\n            SetExtractedValue(\"currentBobbin\", bobbin);\r\n            \r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            ",
+                "Code": "            \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n           \r\n            var bobbinOrderId = int.Parse(Data[\"Id\"].ToString());\r\n            \r\n            var bobbin = Helper.GetBobbinByBobbinOrderId(bobbinOrderId);\r\n\r\n            if(bobbin == null)\r\n            {\r\n                throw new ArgumentNullException(\"could not find bobbin\");\r\n            }\r\n            \r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n            \r\n            SetExtractedValue(\"currentBobbin\", bobbin);\r\n            \r\n            SetExtractedValue(\"bobbinName\", bobbin.Name);\r\n            ",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -98,7 +98,7 @@
                 "DataBindingExpressions": {}
               }
             },
-            "Enabled": true,
+            "Enabled": false,
             "Order": 2,
             "Id": "",
             "StepState": 0,
@@ -364,7 +364,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "      \r\n            var bobbinOrderName = Data[\"Name\"].ToString();\r\n\r\n            SetExtractedValue(\"bobbinOrderName\", bobbinOrderName);\r\n\r\n            var currentBobbin = Helper.GetBobbinsByBobbinOrderName(bobbinOrderName).FirstOrDefault();\r\n            \r\n            SetExtractedValue(\"currentBobbin\", currentBobbin);\r\n            \r\n            var lots = Helper.GetLotsByBobbinName(currentBobbin.Name).OrderBy( lot => lot.Id).ToList();\r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\unregister-source-no-weldings.tstest\");\r\n                \r\n            }",
+                "Code": "      \r\n            var currentBobbin = GetExtractedValue(\"currentBobbin\") as Bobbin;\r\n            \r\n            var lots = Helper.GetLotsByBobbinId(currentBobbin.Id).OrderBy( lot => lot.CoilNumber).ToList();\r\n            \r\n            Log.WriteLine(\"lots count: \" + lots.Count().ToString());\r\n            \r\n            foreach( var lot in lots)\r\n            {\r\n                \r\n                SetExtractedValue(\"currentLot\", lot);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\register-source.tstest\");\r\n                \r\n                System.Threading.Thread.Sleep(1000);\r\n                \r\n                this.ExecuteTest(\"fls-rewinder\\\\unregister-source-no-weldings.tstest\");\r\n                \r\n            }",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -796,7 +796,7 @@
         "DataType": 3,
         "BuiltInData": null,
         "BuiltInDocumentKey": null,
-        "TSQL": "SELECT [Name]\r\nFROM [BobbinOrders]\r\nWHERE [IsActive] = 1"
+        "TSQL": "SELECT [Name], [Id]\r\nFROM [BobbinOrders]\r\nWHERE [IsActive] = 1"
       }
     },
     "VSProperties": {},
